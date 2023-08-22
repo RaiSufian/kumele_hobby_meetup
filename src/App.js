@@ -1,10 +1,10 @@
 import './App.css';
-
+import HeroPage from './pages/heropage';
 function App() {
   return (
-    <h1 className="text-3xl font-bold ">
-      Hello world!
-    </h1>
+    <>
+    <HeroPage/>
+    </>
   );
 }
 
