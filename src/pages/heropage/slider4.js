@@ -20,7 +20,7 @@ const Slider4 = ({ slide, setSlide }) => {
     return (
         <div className='relative'>
             <div className="absolute z-10 top-[7%] left-[7%]">
-                <img src="/img/logo2.png" alt="logo" className='w-72' />
+                <img src="/img/logo2.png" alt="logo" className='lg:w-52 xl:w-68' />
             </div>
             <Slider {...settings} className='max-w-full max-h-screen min-h-[830px] overflow-hidden'>
                 <div className='relative '>
@@ -47,7 +47,7 @@ const Slider4 = ({ slide, setSlide }) => {
                     <SliderEvent name="Sports" />
                 </div>
                 <div className='relative '>
-                    <img src="/img/slider4-e.png" alt="slider_img" className="lg:w-52 xl:w-68" />
+                    <img src="/img/slider4-e.png" alt="slider_img" className="w-full" />
                     <div className='absolute top-0 left-0 w-full h-full bg-black contents-[""] bg-opacity-40'>
                     </div>
                     <SliderEvent name="Volunteers" />

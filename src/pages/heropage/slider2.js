@@ -1,6 +1,6 @@
 const Slider2 = () => {
     return (
-        <div className="container mx-auto xl:pt-5 lg:pt-2">
+        <div className="container mx-auto xl:pt-3 lg:pt-2">
             <div className="flex text-start gap-14 px-8">
                 <div className="flex w-1/2 gap-3">
                     <div className="flex-1">

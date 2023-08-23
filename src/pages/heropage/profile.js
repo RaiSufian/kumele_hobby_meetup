@@ -5,7 +5,7 @@ import Slider3 from "./slider3";
 const ProfileHero = ({ slide, setSlide }) => {
     return (
 
-        <div className="text-center font-fredoka xl:pt-12 lg:pt-7 relative">
+        <div className="text-center font-fredoka xl:pt-8 lg:pt-4 relative">
             <div className="logo absolute top-[7%] left-[7%]">
                 <img src="/img/logo_light.png" alt="logo" className="lg:w-52 xl:w-68" />
             </div>

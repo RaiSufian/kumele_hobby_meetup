@@ -3,7 +3,7 @@ import React from 'react'
 const Slider3 = () => {
   return (
     <div className="max-w-7xl mx-auto xl:py-2 py-2 xl:mt-1">
-      <div className='flex xl:py-16 py-8 gap-20 lg:px-2'>
+      <div className='flex xl:py-12 py-8 gap-20 lg:px-2'>
         <div className='w-1/2'>
           <img src="/img/slider3.png" alt="img" />
           <span className="text-sm font-plus text-theme">He lost his sight but not his passion for skateboarding. Be inspired and start a hobby to improve your mental and physical well-being.</span>
