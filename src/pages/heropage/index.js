@@ -6,14 +6,14 @@ const HeroPage = () => {
     if (slide == 4) {
         return (
             <div className="">
-                < Slider4  slide={slide} setSlide={setSlide}/>
+                < Slider4 slide={slide} setSlide={setSlide} />
             </div>
         )
     }
     else {
         return (
             <div className="bg-black">
-                <div className="h-screen bg-black text-white">
+                <div className="max-h-screen bg-black text-white min-h-[834px]">
                     <ProfileHero slide={slide} setSlide={setSlide} />
                 </div>
 

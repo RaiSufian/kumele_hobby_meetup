@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import '../../../node_modules/slick-carousel/slick/slick.css';
 import '../../../node_modules/slick-carousel/slick/slick-theme.css';
 import HeroFooter from './heroFooter';
+import SliderEvent from './sliderEvent';
 const Slider4 = ({ slide, setSlide }) => {
     const settings = {
         dots: false,
@@ -18,46 +19,45 @@ const Slider4 = ({ slide, setSlide }) => {
     };
     return (
         <div className='relative'>
-            <div className="absolute z-10 top-[10%] left-[10%]">
-                <img src="/img/logo2.png" alt="logo" className='w-80' />
+            <div className="absolute z-10 top-[7%] left-[7%]">
+                <img src="/img/logo2.png" alt="logo" className='w-72' />
             </div>
-            <Slider {...settings} className='max-w-full h-screen overflow-hidden'>
+            <Slider {...settings} className='max-w-full max-h-screen min-h-[830px] overflow-hidden'>
                 <div className='relative '>
                     <img src="./img/slider4-a.png" alt="slider_img" className=" " />
-                    <div className='absolute top-0 left-0 w-full h-full bg-black contents-[""] bg-opacity-40'>
-
-                    </div>
+                    <div className='absolute top-0 left-0 w-full h-full bg-black contents-[""] bg-opacity-40'> </div>
+                    <SliderEvent name="House Party" />
                 </div>
                 <div className='relative '>
                     <img src="./img/slider4-b.png" alt="slider_img" className="w-full" />
                     <div className='absolute top-0 left-0 w-full h-full bg-black contents-[""] bg-opacity-40'>
-
                     </div>
+                    <SliderEvent name="Family Activities" />
                 </div>
                 <div className='relative '>
                     <img src="/img/slider4-c.png" alt="slider_img" className="w-full" />
                     <div className='absolute top-0 left-0 w-full h-full bg-black contents-[""] bg-opacity-40'>
-
                     </div>
+                    <SliderEvent name="Spirituality" />
                 </div>
                 <div className='relative '>
                     <img src="/img/slider4-d.png" alt="slider_img" className="w-full" />
                     <div className='absolute top-0 left-0 w-full h-full bg-black contents-[""] bg-opacity-40'>
-
                     </div>
+                    <SliderEvent name="Sports" />
                 </div>
                 <div className='relative '>
                     <img src="/img/slider4-e.png" alt="slider_img" className="w-full" />
                     <div className='absolute top-0 left-0 w-full h-full bg-black contents-[""] bg-opacity-40'>
-
                     </div>
+                    <SliderEvent name="Volunteers" />
                 </div>
             </Slider>
-            <div className='absolute bottom-[5%] left-1/2 -translate-x-1/2 text-center text-white w-full'>
+            <div className='absolute bottom-[4%] left-1/2 -translate-x-1/2 text-center text-white w-full'>
                 <div>
                     <h2 className='text-6xl font-medium font-fredoka'>“Hobby Meetup | Create or Attend Events Within <span className='text-theme'>4</span><span className='text-[#38579E]'>8</span> Hours” </h2>
                     <p className='text-4xl'>We play. We overcome. We unite. We live.</p>
-                    <div className='flex justify-center mt-8 '>
+                    <div className='flex justify-center mt-5 '>
                         <button className='bg-theme text-2xl font-plus w-64 py-3 text-black font-medium rounded-l-full'>Login</button>
                         <button className='bg-[#38579E] text-2xl font-plus w-64 py-3 text-black font-medium rounded-r-full'>signup</button>
                     </div>
@@ -72,7 +72,7 @@ const Slider4 = ({ slide, setSlide }) => {
                     </div>
                 </div>
                 <div className=''>
-                        <HeroFooter />
+                    <HeroFooter />
                 </div>
 
             </div>

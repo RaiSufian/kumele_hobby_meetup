@@ -1,6 +1,6 @@
 const HeroFooter = () => {
     return (
-        <div className="xl:pt-10 pt-3 container mx-auto xl:mb-6 lg:mb-2 px-2">
+        <div className="xl:pt-8 pt-3 container mx-auto xl:mb-6 lg:mb-2 px-2">
             <div className="flex justify-between gap-32">
                 <div className="flex justify-between w-1/4">
                     <div className="w-12 h-12 bg-theme rounded-md relative cursor-pointer">

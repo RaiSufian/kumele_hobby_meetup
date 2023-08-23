@@ -6,7 +6,7 @@ const ProfileHero = ({ slide, setSlide }) => {
     return (
 
         <div className="text-center font-fredoka xl:pt-14 lg:pt-8 relative">
-            <div className="logo absolute xl:top-10 pt-6 xl:left-16 left-6">
+            <div className="logo absolute top-[7%] left-[7%]">
                 <img src="/img/logo_light.png" alt="logo" className="lg:w-56 xl:w-72" />
             </div>
             <div>
