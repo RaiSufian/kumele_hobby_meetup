@@ -47,7 +47,7 @@ const Slider4 = ({ slide, setSlide }) => {
                     <SliderEvent name="Sports" />
                 </div>
                 <div className='relative '>
-                    <img src="/img/slider4-e.png" alt="slider_img" className="w-full" />
+                    <img src="/img/slider4-e.png" alt="slider_img" className="lg:w-52 xl:w-68" />
                     <div className='absolute top-0 left-0 w-full h-full bg-black contents-[""] bg-opacity-40'>
                     </div>
                     <SliderEvent name="Volunteers" />
@@ -56,7 +56,7 @@ const Slider4 = ({ slide, setSlide }) => {
             <div className='absolute bottom-[4%] left-1/2 -translate-x-1/2 text-center text-white w-full'>
                 <div>
                     <h2 className='text-5xl font-medium font-fredoka'>“Hobby Meetup | Create or Attend Events Within <span className='text-theme'>4</span><span className='text-[#38579E]'>8</span> Hours” </h2>
-                    <p className='text-3xl'>We play. We overcome. We unite. We live.</p>
+                    <p className='text-3xl mt-2'>We play. We overcome. We unite. We live.</p>
                     <div className='flex justify-center mt-5 '>
                         <button className='bg-theme text-2xl font-plus w-64 py-3 text-black font-medium rounded-l-full'>Login</button>
                         <button className='bg-[#38579E] text-2xl font-plus w-64 py-3 text-black font-medium rounded-r-full'>signup</button>

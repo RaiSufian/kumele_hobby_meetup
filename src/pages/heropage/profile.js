@@ -5,13 +5,13 @@ import Slider3 from "./slider3";
 const ProfileHero = ({ slide, setSlide }) => {
     return (
 
-        <div className="text-center font-fredoka xl:pt-14 lg:pt-8 relative">
+        <div className="text-center font-fredoka xl:pt-12 lg:pt-7 relative">
             <div className="logo absolute top-[7%] left-[7%]">
-                <img src="/img/logo_light.png" alt="logo" className="lg:w-56 xl:w-72" />
+                <img src="/img/logo_light.png" alt="logo" className="lg:w-52 xl:w-68" />
             </div>
             <div>
                 <h1 className="text-5xl font-medium">Hobby Meetup</h1>
-                <h6 className="p-3 text-2xl font-medium text-theme">We play. We overcome. We unite. We live.</h6>
+                <h6 className="p-3 text-xl font-medium text-theme">We play. We overcome. We unite. We live.</h6>
             </div>
 
             {slide == 1 ?
