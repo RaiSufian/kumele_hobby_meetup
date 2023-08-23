@@ -7,8 +7,8 @@ const Slider1 = () =>{
                             <img src="/img/hero1.png" className="xl:max-w-lg lg:max-w-sm h-auto ml-auto" alt="img"/>
                         </div>
                         <div className="text-start w-1/2">
-                            <h2 className="text-4xl font-medium">Why Kuleme?</h2>
-                            <ul className="xl:py-5 py-2 text-xl font-medium list-disc px-4">
+                            <h2 className="text-3xl font-medium">Why Kuleme?</h2>
+                            <ul className="xl:py-5 py-2 text-md font-medium list-disc px-4">
                                 <li className="xl:py-3 py-1">
                                     kumele is an app by hobby-enthusiasts for the hobby enthusiast.
                                 </li>
