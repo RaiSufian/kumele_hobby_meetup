@@ -4,6 +4,7 @@ import '../../../node_modules/slick-carousel/slick/slick.css';
 import '../../../node_modules/slick-carousel/slick/slick-theme.css';
 import HeroFooter from './heroFooter';
 import SliderEvent from './sliderEvent';
+import { Link } from 'react-router-dom';
 const Slider4 = ({ slide, setSlide }) => {
     const settings = {
         dots: false,
@@ -58,8 +59,14 @@ const Slider4 = ({ slide, setSlide }) => {
                     <h2 className='text-5xl font-medium font-fredoka'>“Hobby Meetup | Create or Attend Events Within <span className='text-theme'>4</span><span className='text-[#38579E]'>8</span> Hours” </h2>
                     <p className='text-3xl mt-2'>We play. We overcome. We unite. We live.</p>
                     <div className='flex justify-center mt-5 '>
-                        <button className='bg-theme text-2xl font-plus w-56 py-3 text-black font-medium rounded-l-full flex items-center justify-center'>Login</button>
-                        <button className='bg-[#38579E] text-2xl font-plus w-56 py-3 text-black font-medium rounded-r-full flex items-center justify-center'>Signup</button>
+                        <Link to="/login">
+                            <button className='bg-theme text-2xl font-plus w-56 py-3 text-black font-medium rounded-l-full flex items-center justify-center'>Login</button>
+                        </Link>
+
+                        <Link to="/Signup">
+                            <button className='bg-[#38579E] text-2xl font-plus w-56 py-3 text-black font-medium rounded-r-full flex items-center justify-center'>Signup</button>
+                        </Link>
+
                     </div>
                 </div>
 

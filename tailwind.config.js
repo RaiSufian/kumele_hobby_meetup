@@ -12,7 +12,9 @@ module.exports = {
       colors: {
         theme : '#F4C755',
         dark_theme: '#9F8137',
-        theme_orange: '#F60'
+        theme_orange: '#F60',
+        light: "#959595",
+        dark: '#262626'
       }
     },
     
