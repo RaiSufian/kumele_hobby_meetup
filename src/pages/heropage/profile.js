@@ -5,12 +5,12 @@ import Slider3 from "./slider3";
 const ProfileHero = ({ slide, setSlide }) => {
     return (
 
-        <div className="text-center font-fredoka xl:pt-8 lg:pt-4 relative">
-            <div className="logo absolute top-[7%] left-[7%]">
-                <img src="/img/logo_light.png" alt="logo" className="lg:w-52 xl:w-68" />
+        <div className="text-center font-fredoka xl:pt-10 lg:pt-4 relative">
+            <div className="logo absolute top-[6%] left-[6%]">
+                <img src="/img/logo_light.png" alt="logo" className="lg:w-58 xl:w-64" />
             </div>
             <div>
-                <h1 className="text-5xl font-medium">Hobby Meetup</h1>
+                <h1 className="text-6xl font-medium">Hobby Meetup</h1>
                 <h6 className="p-3 text-xl font-medium text-theme">We play. We overcome. We unite. We live.</h6>
             </div>
 
