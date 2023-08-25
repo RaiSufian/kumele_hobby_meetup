@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import Login from './pages/login';
 import Signup from './pages/signup';
 import Home from './pages/home';
+import '../node_modules/slick-carousel/slick/slick.css';
+import '../node_modules/slick-carousel/slick/slick-theme.css';
 function App() {
   return (
     <>

@@ -492,7 +492,7 @@ const Signup = () => {
                         <div className="flex mt-5 flex-wrap mx-auto">
                             {cat_data.map((value, index) => {
                                 return (
-                                    <div className="w-28 cursor-pointer py-3 border rounded-xl border-[#EEECEC] text-center m-2 cat_card" key={index}>
+                                    <div className="w-28 cursor-pointer py-3 border rounded-xl border-[#EEECEC] text-center m-2 cat_card hover:bg-theme" key={index}>
                                         <span >
                                             {value.icons}
                                         </span>
