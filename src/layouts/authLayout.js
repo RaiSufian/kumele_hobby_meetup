@@ -13,7 +13,7 @@ const AuthLayout = ({ children }) => {
                 <div className=" w-1/2 flex justify-center items-center px-10">
                     <img src="/img/authimg1.png"/>
                 </div>
-                <div className=" w-1/2 pt-8">
+                <div className=" w-1/2 pt-8 custom_auto_h overflow-y-auto">
                     {children}
                 </div>
             </div>

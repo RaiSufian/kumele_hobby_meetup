@@ -16,6 +16,33 @@ code {
     monospace;
 }
 
-.custom_input:focus{
+.custom_input:focus {
   outline: none;
+}
+
+.custom_auto_h {
+  max-height: calc(100vh - 200px);
+
+}
+
+.custom_auto_h::-webkit-scrollbar {
+  display: none;
+}
+
+.login_gif {
+  background: url("https://s3-alpha-sig.figma.com/img/641a/b5a3/6da730e9bde4355afe6310daf2cee724?Expires=1693785600&Signature=oqV60qtgLRhMUc~bx9Etwxn~tahNm53CPHTdgg3PGPZbzZgZvkNid1GuvZkrG0A9O87YAMxoikC7XWKMKPwA4D8hfJ57dBIYyCvV40Sh547oV04-StPeQMgnSmOooCAncEyub3M4S0U9SfPwk2aUiKYpjI2P1oohjkw6yRhHiRaBeEvL2usnlMeD-IIZuIniBFTp9uUpnET-OfGEBD2JWuBucog-INMr2qvWfWfP-WaLOkHT5Fiij~oX~paylvIK9rVbAR6-PyQZWq1-SibHijngewn8XaYFF9wR5cJWCgEdwVqr0wYCWhLyt0fiPV4Y1dJ4PP6X9NFSjQoWGn2WHw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), lightgray 50% / cover no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cat_card svg {
+  margin: auto;
+}
+
+.earn_madel {
+  background: url("https://s3-alpha-sig.figma.com/img/decf/cec3/05fce9b681f1011a97aa8377634c601a?Expires=1693785600&Signature=JfCyQh8IvagnI88rTniyndiPuFCtig1Wki5KjNfmrNjHQ5G~OOjPaiXVF1U6j~jX7FhRIcmeNUpiqXfuk-rGNBMiI-FxoNbqskkqxSJRxtJbxb7UM7U4FVvL7R2bwr9-BPp5kw49GrNld4xNpuMlfqbaWLzjKuQ~x-8tGCzyUGUPnn-dpAck6sXEg0DF4GW0qBY6ZM-2TLoKsZ8ychQlzjiSWM4iYa8wucvOtCPHP15N4z1anaElUw5IT~~8fdUcFb6Q0-XN7MonhpcKpxflfLqjiWaIdjRBZWFnEh-iqZWBS8wZU6rqozBukXVy42zUbCxT9fqyzUsxJrJgIGcF8g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), lightgray 50% / cover no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
