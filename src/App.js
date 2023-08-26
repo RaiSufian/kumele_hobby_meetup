@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from './pages/login';
 import Signup from './pages/signup';
 import Home from './pages/home';
+import Notification from './pages/notification';
 import '../node_modules/slick-carousel/slick/slick.css';
 import '../node_modules/slick-carousel/slick/slick-theme.css';
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/dashboard" element={<Home />} />
+        <Route path="/user/notificaitons" element={<Notification/>}/>
       </Routes>
 
     </>

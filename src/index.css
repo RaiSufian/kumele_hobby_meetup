@@ -58,6 +58,42 @@ code {
   box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.09);
 }
 
-.event_slider .slick-prev::before, .event_slider .slick-arrow::before {
+.event_slider .slick-prev::before,
+.event_slider .slick-arrow::before {
   color: black;
+}
+
+.home_pop1 {
+  background: url("https://s3-alpha-sig.figma.com/img/7762/6ba5/4e5c8f3a14698fc044435d688cc568ba?Expires=1693785600&Signature=cLt-5hMmpxObXaAz~ZSEgYNcWZfWKT3hjHpTMCZs2VCZqk4mgZpwylkx2-eOge0VIYLl-4aCfEziiog-IEzzt8tHgWRtXFss0u100X-TDI4vp-4161CtVNr3qlykHeoxO9pDLlAKls2mKDfFezgxwy0otddaOfzggwOWCS3CKdmsxuJKw8hZbaDXmmLI3rDt9Cj-WXYAS~UiS8jR-eGJIXbNSwBmEA7x5DjuojjoiYufhxyr0bqnxACQVQ1I-YY-gnyDyuKd7dGLSG6uDk2oNI9F3qTXbOYCa5Vm-VSYZIAn6LrP8FOgvYAlI2tY7CBGfPebil~nPlA~yxUWouBCXA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), lightgray 50% / cover no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.home_pop2 {
+  background: url("https://s3-alpha-sig.figma.com/img/091e/264f/bfbc492ce0956ffc568dfbd12493a24a?Expires=1693785600&Signature=CiCOAneRo1OY20ViMwjgO1apvIB-Ms~vusvOhY7Gt7zpnd4BfvN~1MXF7lh5a6RnJT4PSNsalCTGwVyy6crRuN~X-IznAW4Zm18rh6g1Fn6MuJH4UwmpSpXkxkYBfWXuKltxOhXnmXC1n-klTMhVT~rG~YE74G38htLz~XYHlKh1Xnb8Hg0mPONclGq0H~H2cqz6p4r3OA3ONKgWFxkEr00mBN5ValYnQngsR-6v2x9SoqCIGwBCjock5goM0dvLf3bQump02U8yYxoJft5sqtWNhSGOu~vqSmZXE9CIT~1hy5UpzY1hhn-8wi6AeBW7yRIbwwSRBTAJdcxdgZPcXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), lightgray 50% / cover no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.time-icon {
+  background: url("https://s3-alpha-sig.figma.com/img/ca73/3b45/2ffe7157fdca70e457adcb8668498410?Expires=1693785600&Signature=dRgSykH2OtVIS8h5TRJnBHbBMslymvsc8DkupMy-57FXxU72W4-rrfNRmEB0BzLps4P9j-aIjsTpVN5tP55RS1loj64wOKUvrr3XBYgpKfHa2wIhQPXhdoTw4rqadzDaY5~DwZPzpB7BGxiUks-im8p6UAuK4w~YV4ZO7EwTNMxuRGadJleylQkonr4LPayjO5YD4b4YCJJGL3wNCCf4Z1w6PKmqfYxd6HzPTpM5A9~F5COwCm3X6IEY0~nr5HCrJ17UvwtOZenroSupc6UENkaVEOiwz5fhJ9q0B7VDUhX9hu8M-RNa7KG8wbkiSf-NqqgDRgXHyP0IO2HoZ6yc-w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), lightgray 50% / cover no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.footer_shadow {
+  box-shadow: 0px -4px 36px 0px rgba(0, 0, 0, 0.09);
 }

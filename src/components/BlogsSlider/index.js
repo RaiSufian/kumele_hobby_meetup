@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import EventCard from "../eventCard";
-const BlogsSlider = () => {
+const BlogsSlider = ({setEvent}) => {
     var settings = {
         dots: false,
         infinite: false,
@@ -40,22 +40,22 @@ const BlogsSlider = () => {
             <h2 className="text-xl font-bold font-plus"> Hobby events in your location</h2>
             <Slider {...settings} className="event_slider mt-5 px-3">
                 <div>
-                    <EventCard />
+                    <EventCard setEvent={setEvent}/>
                 </div>
                 <div>
-                    <EventCard />
+                    <EventCard setEvent={setEvent}/>
                 </div>
                 <div>
-                    <EventCard />
+                    <EventCard setEvent={setEvent}/>
                 </div>
                 <div>
-                    <EventCard />
+                    <EventCard setEvent={setEvent}/>
                 </div>
                 <div>
-                    <EventCard />
+                    <EventCard setEvent={setEvent}/>
                 </div>
                 <div>
-                    <EventCard />
+                    <EventCard setEvent={setEvent}/>
                 </div>
             </Slider>
         </div>

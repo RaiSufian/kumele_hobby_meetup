@@ -1,4 +1,4 @@
-const EventCard = () => {
+const EventCard = ({setEvent}) => {
     return (
         <div className="bg-white  max-w-xs mx-auto xl:px-3 lg:px-1 mt-2">
             <div className="bg-white border border-[#EEECEC] rounded-2xl ">
@@ -62,7 +62,7 @@ const EventCard = () => {
                         <span className="text-sm font-plus font-bold text-[#38579E]">3 Days</span>
                     </div>
                     <div className="absolute right-4 bottom-3 bg-[#EEECEC]  rounded-full cursor-pointer">
-                        <div className="relative w-5 h-5 ">
+                        <div className="relative w-5 h-5 " onClick={()=>setEvent(true)}>
                             <svg className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                                 <path opacity="0.35" d="M10.3009 9.80145C9.91278 9.41333 6.05276 5.55331 5.66464 5.16519C4.88839 4.38895 3.63064 4.38895 2.8544 5.16519C2.07816 5.94143 2.07816 7.19919 2.8544 7.97543C3.24252 8.36355 7.10254 12.2236 7.49066 12.6117C8.26691 13.3879 9.52466 13.3879 10.3009 12.6117C11.0771 11.8354 11.0771 10.577 10.3009 9.80145Z" fill="black" />
                                 <path d="M10.3011 12.6107C10.6892 12.2226 14.5493 8.36257 14.9374 7.97445C15.7136 7.19821 15.7136 5.94046 14.9374 5.16421C14.1611 4.38797 12.9034 4.38797 12.1271 5.16421C11.739 5.55234 7.879 9.41236 7.49087 9.80048C6.71463 10.5767 6.71463 11.8345 7.49087 12.6107C8.26712 13.387 9.52553 13.387 10.3011 12.6107Z" fill="black" />

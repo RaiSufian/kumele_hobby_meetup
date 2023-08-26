@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 const SidebarSub = () => {
     const list = [0, 1, 2, 3, 4]
     return (
@@ -5,7 +6,7 @@ const SidebarSub = () => {
             <div className="text-end">
                 <div className="flex items-center justify-between">
                     <h2 className="font-semibold font-plus text-2xl">Notifications</h2>
-                    <span className="text-[#38579E] font-semibold font-plus texxt-lg">View all</span>
+                    <Link className="text-[#38579E] font-semibold font-plus texxt-lg" to="/user/notificaitons">View all</Link>
                 </div>
 
                 <ul className="mt-5">
