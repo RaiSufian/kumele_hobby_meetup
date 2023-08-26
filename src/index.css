@@ -46,9 +46,18 @@ code {
   background-position: center;
   background-size: cover;
 }
-.homePage{
+
+.homePage {
   background: url("https://s3-alpha-sig.figma.com/img/7a34/ed2e/e6c19f2b4c1c30d8f42171a8a46201e6?Expires=1693785600&Signature=F09sGyYEc0fSzqRcV1mixc-~jWuZbNnu6h8QPl57siGiwr~qv9nVwG1Qc~-Bh4pUVBE1SlOwKb17bLp5CuIgDbSpQ4Ugwub9fW98EE-2~w35j6Ay~c2eYhyhEy9RgDC0c2S7RlJf3pbh6WR0EIQS6x2CB8-oBM0vaev0NSuXay20B-4eLpn~xmCVTGenOjgLUqtgmHSIaqQ3OqRRrg3RndEX7l9E3Za7YP8mIq5rMX03eDxNDUz6wB6OI1rr73O-vBFXArRT4-gOmDG3-12r6eW~bTwTdpsVh6IkhcPkRlfMMytXgWfiebuumuuVJZDm0VJStEvrui~hKQKYIlEDWw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), lightgray 50% / cover no-repeat;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.event_shadow {
+  box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.09);
+}
+
+.event_slider .slick-prev::before, .event_slider .slick-arrow::before {
+  color: black;
 }

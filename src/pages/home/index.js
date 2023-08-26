@@ -1,7 +1,8 @@
 import Dashboardlayout from "../../layouts/dashboardlayout";
 import SidebarSub from "../../components/sidebarSab";
 // import SidebarUnSub from "../../components/sidebarUnSub";
- import BlogsSlider from "../../components/BlogsSlider";
+import BlogsSlider from "../../components/BlogsSlider";
+import EventsCatBlock from "../../components/eventsCatBlock";
 const Home = () => {
     return (
         <Dashboardlayout>
@@ -57,17 +58,19 @@ const Home = () => {
                     <div>
                     </div>
                 </div>
-                <div className="flex mt-5 gap-3 justify-between">
-                    <div className="flex-1">
+                <div className="lg:flex mt-5 gap-3 justify-between">
+                    {/* <div className="max-w-5xl">
                         <div className="bg-white rounded-md flex justify-center items-center py-10">
                             <div className="homePage w-1/2 h-96"> </div>
                         </div>
 
-                    </div>
-                    {/* <div className="max-w-5xl">
-                             <BlogsSlider/> 
                     </div> */}
-                    <div className="w-96">
+                    <div className="xl:max-w-5xl lg:max-w-xl ">
+                        <BlogsSlider />
+                        <EventsCatBlock name={"Matched events"} />
+                        <EventsCatBlock name={"Created events"} />
+                    </div>
+                    <div className="flex-1 ">
                         <SidebarSub />
                         {/* <SidebarUnSub/> */}
                     </div>
