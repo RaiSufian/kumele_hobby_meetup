@@ -8,9 +8,9 @@ const EventDetails = ({ setEvent }) => {
                         <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill="black" />
                     </svg>
                 </span>
-                <div className="h-[500px] relative overflow-y-auto pb-12">
+                <div className="h-[500px] relative overflow-y-auto pb-12 custom_scroll">
                     <div className="w-full h-[380px] overflow-hidden">
-                        <img src="/img/event1.png" className="object-cover" />
+                        <img src="/img/event1.png" className="object-cover" alt="detail_img"/>
                     </div>
                     <div className="py-6">
                         <div className="flex items-center justify-between px-1">
@@ -80,7 +80,7 @@ const EventDetails = ({ setEvent }) => {
                     </div>
                     <div className="flex mt-5 items-center">
                         <div className="flex gap-3 items-center w-2/5">
-                            <img src="/img/profile1.png" className="w-16 h-16" />
+                            <img src="/img/profile1.png" className="w-16 h-16" alt="profile"/>
                             <div className="text-start">
                                 <div className="flex items-center justify-between gap-5">
                                     <h1 className="text-xl font-semibold font-plus">Alkash Kumar</h1>
@@ -97,7 +97,7 @@ const EventDetails = ({ setEvent }) => {
                 <div className="absolute bottom-0 left-0 w-full footer_shadow z-20 bg-white">
                     <div className="flex gap-10 py-4 px-14">
                         <button onClick={() => setEvent(false)} className="w-1/2 border-2 border-black text-lg font-plus font-medium h-12 flex items-center justify-center rounded-lg">Decline</button>
-                        <bottom className="w-1/2 bg-black text-white text-lg font-plus font-medium h-12 flex items-center justify-center rounded-lg">Interested</bottom>
+                        <button className="w-1/2 bg-black text-white text-lg font-plus font-medium h-12 flex items-center justify-center rounded-lg">Interested</button>
                     </div>
                 </div>
 

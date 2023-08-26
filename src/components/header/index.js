@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-        <header className="bg-white px-16 py-5 border-b border-[#CFCFCF]">
+        <header className="bg-white px-16 py-5 border-b border-[#CFCFCF] fixed top-0 left-0 w-full z-10">
             <div className="flex justify-between">
                 <div>
                     <img src="/img/dark_logo.png" alt="logo" className="w-48" />

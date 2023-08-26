@@ -10,7 +10,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.main_menu{
+  top: 97px;
+  height: calc(100vh - 97px);
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -27,6 +30,9 @@ code {
 
 .custom_auto_h::-webkit-scrollbar {
   display: none;
+}
+.custom_scroll::-webkit-scrollbar {
+ display: none;
 }
 
 .login_gif {

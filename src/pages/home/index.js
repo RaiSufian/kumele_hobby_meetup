@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import EventDetails from "../../components/eventDetails";
 const Home = () => {
     const [slide, setSlide] = useState(0);
-    const [evnet, setEvent] = useState(false)
+    const [event, setEvent] = useState(false)
     useEffect(() => {
         if (slide < 3) {
             const interval = setInterval(() => {
@@ -98,12 +98,12 @@ const Home = () => {
                 </div>
             </Dashboardlayout>
             {slide === 1 ?
-                <div className="w-full  h-screen bg-black bg-opacity-20 absolute top-0 left-0 z-50 flex items-center justify-center">
+                <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
                     <DashboardSlider setSlide={setSlide} />
                 </div>
                 : null}
             {slide === 2 ?
-                <div className="w-full  h-screen bg-black bg-opacity-20 absolute top-0 left-0 z-50 flex items-center justify-center">
+                <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
                     <div className="w-[490px] bg-white p-14 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out">
                         <span className="absolute top-10 right-7 cursor-pointer" onClick={() => setSlide(4)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
@@ -142,7 +142,7 @@ const Home = () => {
                 null}
             {
                 slide === 3 ?
-                    <div className="w-full  h-screen bg-black bg-opacity-20 absolute top-0 left-0 z-50 flex items-center justify-center">
+                    <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
                         <div className="w-[490px] bg-white p-14 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out">
                             <span className="absolute top-10 right-7 cursor-pointer" onClick={() => setSlide(4)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
@@ -166,8 +166,8 @@ const Home = () => {
                     :
                     null
             }
-            {evnet ?
-                <EventDetails />
+            {event ?
+                <EventDetails setEvent={setEvent} />
                 :
                 null}
         </>
