@@ -7,6 +7,8 @@ import Home from './pages/home';
 import Blogs from './pages/blogs';
 import BlogDetail from './pages/blogDetail';
 import Notification from './pages/notification';
+import Shop from './pages/shop';
+
 import '../node_modules/slick-carousel/slick/slick.css';
 import '../node_modules/slick-carousel/slick/slick-theme.css';
 function App() {
@@ -19,7 +21,8 @@ function App() {
         <Route path="/dashboard" element={<Home />} />
         <Route path="/user/notificaitons" element={<Notification />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/blogs/:id" element={<BlogDetail />} />
+        <Route path="/shop" element={<Shop />} />
       </Routes>
 
     </>

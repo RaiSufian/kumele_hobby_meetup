@@ -1,11 +1,13 @@
 import Dashboardlayout from "../../layouts/dashboardlayout";
+import { useNavigate } from "react-router-dom";
 const BlogDetail = () => {
+    const navigate = useNavigate();
     return (
         <Dashboardlayout>
-            <div className="min-h-screen px-6">
-                <div className="bg-white rounded-lg">
+            <div className="min-h-screen px-10">
+                <div className="bg-white rounded-lg my-5">
                     <div className="px-3 flex items-center gap-6 py-2 border-b border-[#EEECEC]">
-                        <span className="w-10 h-10 flex items-center justify-center">
+                        <span className="w-10 h-10 flex items-center justify-center" onClick={() => navigate("/blogs")}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48" fill="none">
                                 <path opacity="0.35" d="M33.0721 9.27306C32.6781 9.66506 27.6101 14.7351 24.0001 18.3451C20.3901 14.7351 15.3221 9.66706 14.9281 9.27306C13.3661 7.71106 10.8341 7.71106 9.27209 9.27306C7.71009 10.8351 7.71009 13.3671 9.27209 14.9291C9.66409 15.3231 14.7341 20.3911 18.3441 24.0011C14.7341 27.6111 9.66609 32.6791 9.27209 33.0731C7.71009 34.6351 7.71009 37.1671 9.27209 38.7291C10.8341 40.2911 13.3661 40.2911 14.9281 38.7291C15.2121 38.4451 38.4441 15.2131 38.7281 14.9291C40.2901 13.3671 40.2901 10.8351 38.7281 9.27306C37.1661 7.71106 34.6341 7.71106 33.0721 9.27306Z" fill="black" />
                                 <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill="black" />
@@ -80,6 +82,49 @@ const BlogDetail = () => {
                                 <button className="w-80 h-12 bg-black text-white rounded-md">Login/Signup to Comment</button>
                                 <button className="w-80 h-12 border-2 border-black rounded-md">Publish Comment</button>
                             </div>
+                            <ul className="mt-6">
+                                <li className="mt-8 flex gap-2 items-center">
+                                    <img src="/img/user-1.png" alt="user_profile" className="w-20 h-20 rounded-full" />
+                                    <div>
+                                        <span className="text-xl font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
+                                        <p className="text-[#808080]">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
+                                    </div>
+                                </li>
+                                <li className="mt-8 flex gap-2 items-center">
+                                    <img src="/img/user-1.png" alt="user_profile" className="w-20 h-20 rounded-full" />
+                                    <div>
+                                        <span className="text-xl font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
+                                        <p className="text-[#808080]">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
+                                    </div>
+                                </li>
+                                <li className="mt-8 flex gap-2 items-center">
+                                    <img src="/img/user-1.png" alt="user_profile" className="w-20 h-20 rounded-full" />
+                                    <div>
+                                        <span className="text-xl font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
+                                        <p className="text-[#808080]">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="flex items-center justify-between py-5 mt-5">
+                            <button className="flex items-center gap-6" onClick={() => navigate("/blogs")}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 36 36" fill="none">
+                                    <path opacity="0.35" d="M15.3162 20.9602C16.1533 20.1231 24.479 11.7974 25.3162 10.9602C26.9905 9.28592 26.9905 6.57307 25.3162 4.89878C23.6419 3.2245 20.929 3.2245 19.2547 4.89878C18.4176 5.73592 10.0919 14.0616 9.25474 14.8988C7.58045 16.5731 7.58045 19.2859 9.25474 20.9602C10.929 22.6345 13.6433 22.6345 15.3162 20.9602Z" fill="black" />
+                                    <path d="M9.25571 20.9602C10.0929 21.7974 18.4186 30.1231 19.2557 30.9602C20.93 32.6345 23.6429 32.6345 25.3171 30.9602C26.9914 29.2859 26.9914 26.5731 25.3171 24.8988C24.48 24.0616 16.1543 15.7359 15.3171 14.8988C13.6429 13.2245 10.93 13.2245 9.25571 14.8988C7.58143 16.5731 7.58143 19.2874 9.25571 20.9602Z" fill="black" />
+                                </svg>
+                                <span className="text-2xl font-plus font-semibold">
+                                    Previous
+                                </span>
+                            </button>
+                            <button className="flex items-center gap-6">
+                                <span className="text-2xl font-plus font-semibold text-[#38579E]">
+                                    Next
+                                </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                    <path opacity="0.35" d="M20.6838 20.9602C19.8467 20.1231 11.521 11.7974 10.6838 10.9602C9.00955 9.28592 9.00955 6.57307 10.6838 4.89878C12.3581 3.2245 15.071 3.2245 16.7453 4.89878C17.5824 5.73592 25.9081 14.0616 26.7453 14.8988C28.4195 16.5731 28.4195 19.2859 26.7453 20.9602C25.071 22.6345 22.3567 22.6345 20.6838 20.9602Z" fill="black" />
+                                    <path d="M26.7443 20.9602C25.9071 21.7974 17.5814 30.1231 16.7443 30.9602C15.07 32.6345 12.3571 32.6345 10.6829 30.9602C9.00857 29.2859 9.00857 26.5731 10.6829 24.8988C11.52 24.0616 19.8457 15.7359 20.6829 14.8988C22.3571 13.2245 25.07 13.2245 26.7443 14.8988C28.4186 16.5731 28.4186 19.2874 26.7443 20.9602Z" fill="black" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
