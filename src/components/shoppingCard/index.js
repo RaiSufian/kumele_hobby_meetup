@@ -1,4 +1,4 @@
-const ShoppingCard = ({value}) => {
+const ShoppingCard = ({value , setPayModal}) => {
     return (
         <div className={`${value.active ? "bg-theme" : "bg-white"} py-2 px-3  card_shadow rounded-lg mt-4`}>
 
@@ -13,7 +13,7 @@ const ShoppingCard = ({value}) => {
                     </div>
                     <p className="font-lg py-1">{value.des}</p>
                     <div className="mt-5">
-                        <button className="bg-black text-white float-right w-48 rounded-lg text-lg py-1">  {value.button}</button>
+                        <button className="bg-black text-white float-right w-48 rounded-lg text-lg py-1" onClick={()=>setPayModal(true)}>  {value.button}</button>
                     </div>
 
 

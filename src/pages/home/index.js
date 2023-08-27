@@ -85,7 +85,7 @@ const Home = () => {
                         </div>
 
                     </div> */}
-                        <div className="xl:max-w-5xl lg:max-w-xl ">
+                        <div className="xl:max-w-4xl lg:max-w-xl ">
                             <BlogsSlider setEvent={setEvent} />
                             <EventsCatBlock name={"Matched events"} setEvent={setEvent} />
                             <EventsCatBlock name={"Created events"} setEvent={setEvent} />

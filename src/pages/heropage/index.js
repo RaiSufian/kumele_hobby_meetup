@@ -13,7 +13,7 @@ const HeroPage = () => {
     else {
         return (
             <div className="bg-black">
-                <div className="h-screen bg-black text-white ">
+                <div className="min-h-screen bg-black text-white ">
                     <ProfileHero slide={slide} setSlide={setSlide} />
                 </div>
 

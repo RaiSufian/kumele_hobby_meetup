@@ -8,6 +8,7 @@ import Blogs from './pages/blogs';
 import BlogDetail from './pages/blogDetail';
 import Notification from './pages/notification';
 import Shop from './pages/shop';
+import ChatRoom from './pages/chatroom';
 
 import '../node_modules/slick-carousel/slick/slick.css';
 import '../node_modules/slick-carousel/slick/slick-theme.css';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<BlogDetail />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/chatroom" element={<ChatRoom />} />
       </Routes>
 
     </>

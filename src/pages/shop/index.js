@@ -1,7 +1,10 @@
 import Dashboardlayout from "../../layouts/dashboardlayout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ShoppingCard from "../../components/shoppingCard";
+import Addpayment from "../../components/addpayment";
 const Shop = () => {
+    const [noteModal, setNotemodel] = useState(false);
+    const [payModal, setPayModal] = useState(false);
     const [shop, setShop] = useState("sub");
     const subscript1 = [
         {
@@ -142,60 +145,91 @@ const Shop = () => {
             button: "Buy now",
         },
     ]
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setNotemodel(true);
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, []);
     return (
-        < Dashboardlayout>
-            <div className="min-h-screen  px-4 mt-5">
-                <div className="bg-[#e3e3e3] rounded-lg w-96 p-1 relative">
-                    <div className=" flex relative z-20">
-                        <div className="w-1/2 h-9 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setShop("sub") }}>
-                            Subscriptions
+        <>
+            < Dashboardlayout>
+                <div className="min-h-screen  px-4 mt-5">
+                    <div className="bg-[#e3e3e3] rounded-lg w-96 p-1 relative">
+                        <div className=" flex relative z-20">
+                            <div className="w-1/2 h-9 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setShop("sub") }}>
+                                Subscriptions
+                            </div>
+                            <div className="w-1/2 h-9 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setShop("guest") }}>
+                                Guest tickets
+                            </div>
                         </div>
-                        <div className="w-1/2 h-9 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setShop("guest") }}>
-                            Guest tickets
+                        <div className={`h-9 w-1/2 bg-white absolute top-1 ${shop == "sub" ? 'left-1' : 'right-1'} rounded-lg transition-all duration-75 ease-in`}></div>
+                    </div>
+
+
+                    <div className={`mt-5 pr-10 transition-all duration-700 ease-in ${shop == "sub" ? "block" : "hidden"}`}>
+                        <div className="flex">
+                            <div className="w-1/2 px-2">
+                                {subscript1.map((value, index) => {
+                                    return (
+                                        <ShoppingCard value={value} key={index} setPayModal={setPayModal} />
+                                    )
+                                })}
+
+                            </div>
+                            <div className="w-1/2 px-2">
+                                {subscript2.map((value, index) => {
+                                    return (
+                                        <ShoppingCard value={value} key={index} setPayModal={setPayModal} />
+                                    )
+                                })}
+
+                            </div>
                         </div>
                     </div>
-                    <div className={`h-9 w-1/2 bg-white absolute top-1 ${shop == "sub" ? 'left-1' : 'right-1'} rounded-lg transition-all duration-75 ease-in`}></div>
-                </div>
 
+                    <div className={`mt-5 pr-10 transition-all duration-700 ease-in ${shop == "guest" ? "block" : "hidden"}`}>
+                        <div className="flex flex-wrap">
 
-                <div className={`mt-5 pr-10 transition-all duration-700 ease-in ${shop == "sub" ? "block" : "hidden"}`}>
-                    <div className="flex">
-                        <div className="w-1/2 px-2">
-                            {subscript1.map((value, index) => {
+                            {guest.map((value, index) => {
                                 return (
-                                    <ShoppingCard value={value} key={index} />
+                                    <div className="w-1/2 px-2">
+                                        <ShoppingCard value={value} key={index} setPayModal={setPayModal} />
+                                    </div>
                                 )
                             })}
-
-                        </div>
-                        <div className="w-1/2 px-2">
-                            {subscript2.map((value, index) => {
-                                return (
-                                    <ShoppingCard value={value} key={index} />
-                                )
-                            })}
-
                         </div>
                     </div>
                 </div>
+            </ Dashboardlayout>
+            {noteModal ?
+                <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
+                    <div className="w-[410px] bg-white p-12 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out">
+                        <span className="absolute top-10 right-7 cursor-pointer" onClick={() => setNotemodel(false)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
+                                <path opacity="0.35" d="M33.0721 9.27209C32.6781 9.66409 27.6101 14.7341 24.0001 18.3441C20.3901 14.7341 15.3221 9.66609 14.9281 9.27209C13.3661 7.71009 10.8341 7.71009 9.27209 9.27209C7.71009 10.8341 7.71009 13.3661 9.27209 14.9281C9.66409 15.3221 14.7341 20.3901 18.3441 24.0001C14.7341 27.6101 9.66609 32.6781 9.27209 33.0721C7.71009 34.6341 7.71009 37.1661 9.27209 38.7281C10.8341 40.2901 13.3661 40.2901 14.9281 38.7281C15.2121 38.4441 38.4441 15.2121 38.7281 14.9281C40.2901 13.3661 40.2901 10.8341 38.7281 9.27209C37.1661 7.71009 34.6341 7.71009 33.0721 9.27209Z" fill="black" />
+                                <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill="black" />
+                            </svg>
+                        </span>
+                        <div>
+                            <div className="home_pop2 w-28 h-28"></div>
+                            <div className="py-1 text-start">
+                                <h3 className="text-2xl font-bold font-plus">Subscription Expiration</h3>
+                                <p className=" font-plus text-sm py-6 text-[#525252]">Your Yearly Gold subscription will be expiring within one month and will be updated automatically. If you want to update or cancel your subsciption, do it before the charge.</p>
 
-                <div className={`mt-5 pr-10 transition-all duration-700 ease-in ${shop == "guest" ? "block" : "hidden"}`}>
-                    <div className="flex flex-wrap">
-
-                        {guest.map((value, index) => {
-                            return (
-                                <div className="w-1/2 px-2">
-                                    <ShoppingCard value={value} key={index} />
-                                </div>
-                            )
-                        })}
-
-
-
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </ Dashboardlayout>
+                : null}
+
+
+            {payModal ?
+                <Addpayment setPayModal={setPayModal} />
+                : null}
+        </>
     )
 }
 export default Shop;

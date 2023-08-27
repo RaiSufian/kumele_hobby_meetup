@@ -6,7 +6,7 @@ const Dashboardlayout = ({ children }) => {
             <Header />
             <div className="flex">
                 <MainMenu />
-                <div className="flex-1 mt-28 ml-24">
+                <div className="flex-1 mt-24 ml-24">
                     {children}
                 </div>
             </div>

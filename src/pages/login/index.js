@@ -94,7 +94,7 @@ const Login = () => {
                 </form>
             </div>
             {login ?
-             <div className="w-full  h-screen bg-black bg-opacity-20 absolute top-0 left-0 z-50 flex items-center justify-center">
+             <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
                 <div className=" bg-white p-20 rounded-3xl relative">
                     <div className="w-96">
                         <div className="w-52 h-52 login_gif mx-auto">
