@@ -10,6 +10,7 @@ import Notification from './pages/notification';
 import Shop from './pages/shop';
 import ChatRoom from './pages/chatroom';
 import Statistics from './pages/Statistics';
+import CreateEvent from './pages/createEvent';
 
 import '../node_modules/slick-carousel/slick/slick.css';
 import '../node_modules/slick-carousel/slick/slick-theme.css';
@@ -27,6 +28,7 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/chatroom" element={<ChatRoom />} />
         <Route path="/history&statistics" element={<Statistics />} />
+        <Route path="/create/event" element={<CreateEvent />} />
       </Routes>
 
     </>

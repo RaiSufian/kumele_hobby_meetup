@@ -121,12 +121,15 @@ const Statistics = () => {
                     </div>
                 </div>
 
-                <div className="flex mx-auto max-w-5xl  gap-3 pb-7">
-                    <div className="w-1/2">
-                            <EventStatCard />
+                <div className="flex mx-auto max-w-5xl pb-7 flex-wrap">
+                    <div className="w-1/2 px-2 mt-2">
+                        <EventStatCard />
                     </div>
-                    <div className="w-1/2">
-                            <EventStatCard />
+                    <div className="w-1/2 px-2 mt-2">
+                        <EventStatCard />
+                    </div>
+                    <div className="w-1/2 px-2 mt-2">
+                        <EventStatCard />
                     </div>
                 </div>
             </div>
