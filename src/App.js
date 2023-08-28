@@ -11,7 +11,8 @@ import Shop from './pages/shop';
 import ChatRoom from './pages/chatroom';
 import Statistics from './pages/Statistics';
 import CreateEvent from './pages/createEvent';
-
+import UserProfile from './pages/profile.js';
+import UserFollower from './pages/userFollower';
 import '../node_modules/slick-carousel/slick/slick.css';
 import '../node_modules/slick-carousel/slick/slick-theme.css';
 function App() {
@@ -29,6 +30,8 @@ function App() {
         <Route path="/chatroom" element={<ChatRoom />} />
         <Route path="/history&statistics" element={<Statistics />} />
         <Route path="/create/event" element={<CreateEvent />} />
+        <Route path="/dashboard/profile" element={<UserProfile/>}/>
+        <Route path="/dashboard/user/follower" element={<UserFollower/>}/>
       </Routes>
 
     </>

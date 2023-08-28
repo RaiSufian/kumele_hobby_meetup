@@ -16,6 +16,10 @@ body {
   height: calc(100vh - 81px);
 }
 
+.profile_shadow {
+  filter: drop-shadow(0px 6px 26px rgba(0, 0, 0, 0.09));
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -88,6 +92,13 @@ code {
 
 .time-icon {
   background: url("https://s3-alpha-sig.figma.com/img/ca73/3b45/2ffe7157fdca70e457adcb8668498410?Expires=1693785600&Signature=dRgSykH2OtVIS8h5TRJnBHbBMslymvsc8DkupMy-57FXxU72W4-rrfNRmEB0BzLps4P9j-aIjsTpVN5tP55RS1loj64wOKUvrr3XBYgpKfHa2wIhQPXhdoTw4rqadzDaY5~DwZPzpB7BGxiUks-im8p6UAuK4w~YV4ZO7EwTNMxuRGadJleylQkonr4LPayjO5YD4b4YCJJGL3wNCCf4Z1w6PKmqfYxd6HzPTpM5A9~F5COwCm3X6IEY0~nr5HCrJ17UvwtOZenroSupc6UENkaVEOiwz5fhJ9q0B7VDUhX9hu8M-RNa7KG8wbkiSf-NqqgDRgXHyP0IO2HoZ6yc-w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), lightgray 50% / cover no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrong_img {
+  background: url("https://s3-alpha-sig.figma.com/img/18f6/b847/0d84f77ce2f28716abe8d8444ebb4655?Expires=1694390400&Signature=TfqUx~gYnVjVkKvoFV115XxHJ5ygXsDEDd6HazGhKHGnJhQtZ5q2NGP~bP5XjAECBzToE91CFDiB-cYflbYqcrQZhl5-ojVnsG9BWQPSAJvBM0IDDEHJHOSqrN-oYuqs~PtaFXSzvzGvoPYTCy4AVnSNPMVlF-OilvsLIeZZxsyssK~mWjNdgBdmWpqT5Q5OljyOGuc3llJfhXHtQp4t~vbwoUQnf6q-GUtj7Yis9IlFX-ZSlmXLKL4O5H4qi7Xpa7DHZBY8sE8BjqQtr-Gc5ulKIFaWO1IewRm1gO96v-UkvSjJyfniLcM3eQ5rB3cdwRacuzKlhdlqGWzBekt~Uw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), lightgray 50% / cover no-repeat;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
