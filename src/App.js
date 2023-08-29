@@ -13,8 +13,11 @@ import Statistics from './pages/Statistics';
 import CreateEvent from './pages/createEvent';
 import UserProfile from './pages/profile.js';
 import UserFollower from './pages/userFollower';
+import GuideLine from './pages/guideline';
+import TermsConditions from './pages/terms&conditions';
 import '../node_modules/slick-carousel/slick/slick.css';
 import '../node_modules/slick-carousel/slick/slick-theme.css';
+
 function App() {
   return (
     <>
@@ -30,8 +33,10 @@ function App() {
         <Route path="/chatroom" element={<ChatRoom />} />
         <Route path="/history&statistics" element={<Statistics />} />
         <Route path="/create/event" element={<CreateEvent />} />
-        <Route path="/dashboard/profile" element={<UserProfile/>}/>
-        <Route path="/dashboard/user/follower" element={<UserFollower/>}/>
+        <Route path="/dashboard/profile" element={<UserProfile />} />
+        <Route path="/dashboard/user/follower" element={<UserFollower />} />
+        <Route path="/dashboard/user/guideline" element={<GuideLine />} />
+        <Route path='/dashboard/user/terms&conditions' element={<TermsConditions />} />
       </Routes>
 
     </>

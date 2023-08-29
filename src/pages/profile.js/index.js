@@ -1,9 +1,13 @@
 import Dashboardlayout from "../../layouts/dashboardlayout";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UserSecurity from "../../components/userSecurity";
-
+import ContactUs from "../../components/contactUs";
+import ReferFriends from "../../components/referFriends";
+import DeleteAccount from "../../components/deleteAccount";
+import SignOut from "../../components/signOut";
 const UserProfile = () => {
+    const navigate = useNavigate();
     ////////////////////////////////////////////////////////////////////////////
     //      Modals controlls start
     ////////////////////////////////////////////////////////////////////////////
@@ -140,7 +144,7 @@ const UserProfile = () => {
                 </div>
                 <div className="bg-white rounded-2xl mt-5 profile_shadow">
                     <ul>
-                        <li className="flex h-14 items-center px-5 justify-between">
+                        <li className="flex h-14 items-center px-5 justify-between cursor-pointer " onClick={() => { setContent(true) }} >
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path opacity="0.35" d="M19.878 3.49316C10.8287 3.49316 3.49316 10.8287 3.49316 19.878V26.4319H8.40862V19.878C8.40862 13.5436 13.5436 8.40862 19.878 8.40862C26.2124 8.40862 31.3474 13.5436 31.3474 19.878V26.4319H36.2628V19.878C36.2628 10.8287 28.9274 3.49316 19.878 3.49316Z" fill="black" />
@@ -160,7 +164,7 @@ const UserProfile = () => {
                                 </svg>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC]">
+                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursor-pointer" onClick={() => navigate("/dashboard/user/guideline")}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path d="M29.5445 7.32753C29.0529 7.32753 28.5614 7.16369 28.0698 7.16369H14.962C12.1765 7.16369 10.0465 9.29372 10.0465 12.0791V31.7409C10.0465 32.2325 10.2103 32.724 10.2103 33.2156C8.24417 32.5602 6.76953 30.7579 6.76953 28.464V8.80217C6.76953 6.01675 8.89956 3.88672 11.685 3.88672H24.7929C27.0867 3.88672 28.8891 5.36135 29.5445 7.32753Z" fill="black" />
@@ -180,7 +184,7 @@ const UserProfile = () => {
                                 </svg>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC]">
+                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursor-pointer " onClick={() => setReferFrd(true)}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path opacity="0.35" d="M12.5042 16.3874C15.6714 16.3874 18.2389 13.8198 18.2389 10.6527C18.2389 7.48548 15.6714 4.91797 12.5042 4.91797C9.33704 4.91797 6.76953 7.48548 6.76953 10.6527C6.76953 13.8198 9.33704 16.3874 12.5042 16.3874Z" fill="black" />
@@ -199,7 +203,7 @@ const UserProfile = () => {
                                 </svg>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC]">
+                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursor-pointer" onClick={() => navigate("/dashboard/user/terms&conditions")}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path d="M26.4319 33.1661C25.5291 33.1661 24.7934 32.432 24.7934 31.5276V20.0582C24.7934 18.2477 23.327 16.7812 21.5165 16.7812H13.324C12.4196 16.7812 11.6855 17.5153 11.6855 18.4197C11.6855 19.3242 12.4098 20.0582 13.324 20.0582C14.2383 20.0582 14.9625 20.7923 14.9625 21.6967V31.5276C14.9625 32.432 14.2498 33.1661 13.324 33.1661C12.3983 33.1661 11.6855 33.9001 11.6855 34.8046C11.6855 35.709 12.4196 36.4431 13.324 36.4431H26.4319C27.3363 36.4431 28.0704 35.709 28.0704 34.8046C28.0704 33.9001 27.3347 33.1661 26.4319 33.1661Z" fill="black" />
@@ -216,7 +220,7 @@ const UserProfile = () => {
                                 </svg>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC]">
+                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursoir-pointer">
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 40 41" fill="none">
                                     <g clip-path="url(#clip0_1_2778)">
@@ -243,7 +247,7 @@ const UserProfile = () => {
                                 </button>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC]">
+                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursor-pointer" onClick={() => setDeleteAc(true)}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path opacity="0.35" d="M19.8158 36.1745C28.8364 36.1745 36.1491 28.8618 36.1491 19.8411C36.1491 10.8205 28.8364 3.50781 19.8158 3.50781C10.7951 3.50781 3.48242 10.8205 3.48242 19.8411C3.48242 28.8618 10.7951 36.1745 19.8158 36.1745Z" fill="black" />
@@ -262,7 +266,7 @@ const UserProfile = () => {
                                 </svg>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC]">
+                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursor-pointer" onClick={() => setSignOut(true)}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path opacity="0.35" d="M19.8158 36.5685C28.8364 36.5685 36.1491 29.2558 36.1491 20.2352C36.1491 11.2145 28.8364 3.90186 19.8158 3.90186C10.7951 3.90186 3.48242 11.2145 3.48242 20.2352C3.48242 29.2558 10.7951 36.5685 19.8158 36.5685Z" fill="black" />
@@ -384,6 +388,14 @@ const UserProfile = () => {
                     <UserSecurity setSecurity={setSecurity} />
                 </div>
             </div>
+            {/* User Contect Us*/}
+            <ContactUs content={content} setContent={setContent} />
+            {/* User Refer Friends */}
+            <ReferFriends referFrd={referFrd} setReferFrd={setReferFrd} />
+            {/* Delete Account setting */}
+            <DeleteAccount deleteAc={deleteAc} setDeleteAc={setDeleteAc} />
+            {/* Sign Out Account */}
+            <SignOut signOut={signOut} setSignOut={setSignOut} />
         </Dashboardlayout>
     )
 }
