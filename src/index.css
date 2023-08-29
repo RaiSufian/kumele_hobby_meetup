@@ -49,6 +49,13 @@ code {
   background-size: cover;
 }
 
+.home_gif {
+  background: url("https://s3-alpha-sig.figma.com/img/d083/10e9/9956a3f1f0377d9807190c17b62a1442?Expires=1694390400&Signature=Bswi55jhIk7O4AP51S7sCZ1eguvBdyrrr5EwQxg-CGueh38TJuXSOkCqhb17Sfuo4j1FvqvTxFRlrXZBQ42BF5GET-AdDZRDcUQoD0o~B9grCwHPKMF14wreUCl4vcYZH9Oarnh0po5d6KPsPpgs1ocvhggjbC~2SmgqASEu~leiQA3sr4muDgVg6WG-8Xhh9U~MSM32dSyzQEE8IZbAf7w0wo1q0slasDkCMjHWval8agXGNOC4hQVTss3RU9nXyQ1uI3jJvvu9UUSsbOar0~plMy31oFKwuxbDlgeKncr2BwSmCbbOfTHK0cK8E0~w5xtUnBto0qjYusK33EDYyw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), lightgray 50% / cover no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .cat_card svg {
   margin: auto;
 }
@@ -61,14 +68,18 @@ code {
 }
 
 .homePage {
-  background: url("https://s3-alpha-sig.figma.com/img/7a34/ed2e/e6c19f2b4c1c30d8f42171a8a46201e6?Expires=1693785600&Signature=F09sGyYEc0fSzqRcV1mixc-~jWuZbNnu6h8QPl57siGiwr~qv9nVwG1Qc~-Bh4pUVBE1SlOwKb17bLp5CuIgDbSpQ4Ugwub9fW98EE-2~w35j6Ay~c2eYhyhEy9RgDC0c2S7RlJf3pbh6WR0EIQS6x2CB8-oBM0vaev0NSuXay20B-4eLpn~xmCVTGenOjgLUqtgmHSIaqQ3OqRRrg3RndEX7l9E3Za7YP8mIq5rMX03eDxNDUz6wB6OI1rr73O-vBFXArRT4-gOmDG3-12r6eW~bTwTdpsVh6IkhcPkRlfMMytXgWfiebuumuuVJZDm0VJStEvrui~hKQKYIlEDWw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), lightgray 50% / cover no-repeat;
+  background: url("https://s3-alpha-sig.figma.com/img/d083/10e9/9956a3f1f0377d9807190c17b62a1442?Expires=1694390400&Signature=Bswi55jhIk7O4AP51S7sCZ1eguvBdyrrr5EwQxg-CGueh38TJuXSOkCqhb17Sfuo4j1FvqvTxFRlrXZBQ42BF5GET-AdDZRDcUQoD0o~B9grCwHPKMF14wreUCl4vcYZH9Oarnh0po5d6KPsPpgs1ocvhggjbC~2SmgqASEu~leiQA3sr4muDgVg6WG-8Xhh9U~MSM32dSyzQEE8IZbAf7w0wo1q0slasDkCMjHWval8agXGNOC4hQVTss3RU9nXyQ1uI3jJvvu9UUSsbOar0~plMy31oFKwuxbDlgeKncr2BwSmCbbOfTHK0cK8E0~w5xtUnBto0qjYusK33EDYyw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"), lightgray 50% / cover no-repeat;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100vh;
 }
 
 .event_shadow {
   box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.09);
+  
+}
+.skip_shadow{
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
 .event_slider .slick-prev::before,

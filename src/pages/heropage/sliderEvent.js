@@ -2,26 +2,26 @@ import React from 'react'
 
 const SliderEvent = ({ name }) => {
     return (
-        <div className='absolute z-20 top-40 left-1/2 -translate-x-1/2 text-white text-center '>
+        <div className='absolute z-20 top-20 left-1/2 -translate-x-1/2 text-white text-center '>
             <h2 className='text-5xl font-fredoka font-semibold' >{name}</h2>
             <div className='mt-8'>
                 <ul >
                     <li className='inline-block -mr-9 relative z-40'>
-                        <img src="/img/s1-side1.png" alt="img" />
+                        <img src="/img/s1-side1.png" alt="img" className="w-24"/>
                         <span>James</span>
                     </li>
                     <li className='inline-block -mr-9 relative z-30'>
-                        <img src="/img/s1-side2.png" alt="img" />
+                        <img src="/img/s1-side2.png" alt="img" className="w-24"/>
                         <span>Jermy</span>
                     </li>
                     <li className='inline-block -mr-9 relative z-20'>
-                        <img src="/img/s1-side3.png" alt="img" />
+                        <img src="/img/s1-side3.png" alt="img" className="w-24"/>
                         <span>Linda</span>
                     </li>
                     <li className='inline-block -mr-9 relative z-10'>
                         <div className='relative z-20'>
-                            <img src="/img/s1-side4.png" alt="img" className='relative z-10' />
-                            <div className='z-0 absolute bg-white top-1/2 left-full w-40 -translate-y-1/2 -translate-x-16 text-black flex justify-end px-2 h-10 items-center gap-2 rounded-full'>
+                            <img src="/img/s1-side4.png" alt="img" className='relative z-10 w-24' />
+                            <div className='z-0 absolute bg-white top-1/2 left-full w-40 -translate-y-1/2 -translate-x-24 text-black flex justify-end px-2 h-10 items-center gap-2 rounded-full'>
                                 <span className='font-semibold'>+20 Guest</span>  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                                     <path d="M14.0002 10C13.7442 10 13.4883 9.902 13.2933 9.707C12.9022 9.316 12.9022 8.684 13.2933 8.293L14.0002 7.586C14.3783 7.208 14.8802 7 15.4142 7H16.0003C16.0003 5.897 16.8973 5 18.0003 5V4C18.0003 2.897 18.8973 2 20.0003 2H21.0003C21.5523 2 22.0003 2.447 22.0003 3C22.0003 3.553 21.5523 4 21.0003 4H20.0003V5C20.0003 6.103 19.1033 7 18.0003 7C18.0003 8.103 17.1033 9 16.0003 9H15.4142L14.7072 9.707C14.5122 9.902 14.2563 10 14.0002 10Z" fill="black" />
                                     <path opacity="0.35" d="M14.6952 16.305L7.69519 9.30497C7.30419 8.91397 6.67219 8.91397 6.28119 9.30497C5.94119 9.64497 5.91519 10.161 6.16819 10.549L3.09519 18.977C2.65719 20.178 3.82219 21.343 5.02319 20.905L13.4522 17.832C13.6172 17.94 13.7992 18.012 13.9892 18.012C14.2452 18.012 14.5012 17.914 14.6962 17.719C15.0852 17.329 15.0852 16.696 14.6952 16.305Z" fill="black" />

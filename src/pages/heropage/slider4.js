@@ -17,11 +17,11 @@ const Slider4 = ({ slide, setSlide }) => {
 
     };
     return (
-        <div className='relative'>
-            <div className="absolute z-10 top-[7%] left-[7%]">
-                <img src="/img/logo2.png" alt="logo" className='w-64' />
+        <div className='relative '>
+            <div className="absolute z-10 top-[6%] left-[6%]">
+                <img src="/img/logo2.png" alt="logo" className="lg:w-44 xl:w-48" />
             </div>
-            <Slider {...settings} className='max-w-full max-h-screen min-h-[750px] overflow-hidden'>
+            <Slider {...settings} className='max-w-full max-h-screen min-h-screen overflow-hidden'>
                 <div className='relative '>
                     <img src="./img/slider4-a.png" alt="slider_img" className=" " />
                     <div className='absolute top-0 left-0 w-full h-full bg-black contents-[""] bg-opacity-40'> </div>
