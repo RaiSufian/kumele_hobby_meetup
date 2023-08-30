@@ -2,27 +2,28 @@ import React from 'react'
 
 const SliderEvent = ({ name }) => {
     return (
-        <div className='absolute z-20 top-20 left-1/2 -translate-x-1/2 text-white text-center '>
-            <h2 className='text-5xl font-fredoka font-semibold' >{name}</h2>
-            <div className='mt-8'>
+        <div className='absolute z-20 xl:top-20 lg:top-16 md:top-6 top-1/2 md:-translate-y-0 -translate-y-1/2 w-full left-1/2 -translate-x-1/2 text-white text-center '>
+            <h2 className='xl:text-5xl md:text-4xl  text-2xl  font-fredoka font-semibold' >{name}</h2>
+            <div className='xl:mt-8 md:mt-3 mt-1'>
                 <ul >
-                    <li className='inline-block -mr-9 relative z-40'>
-                        <img src="/img/s1-side1.png" alt="img" className="w-24"/>
-                        <span>James</span>
+                    <li className='inline-block xl:-mr-9 lg:-mr-7 sm:-mr-5 -mr-3 relative z-40'>
+                        <img src="/img/s1-side1.png" alt="img" className="xl:w-24 lg:w-20 md:w-16 w-14" />
+                        <span className="lg:text-base text-sm">James</span>
                     </li>
-                    <li className='inline-block -mr-9 relative z-30'>
-                        <img src="/img/s1-side2.png" alt="img" className="w-24"/>
-                        <span>Jermy</span>
+                    <li className='inline-block xl:-mr-9 lg:-mr-7 sm:-mr-5 -mr-3 relative z-30'>
+                        <img src="/img/s1-side2.png" alt="img" className="xl:w-24 lg:w-20 md:w-16 w-14" />
+                        <span className="lg:text-base text-sm">Jermy</span>
                     </li>
-                    <li className='inline-block -mr-9 relative z-20'>
-                        <img src="/img/s1-side3.png" alt="img" className="w-24"/>
-                        <span>Linda</span>
+                    <li className='inline-block xl:-mr-9 lg:-mr-7 sm:-mr-5 -mr-3 relative z-20'>
+                        <img src="/img/s1-side3.png" alt="img" className="xl:w-24 lg:w-20 md:w-16 w-14" />
+                        <span className="lg:text-base text-sm">Linda</span>
                     </li>
-                    <li className='inline-block -mr-9 relative z-10'>
+                    <li className='inline-block xl:-mr-9 lg:-mr-7 sm:-mr-5 -mr-3 relative z-10'>
                         <div className='relative z-20'>
-                            <img src="/img/s1-side4.png" alt="img" className='relative z-10 w-24' />
-                            <div className='z-0 absolute bg-white top-1/2 left-full w-40 -translate-y-1/2 -translate-x-24 text-black flex justify-end px-2 h-10 items-center gap-2 rounded-full'>
-                                <span className='font-semibold'>+20 Guest</span>  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <img src="/img/s1-side4.png" alt="img" className='relative z-10 xl:w-24 lg:w-20 md:w-16 w-14' />
+                            <div className='z-0 absolute bg-white top-1/2 xl:left-full md:left-2/3 left-3/4 lg:left-3/4 md:w-40 w-32 -translate-y-1/2 -translate-x-24 text-black flex justify-end px-2 md:h-10 h-8 items-center md:gap-2 rounded-full'>
+                                <span className='font-semibold md:text-base text-sm '>+20 Guest</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                                     <path d="M14.0002 10C13.7442 10 13.4883 9.902 13.2933 9.707C12.9022 9.316 12.9022 8.684 13.2933 8.293L14.0002 7.586C14.3783 7.208 14.8802 7 15.4142 7H16.0003C16.0003 5.897 16.8973 5 18.0003 5V4C18.0003 2.897 18.8973 2 20.0003 2H21.0003C21.5523 2 22.0003 2.447 22.0003 3C22.0003 3.553 21.5523 4 21.0003 4H20.0003V5C20.0003 6.103 19.1033 7 18.0003 7C18.0003 8.103 17.1033 9 16.0003 9H15.4142L14.7072 9.707C14.5122 9.902 14.2563 10 14.0002 10Z" fill="black" />
                                     <path opacity="0.35" d="M14.6952 16.305L7.69519 9.30497C7.30419 8.91397 6.67219 8.91397 6.28119 9.30497C5.94119 9.64497 5.91519 10.161 6.16819 10.549L3.09519 18.977C2.65719 20.178 3.82219 21.343 5.02319 20.905L13.4522 17.832C13.6172 17.94 13.7992 18.012 13.9892 18.012C14.2452 18.012 14.5012 17.914 14.6962 17.719C15.0852 17.329 15.0852 16.696 14.6952 16.305Z" fill="black" />
                                     <path d="M17.5 22C18.3284 22 19 21.3284 19 20.5C19 19.6716 18.3284 19 17.5 19C16.6716 19 16 19.6716 16 20.5C16 21.3284 16.6716 22 17.5 22Z" fill="black" />
@@ -35,7 +36,7 @@ const SliderEvent = ({ name }) => {
                             </div>
                             <div className='w-40'></div>
                         </div>
-                        <span>Olivia</span>
+                        <p className="text-left px-2 md:px-3 lg:px-6 xl:px-8 lg:text-base text-sm">Olivia</p>
                     </li>
                 </ul>
             </div>
