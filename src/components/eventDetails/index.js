@@ -16,7 +16,7 @@ const EventDetails = ({ setEvent }) => {
                         <div className="md:flex items-center justify-between px-1">
                             <h1 className="font-plus text-xl font-bold text-start">Group meditation</h1>
                             <div className="flex items-center">
-                                <span className="text-[#808080] font-plus text-lg">Starts in </span>
+                                <span className="text-light_text font-plus text-lg">Starts in </span>
                                 <div className="w-6 h-6 time-icon mx-1">  </div>
                                 <span className="text-xl text-[#38579E] font-semibold">7 hrs</span>
                             </div>

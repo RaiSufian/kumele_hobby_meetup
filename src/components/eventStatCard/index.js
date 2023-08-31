@@ -1,6 +1,6 @@
 const EventStatCard = () => {
     return (
-        <div className="border border-[#EEECEC] rounded-md p-3 font-plus cursor-pointer">
+        <div className="border border-light_border rounded-md p-3 font-plus cursor-pointer">
             <div className="gap-2 flex">
                 <img src="/img/cardImg.png" alt="img_profile" className="w-16 h-16"/>
                 <div className="flex-1">

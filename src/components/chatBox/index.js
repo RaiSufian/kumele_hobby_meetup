@@ -1,7 +1,7 @@
 const Chatbox = () => {
     return (
         <div className="bg-white rounded-lg font-plus">
-            <div className="flex justify-between items-center py-2 px-5 border-b border-[#EEECEC]">
+            <div className="flex justify-between items-center py-2 px-5 border-b border-light_border">
                 <div className="flex gap-7 items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 36 36" fill="none">
                         <path opacity="0.35" d="M15.3159 21.03C16.1531 20.1929 24.4788 11.8672 25.3159 11.03C26.9902 9.35575 26.9902 6.64289 25.3159 4.9686C23.6416 3.29432 20.9288 3.29432 19.2545 4.9686C18.4174 5.80575 10.0916 14.1315 9.25449 14.9686C7.58021 16.6429 7.58021 19.3557 9.25449 21.03C10.9288 22.7043 13.6431 22.7043 15.3159 21.03Z" fill="black" />
@@ -46,7 +46,7 @@ const Chatbox = () => {
                     </span>
                 </div>
                 <div className="flex items-center justify-start w-full">
-                    <span className="text-sm p-2 rounded-bl-none rounded-xl bg-[#EEECEC]">
+                    <span className="text-sm p-2 rounded-bl-none rounded-xl bg-light_border">
                         <div className="flex justify-between text-xs">
                             <span > Steve Austin</span>
                             <span>22:54</span>

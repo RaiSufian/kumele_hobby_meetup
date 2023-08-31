@@ -7,25 +7,25 @@ const GuideLine = () => {
         <Dashboardlayout >
             <div className="min-h-screen  m-4 font-plus">
                 <div className="bg-white rounded-lg">
-                    <div className="flex items-center gap-10 p-5 border-b border-[#EEECEC]">
+                    <div className="flex items-center sm:gap-10 gap-4 p-5 border-b border-light_border">
                         <Link to="/dashboard/profile">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 36 36" fill="none">
                                 <path opacity="0.35" d="M15.3162 21.03C16.1533 20.1929 24.479 11.8672 25.3162 11.03C26.9905 9.35575 26.9905 6.64289 25.3162 4.9686C23.6419 3.29432 20.929 3.29432 19.2547 4.9686C18.4176 5.80575 10.0919 14.1315 9.25474 14.9686C7.58045 16.6429 7.58045 19.3557 9.25474 21.03C10.929 22.7043 13.6433 22.7043 15.3162 21.03Z" fill="black" />
                                 <path d="M9.25571 21.03C10.0929 21.8672 18.4186 30.1929 19.2557 31.03C20.93 32.7043 23.6429 32.7043 25.3171 31.03C26.9914 29.3557 26.9914 26.6429 25.3171 24.9686C24.48 24.1315 16.1543 15.8057 15.3171 14.9686C13.6429 13.2943 10.93 13.2943 9.25571 14.9686C7.58143 16.6429 7.58143 19.3572 9.25571 21.03Z" fill="black" />
                             </svg>
                         </Link>
-                        <h2 className=" text-xl font-bold">History &  Statistics</h2>
+                        <h2 className=" text-xl font-bold">Guideline</h2>
                     </div>
-                    <div className="p-5">
-                        <div className="bg-[#e3e3e3] rounded-lg w-[660px] p-1 relative">
+                    <div className="sm:p-5 p-1">
+                        <div className="bg-light_border rounded-lg sm:w-[660px] w-full p-1 relative">
                             <div className=" flex relative z-20">
-                                <div className="w-1/3 h-10 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setGuide(0) }}>
+                                <div className="w-1/3 p-1 h-10 sm:text-lg text-sm font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setGuide(0) }}>
                                     Community Guidelines
                                 </div>
-                                <div className="w-1/3 h-10 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setGuide(1) }}>
+                                <div className="w-1/3 p-1 h-10 sm:text-lg text-sm font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setGuide(1) }}>
                                     How to
                                 </div>
-                                <div className="w-1/3 h-10 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setGuide(2) }}>
+                                <div className="w-1/3 p-1 h-10 sm:text-lg text-sm font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setGuide(2) }}>
                                     Popular
                                 </div>
                             </div>

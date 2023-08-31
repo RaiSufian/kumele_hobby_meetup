@@ -2,7 +2,7 @@ const SignOut = ({ signOut, setSignOut }) => {
     return (
         <div className={`font-plus w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${signOut ? " block" : "hidden"}`}>
             <div className=" bg-white py-7 rounded-2xl relative">
-                <div className="w-96 px-3">
+                <div className="sm:w-96 w-72 px-3">
 
                     <div className="w-20 h-20 login_gif mx-auto">
 

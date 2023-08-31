@@ -17,8 +17,11 @@ module.exports = {
         dark: '#262626',
         theme_blue: "#38579E",
         bg_light:"#F4F4F4",
+        bg_light1: "#e3e3e3",
         light_text: "#4D4D4D",
-        page_bg:"#f0f0f0"
+        light_text:"#808080",
+        page_bg:"#f0f0f0",
+        light_border:"#EEECEC"
       }
     },
     

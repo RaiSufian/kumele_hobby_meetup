@@ -130,7 +130,7 @@ const Slider4 = ({ slide, setSlide }) => {
                                 </div>
                                 <div className="mt-3 flex gap-2 px-1 items-center">
                                     <input type='checkbox' className="w-5 h-5" />
-                                    <label className="text-theme text-sm">I agree to the <span className="text-[#808080]">Terms & Conditions</span> </label>
+                                    <label className="text-theme text-sm">I agree to the <span className="text-light_text">Terms & Conditions</span> </label>
                                 </div>
                                 <button className="w-full mt-10 bg-theme h-11 rounded-md font-semibold text-lg">
                                     Subscribe Now

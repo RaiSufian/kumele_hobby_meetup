@@ -42,7 +42,7 @@ const SidebarSub = () => {
                                             Music
                                         </span>
                                     </div>
-                                    <p className="text-[#808080] font-plus text-sm">
+                                    <p className="text-light_text font-plus text-sm">
                                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                                     </p>
                                 </div>

@@ -23,7 +23,7 @@ const CreateEvent = () => {
     return (
         <Dashboardlayout>
             <div className="mx-4 mb-4 pb-4 layout_bg rounded-lg font-plus">
-                <div className="px-5 py-4 bg-white border-b border-[#EEECEC] rounded-t-lg">
+                <div className="px-5 py-4 bg-white border-b border-light_border rounded-t-lg">
                     <h2 className=" text-xl font-bold">Create event</h2>
                 </div>
                 <div className="my-4 mx-4 bg-white rounded-lg p-4">
@@ -32,7 +32,7 @@ const CreateEvent = () => {
                             <div >
                                 <h3>Event Category</h3>
                                 <div className="flex flex-wrap">
-                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-[#EEECEC] text-center m-1 cat_card hover:bg-theme" >
+                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-light_border text-center m-1 cat_card hover:bg-theme" >
                                         <span >
                                             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="31" viewBox="0 0 36 37" fill="none">
                                                 <path opacity="0.35" d="M17.8855 3.45117C9.67073 3.45117 3.01172 10.1102 3.01172 18.325C3.01172 26.5398 9.67073 33.1988 17.8855 33.1988C13.7789 33.1988 10.4486 29.8686 10.4486 25.7619C10.4486 21.6552 13.7789 18.325 17.8855 18.325C21.9922 18.325 25.3224 14.9947 25.3224 10.8881C25.3224 6.78142 21.9922 3.45117 17.8855 3.45117Z" fill="black" />
@@ -44,7 +44,7 @@ const CreateEvent = () => {
 
                                         <span className="font-plus text-dark pt-1 text-xs">Sprituality</span>
                                     </div>
-                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-[#EEECEC] text-center m-1 cat_card hover:bg-theme" >
+                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-light_border text-center m-1 cat_card hover:bg-theme" >
                                         <span >
                                             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="31" viewBox="0 0 36 37" fill="none">
                                                 <path opacity="0.35" d="M17.8855 3.45117C9.67073 3.45117 3.01172 10.1102 3.01172 18.325C3.01172 26.5398 9.67073 33.1988 17.8855 33.1988C13.7789 33.1988 10.4486 29.8686 10.4486 25.7619C10.4486 21.6552 13.7789 18.325 17.8855 18.325C21.9922 18.325 25.3224 14.9947 25.3224 10.8881C25.3224 6.78142 21.9922 3.45117 17.8855 3.45117Z" fill="black" />
@@ -56,7 +56,7 @@ const CreateEvent = () => {
 
                                         <span className="font-plus text-dark pt-1 text-xs">Sprituality</span>
                                     </div>
-                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-[#EEECEC] text-center m-1 cat_card hover:bg-theme" >
+                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-light_border text-center m-1 cat_card hover:bg-theme" >
                                         <span >
                                             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="31" viewBox="0 0 36 37" fill="none">
                                                 <path opacity="0.35" d="M17.8855 3.45117C9.67073 3.45117 3.01172 10.1102 3.01172 18.325C3.01172 26.5398 9.67073 33.1988 17.8855 33.1988C13.7789 33.1988 10.4486 29.8686 10.4486 25.7619C10.4486 21.6552 13.7789 18.325 17.8855 18.325C21.9922 18.325 25.3224 14.9947 25.3224 10.8881C25.3224 6.78142 21.9922 3.45117 17.8855 3.45117Z" fill="black" />
@@ -68,7 +68,7 @@ const CreateEvent = () => {
 
                                         <span className="font-plus text-dark pt-1 text-xs">Sprituality</span>
                                     </div>
-                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-[#EEECEC] text-center m-1 cat_card hover:bg-theme" >
+                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-light_border text-center m-1 cat_card hover:bg-theme" >
                                         <span >
                                             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="31" viewBox="0 0 36 37" fill="none">
                                                 <path opacity="0.35" d="M17.8855 3.45117C9.67073 3.45117 3.01172 10.1102 3.01172 18.325C3.01172 26.5398 9.67073 33.1988 17.8855 33.1988C13.7789 33.1988 10.4486 29.8686 10.4486 25.7619C10.4486 21.6552 13.7789 18.325 17.8855 18.325C21.9922 18.325 25.3224 14.9947 25.3224 10.8881C25.3224 6.78142 21.9922 3.45117 17.8855 3.45117Z" fill="black" />
@@ -80,7 +80,7 @@ const CreateEvent = () => {
 
                                         <span className="font-plus text-dark pt-1 text-xs">Sprituality</span>
                                     </div>
-                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-[#EEECEC] text-center m-1 cat_card hover:bg-theme" >
+                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-light_border text-center m-1 cat_card hover:bg-theme" >
                                         <span >
                                             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="31" viewBox="0 0 36 37" fill="none">
                                                 <path opacity="0.35" d="M17.8855 3.45117C9.67073 3.45117 3.01172 10.1102 3.01172 18.325C3.01172 26.5398 9.67073 33.1988 17.8855 33.1988C13.7789 33.1988 10.4486 29.8686 10.4486 25.7619C10.4486 21.6552 13.7789 18.325 17.8855 18.325C21.9922 18.325 25.3224 14.9947 25.3224 10.8881C25.3224 6.78142 21.9922 3.45117 17.8855 3.45117Z" fill="black" />
@@ -92,7 +92,7 @@ const CreateEvent = () => {
 
                                         <span className="font-plus text-dark pt-1 text-xs">Sprituality</span>
                                     </div>
-                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-[#EEECEC] text-center m-1 cat_card hover:bg-theme" >
+                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-light_border text-center m-1 cat_card hover:bg-theme" >
                                         <span >
                                             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="31" viewBox="0 0 36 37" fill="none">
                                                 <path opacity="0.35" d="M17.8855 3.45117C9.67073 3.45117 3.01172 10.1102 3.01172 18.325C3.01172 26.5398 9.67073 33.1988 17.8855 33.1988C13.7789 33.1988 10.4486 29.8686 10.4486 25.7619C10.4486 21.6552 13.7789 18.325 17.8855 18.325C21.9922 18.325 25.3224 14.9947 25.3224 10.8881C25.3224 6.78142 21.9922 3.45117 17.8855 3.45117Z" fill="black" />
@@ -104,7 +104,7 @@ const CreateEvent = () => {
 
                                         <span className="font-plus text-dark pt-1 text-xs">Sprituality</span>
                                     </div>
-                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-[#EEECEC] text-center m-1 cat_card hover:bg-theme" >
+                                    <div className="w-16 h-16 cursor-pointer py-1 border rounded-lg border-light_border text-center m-1 cat_card hover:bg-theme" >
                                         <span >
                                             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="31" viewBox="0 0 36 37" fill="none">
                                                 <path opacity="0.35" d="M17.8855 3.45117C9.67073 3.45117 3.01172 10.1102 3.01172 18.325C3.01172 26.5398 9.67073 33.1988 17.8855 33.1988C13.7789 33.1988 10.4486 29.8686 10.4486 25.7619C10.4486 21.6552 13.7789 18.325 17.8855 18.325C21.9922 18.325 25.3224 14.9947 25.3224 10.8881C25.3224 6.78142 21.9922 3.45117 17.8855 3.45117Z" fill="black" />
@@ -133,7 +133,7 @@ const CreateEvent = () => {
                                                 </clipPath>
                                             </defs>
                                         </svg>
-                                        <p className="text-sm font-medium  text-[#808080]">Upload an image</p>
+                                        <p className="text-sm font-medium  text-light_text">Upload an image</p>
                                     </div>
                                 </div>
 
@@ -168,7 +168,7 @@ const CreateEvent = () => {
                                             Pay
                                         </button>
                                     </div>
-                                    <button className="h-8 w-1/2 bg-[#F4F4F4] rounded-lg border border-[#F00] text-[#808080]">
+                                    <button className="h-8 w-1/2 bg-[#F4F4F4] rounded-lg border border-[#F00] text-light_text">
                                         100
                                     </button>
                                 </div>

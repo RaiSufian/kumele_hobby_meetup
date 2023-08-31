@@ -4,9 +4,9 @@ const BlogDetail = () => {
     const navigate = useNavigate();
     return (
         <Dashboardlayout>
-            <div className="min-h-screen px-10">
+            <div className="min-h-screen lg:px-10 md:px-5 px-2">
                 <div className="bg-white rounded-lg my-5">
-                    <div className="px-3 flex items-center gap-6 py-2 border-b border-[#EEECEC]">
+                    <div className="px-3 flex items-center gap-6 py-2 border-b border-light_border">
                         <span className="w-10 h-10 flex items-center justify-center" onClick={() => navigate("/blogs")}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48" fill="none">
                                 <path opacity="0.35" d="M33.0721 9.27306C32.6781 9.66506 27.6101 14.7351 24.0001 18.3451C20.3901 14.7351 15.3221 9.66706 14.9281 9.27306C13.3661 7.71106 10.8341 7.71106 9.27209 9.27306C7.71009 10.8351 7.71009 13.3671 9.27209 14.9291C9.66409 15.3231 14.7341 20.3911 18.3441 24.0011C14.7341 27.6111 9.66609 32.6791 9.27209 33.0731C7.71009 34.6351 7.71009 37.1671 9.27209 38.7291C10.8341 40.2911 13.3661 40.2911 14.9281 38.7291C15.2121 38.4451 38.4441 15.2131 38.7281 14.9291C40.2901 13.3671 40.2901 10.8351 38.7281 9.27306C37.1661 7.71106 34.6341 7.71106 33.0721 9.27306Z" fill="black" />
@@ -15,11 +15,11 @@ const BlogDetail = () => {
                         </span>
                         <span className="text-2xl font-bold font-plus">Blogs</span>
                     </div>
-                    <div className="px-12 py-3">
+                    <div className="lg:px-12 md:px-7 px-3 py-3">
                         <img src="/img/blog_details.jpg" alt="detail_img" />
                         <div className="py-4">
-                            <h1 className='text-3xl font-bold font-plus'>Singleton of Glen Ord 38-year old and the Singleton range.</h1>
-                            <div className="py-1 flex items-center gap-5">
+                            <h1 className='md:text-3xl sm:text-2xl text- font-bold font-plus'>Singleton of Glen Ord 38-year old and the Singleton range.</h1>
+                            <div className="py-1 md:flex items-center gap-5">
                                 <span className="text-lg font-plus text-dark">Steve Austin • 23 August, 2022</span>
                                 <ul className="flex items-center py-3 gap-4">
                                     <li>
@@ -69,39 +69,39 @@ const BlogDetail = () => {
                             </div>
                         </div>
                         <div>
-                            <p className="text-[#808080] font-plus text-lg">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                            <p className="text-light_text font-plus text-lg">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                             <img src="/img/blogDetails2.png" alt="detail_img" />
-                            <p className="text-[#808080] font-plus text-lg"> Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
-                            <p className="text-[#808080] font-plus text-lg">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
+                            <p className="text-light_text font-plus text-lg"> Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
+                            <p className="text-light_text font-plus text-lg">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. </p>
                         </div>
 
                         <div className="mt-7">
                             <h5 className="text-3xl">Comments</h5>
                             <input type="text" className="w-full h-10 p-2 my-5 custom_input bg-[#F1F1F1] rounded-lg" placeholder="Add your commint" />
-                            <div className="flex gap-3 text-lg font-medium ">
-                                <button className="w-80 h-12 bg-black text-white rounded-md">Login/Signup to Comment</button>
-                                <button className="w-80 h-12 border-2 border-black rounded-md">Publish Comment</button>
+                            <div className="flex gap-3 sm:text-lg sm:font-medium justify-center">
+                                <button className="md:w-80 sm:w-60 w-1/2 h-12 bg-black text-white rounded-md">Login/Signup to Comment</button>
+                                <button className="md:w-80 sm:w-60 w-1/2 h-12 border-2 border-black rounded-md">Publish Comment</button>
                             </div>
                             <ul className="mt-6">
-                                <li className="mt-8 flex gap-2 items-center">
+                                <li className="mt-8 sm:flex gap-2 items-center">
                                     <img src="/img/user-1.png" alt="user_profile" className="w-20 h-20 rounded-full" />
                                     <div>
-                                        <span className="text-xl font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
-                                        <p className="text-[#808080]">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
+                                        <span className="lg:text-xl text-lg font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
+                                        <p className="text-light_text">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
                                     </div>
                                 </li>
-                                <li className="mt-8 flex gap-2 items-center">
+                                <li className="mt-8 sm:flex gap-2 items-center">
                                     <img src="/img/user-1.png" alt="user_profile" className="w-20 h-20 rounded-full" />
                                     <div>
-                                        <span className="text-xl font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
-                                        <p className="text-[#808080]">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
+                                        <span className="lg:text-xl text-lg font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
+                                        <p className="text-light_text">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
                                     </div>
                                 </li>
-                                <li className="mt-8 flex gap-2 items-center">
+                                <li className="mt-8 sm:flex gap-2 items-center">
                                     <img src="/img/user-1.png" alt="user_profile" className="w-20 h-20 rounded-full" />
                                     <div>
-                                        <span className="text-xl font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
-                                        <p className="text-[#808080]">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
+                                        <span className="lg:text-xl text-lg font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
+                                        <p className="text-light_text">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
                                     </div>
                                 </li>
                             </ul>
@@ -112,12 +112,12 @@ const BlogDetail = () => {
                                     <path opacity="0.35" d="M15.3162 20.9602C16.1533 20.1231 24.479 11.7974 25.3162 10.9602C26.9905 9.28592 26.9905 6.57307 25.3162 4.89878C23.6419 3.2245 20.929 3.2245 19.2547 4.89878C18.4176 5.73592 10.0919 14.0616 9.25474 14.8988C7.58045 16.5731 7.58045 19.2859 9.25474 20.9602C10.929 22.6345 13.6433 22.6345 15.3162 20.9602Z" fill="black" />
                                     <path d="M9.25571 20.9602C10.0929 21.7974 18.4186 30.1231 19.2557 30.9602C20.93 32.6345 23.6429 32.6345 25.3171 30.9602C26.9914 29.2859 26.9914 26.5731 25.3171 24.8988C24.48 24.0616 16.1543 15.7359 15.3171 14.8988C13.6429 13.2245 10.93 13.2245 9.25571 14.8988C7.58143 16.5731 7.58143 19.2874 9.25571 20.9602Z" fill="black" />
                                 </svg>
-                                <span className="text-2xl font-plus font-semibold">
+                                <span className="sm:text-2xl text-xl font-plus font-semibold">
                                     Previous
                                 </span>
                             </button>
                             <button className="flex items-center gap-6">
-                                <span className="text-2xl font-plus font-semibold text-[#38579E]">
+                                <span className="sm:text-2xl text-xl font-plus font-semibold text-[#38579E]">
                                     Next
                                 </span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">

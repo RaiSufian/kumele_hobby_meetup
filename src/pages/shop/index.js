@@ -156,7 +156,7 @@ const Shop = () => {
         <>
             < Dashboardlayout>
                 <div className="min-h-screen  px-4 mt-5">
-                    <div className="bg-[#e3e3e3] rounded-lg w-96 p-1 relative">
+                    <div className="bg-light_border rounded-lg w-96 p-1 relative">
                         <div className=" flex relative z-20">
                             <div className="w-1/2 h-9 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setShop("sub") }}>
                                 Subscriptions

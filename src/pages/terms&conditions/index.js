@@ -5,7 +5,7 @@ const TermsConditions = () => {
         <Dashboardlayout>
             <div className="min-h-screen  m-4 font-plus">
                 <div className="bg-white rounded-lg">
-                    <div className="flex items-center gap-10 p-5 border-b border-[#EEECEC]">
+                    <div className="flex items-center gap-10 p-5 border-b border-light_border">
                         <Link to="/dashboard/profile">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 36 36" fill="none">
                                 <path opacity="0.35" d="M15.3162 21.03C16.1533 20.1929 24.479 11.8672 25.3162 11.03C26.9905 9.35575 26.9905 6.64289 25.3162 4.9686C23.6419 3.29432 20.929 3.29432 19.2547 4.9686C18.4176 5.80575 10.0919 14.1315 9.25474 14.9686C7.58045 16.6429 7.58045 19.3557 9.25474 21.03C10.929 22.7043 13.6433 22.7043 15.3162 21.03Z" fill="black" />

@@ -36,7 +36,7 @@ const Addpayment = ({ setPayModal }) => {
                             <h2 className="text-lg font-plus">Amount to pay</h2>
                             <span className="text-2xl font-plus font-bold text-[#38579E]">$23.07</span>
                         </div>
-                        <div className="rounded-sm border border-[#EEECEC]   event_shadow">
+                        <div className="rounded-sm border border-light_border   event_shadow">
                             <div className="flex items-start gap-3 px-4 py-2">
                                 <input type="radio" name="paypal" className="mt-1 w-4 h-4" />
                                 <div className="flex-1 flex items-center justify-between">
@@ -50,7 +50,7 @@ const Addpayment = ({ setPayModal }) => {
                                     </svg>
                                 </div>
                             </div>
-                            <div className=" border-t border-[#EEECEC] ">
+                            <div className=" border-t border-light_border ">
                                 <div className="py-2 flex justify-between px-4">
                                     <span className="">Pay with Crypto</span>
                                     <Link to="" className="text-[#38579E] font-bold"> Crypto</Link>

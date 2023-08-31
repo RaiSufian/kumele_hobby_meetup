@@ -2,10 +2,10 @@ const ReferFriends = ({ referFrd, setReferFrd }) => {
     return (
         <div className={`font-plus w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${referFrd ? " block" : "hidden"}`}>
             <div className=" bg-white py-7 rounded-2xl relative">
-                <div className="w-96 ">
+                <div className="sm:w-96 w-80 ">
                     <div className="mt-7 text-center">
                         <h4 className="text-xl font-bold">Invite your friends to Kumele</h4>
-                        <div className="text-center py-4 border-b border-[#EEECEC]">
+                        <div className="text-center py-4 border-b border-light_border">
                             <p>Referral code</p>
                             <div className="flex justify-center items-center cursor-pointer">
                                 <span className="font-semibold text-lg text-[#38579E]">SXF2RS4</span>

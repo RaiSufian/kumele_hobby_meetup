@@ -36,33 +36,33 @@ const UserProfile = () => {
     };
     return (
         <Dashboardlayout>
-            <div className="max-w-4xl mx-auto mb-4 font-plus mt-3">
-                <div className="p-5 bg-white rounded-2xl profile_shadow relative">
-                    <div className="flex gap-3">
+            <div className="lg:max-w-4xl lg:mx-auto md:mx-5 sm:mx-5 mx-1 mb-4 font-plus mt-3">
+                <div className="sm:p-5 p-2 bg-white rounded-2xl profile_shadow relative">
+                    <div className="sm:flex gap-3">
                         <img src="/img/profile1.png" className="w-20 h-20" />
                         <div className="">
-                            <div className="flex items-center gap-3">
+                            <div className="md:flex items-center gap-3">
                                 <h3 className="text-xl font-bold">Alkesh Kumar</h3>
                                 <button className="w-24 h-6 rounded-md text-sm bg-[#38579E] text-white">Follow</button>
                             </div>
-                            <p className="text-[#262626] text-sm w-4/5"> Hello, I am Alkesh Kumar from Cuberto  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
+                            <p className="text-dark text-sm md:w-4/5"> Hello, I am Alkesh Kumar from Cuberto  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
                         </div>
                     </div>
-                    <div className="mt-5 flex text-center rounded-b-lg border border-[#EEECEC]">
-                        <div className="w-1/3 h-20 flex items-center justify-center">
+                    <div className="mt-5 flex text-center rounded-b-lg border border-light_border">
+                        <div className="w-1/3 sm:h-20 h-16 flex items-center justify-center">
                             <Link to="/dashboard/user/follower" className="cursor-pointer">
                                 <p className="text-sm ">Following</p>
                                 <span className="text-lg font-bold text-[#38579E]">8</span>
                             </Link>
 
                         </div>
-                        <div className="w-1/3 h-20 flex items-center justify-center border border-t-0 border-b-0 border-[#EEECEC]">
+                        <div className="w-1/3 sm:h-20 h-16 flex items-center justify-center border border-t-0 border-b-0 border-light_border">
                             <Link to="/dashboard/user/follower" className="cursor-pointer">
                                 <p className="text-sm ">Followers</p>
                                 <span className="text-lg font-bold text-[#38579E]">23</span>
                             </Link>
                         </div>
-                        <div className="w-1/3 h-20 flex items-center justify-center">
+                        <div className="w-1/3 sm:h-20 h-16 flex items-center justify-center">
                             <Link to="/dashboard/user/follower" className="cursor-pointer">
 
                                 <p className="text-sm ">Gold Status</p>
@@ -70,7 +70,7 @@ const UserProfile = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className=" cursor-pointer absolute w-10 h-10 rounded-full bg-theme top-1 right-1 flex justify-center items-center translate-x-1/2 -translate-y-1/2" onClick={() => setProfileEdit(true)}>
+                    <div className=" cursor-pointer absolute w-10 h-10 rounded-full bg-theme top-1 right-1 flex justify-center items-center md:translate-x-1/2 md:-translate-y-1/2" onClick={() => setProfileEdit(true)}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 46 46" fill="none">
                             <path opacity="0.35" d="M37.8003 8.20023C35.3953 5.79523 31.3253 5.79523 28.9203 8.20023L8.57025 28.5502C8.01525 29.1052 7.64525 29.8452 7.46025 30.5852L6.35025 37.2452C6.16525 38.7252 7.27525 39.8352 8.75525 39.6502L15.2303 38.5402C15.9703 38.3552 16.7102 37.9852 17.2653 37.4302L37.8003 17.0802C40.2053 14.4902 40.2053 10.6052 37.8003 8.20023Z" fill="black" />
                             <path d="M37.4296 17.4503L33.7296 20.9653L24.8496 12.2703L28.5496 8.57031L37.4296 17.4503Z" fill="black" />
@@ -80,7 +80,7 @@ const UserProfile = () => {
                 </div>
                 <div className="bg-white rounded-2xl mt-5 profile_shadow">
                     <ul>
-                        <li className="flex h-14 items-center px-5 justify-between cursor-pointer " onClick={() => setSound(true)}>
+                        <li className="flex md:h-14 sm:h-12 h-12 items-center px-5 justify-between cursor-pointer " onClick={() => setSound(true)}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path opacity="0.35" d="M20.9626 5.31491C19.6502 4.86105 18.1887 5.27231 17.3187 6.36191L11.7494 13.3238H11.6855V26.4317H11.7494L17.3187 33.3936C17.9527 34.1866 18.9014 34.6241 19.878 34.6241C20.2417 34.6241 20.6071 34.5635 20.9626 34.4406C22.2767 33.9786 23.1549 32.7399 23.1549 31.3471V8.40837C23.1549 7.01566 22.2767 5.77697 20.9626 5.31491Z" fill="black" />
@@ -88,7 +88,7 @@ const UserProfile = () => {
                                     <path d="M26.9578 26.838C26.4466 26.838 25.9436 26.5988 25.6241 26.1531C25.0981 25.4175 25.2669 24.3951 26.0025 23.8658C27.2969 22.9401 28.0703 21.4491 28.0703 19.8778C28.0703 18.3064 27.2969 16.8154 26.0025 15.888C25.2669 15.3605 25.0965 14.338 25.6241 13.6007C26.15 12.8667 27.1708 12.6946 27.9114 13.2222C30.0627 14.764 31.3473 17.2513 31.3473 19.8778C31.3473 22.5042 30.0627 24.9915 27.9097 26.5333C27.6214 26.7397 27.2871 26.838 26.9578 26.838Z" fill="black" />
                                     <path d="M30.7664 32.1725C30.2552 32.1725 29.7522 31.9333 29.4327 31.4876C28.9067 30.7519 29.0755 29.7279 29.8111 29.2003C32.8243 27.0457 34.6234 23.5606 34.6234 19.8773C34.6234 16.194 32.8243 12.7089 29.8111 10.5543C29.0755 10.0284 28.9051 9.00432 29.4327 8.267C29.9586 7.53296 30.981 7.36256 31.72 7.88851C35.5901 10.6575 37.9003 15.1388 37.9003 19.8773C37.9003 24.6158 35.5901 29.097 31.72 31.8661C31.43 32.0725 31.0973 32.1725 30.7664 32.1725Z" fill="black" />
                                 </svg>
-                                <h4 className="text-[#262626] text-lg">
+                                <h4 className="text-dark text-lg">
                                     Sound notifications
                                 </h4>
                             </div>
@@ -102,14 +102,14 @@ const UserProfile = () => {
                                 </button>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border border-[#EEECEC] cursor-pointer" onClick={() => { setPaypal(true) }}>
+                        <li className="flex md:h-14 sm:h-12 h-12 items-center px-5 justify-between border border-light_border cursor-pointer" onClick={() => { setPaypal(true) }}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path opacity="0.35" d="M16.3512 11.8866L16.3545 11.8883C16.4413 11.5262 16.751 11.2591 17.1377 11.2591H28.1745C28.1876 11.2591 28.2024 11.2542 28.2155 11.2542C27.9812 7.33985 24.6976 5.52441 21.7992 5.52441H10.764C10.3756 5.52441 10.0643 5.79968 9.98077 6.16015H9.97586L5.15216 28.3092H5.16363C5.15216 28.3632 5.13086 28.4124 5.13086 28.4697C5.13086 28.9236 5.49788 29.2824 5.9501 29.2824H12.5614L16.3512 11.8866Z" fill="black" />
                                     <path opacity="0.35" d="M28.2171 11.2549C28.2613 11.9725 28.2122 12.7525 28.0286 13.6159C26.9784 18.5265 23.1853 21.0825 18.4959 21.0825C18.4959 21.0825 15.6532 21.0825 14.9634 21.0825C14.5374 21.0825 14.3342 21.3332 14.2424 21.5249L12.817 28.1182L12.5663 29.2897H12.563L11.5291 34.038H11.5389C11.5275 34.0904 11.5078 34.1396 11.5078 34.1969C11.5078 34.6508 11.8732 35.0162 12.3271 35.0162H18.3337L18.3452 35.008C18.7319 35.0031 19.0399 34.7262 19.1186 34.3624L19.1333 34.351L20.6178 27.4562C20.6178 27.4562 20.721 26.7992 21.4124 26.7992C22.1039 26.7992 24.8352 26.7992 24.8352 26.7992C29.5246 26.7992 33.3554 24.2546 34.4073 19.3424C35.587 13.8044 31.6366 11.2745 28.2171 11.2549Z" fill="black" />
                                     <path d="M17.1374 11.2591C16.7491 11.2591 16.4394 11.5262 16.3558 11.8899L16.3509 11.8866L14.2422 21.5258C14.3356 21.3341 14.5355 21.0834 14.9631 21.0834C15.6546 21.0834 18.4318 21.0834 18.4318 21.0834C23.1195 21.0834 26.9781 18.5274 28.0268 13.6169C28.2103 12.755 28.2578 11.9735 28.2152 11.2558C28.2021 11.2525 28.1873 11.2591 28.1742 11.2591H17.1374Z" fill="black" />
                                 </svg>
-                                <h4 className="text-[#262626] text-lg">
+                                <h4 className="text-dark text-lg">
                                     Update paypal
                                 </h4>
                             </div>
@@ -120,7 +120,7 @@ const UserProfile = () => {
                                 </svg>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between cursor-pointer" onClick={() => setSecurity(true)}>
+                        <li className="flex md:h-14 sm:h-12 h-12 items-center px-5 justify-between cursor-pointer" onClick={() => setSecurity(true)}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path opacity="0.35" d="M29.7081 34.4114H10.0463C7.33134 34.4114 5.13086 32.2109 5.13086 29.496V16.3881C5.13086 13.6731 7.33134 11.4727 10.0463 11.4727H29.7081C32.4231 11.4727 34.6236 13.6731 34.6236 16.3881V29.496C34.6236 32.2109 32.4231 34.4114 29.7081 34.4114Z" fill="black" />
@@ -129,7 +129,7 @@ const UserProfile = () => {
                                     <path d="M28.07 25.3998C29.4274 25.3998 30.5278 24.2995 30.5278 22.9421C30.5278 21.5847 29.4274 20.4844 28.07 20.4844C26.7127 20.4844 25.6123 21.5847 25.6123 22.9421C25.6123 24.2995 26.7127 25.3998 28.07 25.3998Z" fill="black" />
                                     <path d="M11.6853 25.3998C13.0426 25.3998 14.143 24.2995 14.143 22.9421C14.143 21.5847 13.0426 20.4844 11.6853 20.4844C10.3279 20.4844 9.22754 21.5847 9.22754 22.9421C9.22754 24.2995 10.3279 25.3998 11.6853 25.3998Z" fill="black" />
                                 </svg>
-                                <h4 className="text-[#262626] text-lg">
+                                <h4 className="text-dark text-lg">
                                     Security
                                 </h4>
                             </div>
@@ -144,7 +144,7 @@ const UserProfile = () => {
                 </div>
                 <div className="bg-white rounded-2xl mt-5 profile_shadow">
                     <ul>
-                        <li className="flex h-14 items-center px-5 justify-between cursor-pointer " onClick={() => { setContent(true) }} >
+                        <li className="flex md:h-14 sm:h-12 h-12 items-center px-5 justify-between cursor-pointer " onClick={() => { setContent(true) }} >
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path opacity="0.35" d="M19.878 3.49316C10.8287 3.49316 3.49316 10.8287 3.49316 19.878V26.4319H8.40862V19.878C8.40862 13.5436 13.5436 8.40862 19.878 8.40862C26.2124 8.40862 31.3474 13.5436 31.3474 19.878V26.4319H36.2628V19.878C36.2628 10.8287 28.9274 3.49316 19.878 3.49316Z" fill="black" />
@@ -153,7 +153,7 @@ const UserProfile = () => {
                                     <path opacity="0.35" d="M8.40783 29.7088V28.0703H5.13086V29.7088C5.13086 33.3282 8.06538 36.2627 11.6848 36.2627H19.8772V32.9858H11.6848C9.87427 32.9858 8.40783 31.5193 8.40783 29.7088Z" fill="black" />
                                     <path d="M19.8776 37.9006C21.6874 37.9006 23.1545 36.4335 23.1545 34.6236C23.1545 32.8138 21.6874 31.3467 19.8776 31.3467C18.0677 31.3467 16.6006 32.8138 16.6006 34.6236C16.6006 36.4335 18.0677 37.9006 19.8776 37.9006Z" fill="black" />
                                 </svg>
-                                <h4 className="text-[#262626] text-lg">
+                                <h4 className="text-dark text-lg">
                                     Contact
                                 </h4>
                             </div>
@@ -164,7 +164,7 @@ const UserProfile = () => {
                                 </svg>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursor-pointer" onClick={() => navigate("/dashboard/user/guideline")}>
+                        <li className="flex md:h-14 sm:h-12 h-12 items-center px-5 justify-between border-t border-light_border cursor-pointer" onClick={() => navigate("/dashboard/user/guideline")}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path d="M29.5445 7.32753C29.0529 7.32753 28.5614 7.16369 28.0698 7.16369H14.962C12.1765 7.16369 10.0465 9.29372 10.0465 12.0791V31.7409C10.0465 32.2325 10.2103 32.724 10.2103 33.2156C8.24417 32.5602 6.76953 30.7579 6.76953 28.464V8.80217C6.76953 6.01675 8.89956 3.88672 11.685 3.88672H24.7929C27.0867 3.88672 28.8891 5.36135 29.5445 7.32753Z" fill="black" />
@@ -173,7 +173,7 @@ const UserProfile = () => {
                                     <path d="M26.4313 23.5485H16.6004C15.6173 23.5485 14.9619 22.8931 14.9619 21.91C14.9619 20.9269 15.6173 20.2715 16.6004 20.2715H26.4313C27.4144 20.2715 28.0698 20.9269 28.0698 21.91C28.0698 22.8931 27.4144 23.5485 26.4313 23.5485Z" fill="black" />
                                     <path d="M26.4313 30.1022H16.6004C15.6173 30.1022 14.9619 29.4468 14.9619 28.4637C14.9619 27.4806 15.6173 26.8252 16.6004 26.8252H26.4313C27.4144 26.8252 28.0698 27.4806 28.0698 28.4637C28.0698 29.4468 27.4144 30.1022 26.4313 30.1022Z" fill="black" />
                                 </svg>
-                                <h4 className="text-[#262626] text-lg">
+                                <h4 className="text-dark text-lg">
                                     Guidelines
                                 </h4>
                             </div>
@@ -184,7 +184,7 @@ const UserProfile = () => {
                                 </svg>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursor-pointer " onClick={() => setReferFrd(true)}>
+                        <li className="flex md:h-14 sm:h-12 h-12 items-center px-5 justify-between border-t border-light_border cursor-pointer " onClick={() => setReferFrd(true)}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path opacity="0.35" d="M12.5042 16.3874C15.6714 16.3874 18.2389 13.8198 18.2389 10.6527C18.2389 7.48548 15.6714 4.91797 12.5042 4.91797C9.33704 4.91797 6.76953 7.48548 6.76953 10.6527C6.76953 13.8198 9.33704 16.3874 12.5042 16.3874Z" fill="black" />
@@ -192,7 +192,7 @@ const UserProfile = () => {
                                     <path opacity="0.35" d="M17.4199 22.9414H30.5278C33.6901 22.9414 36.2625 25.5138 36.2625 28.6761C36.2625 31.8384 33.6901 34.4108 30.5278 34.4108H17.4199V22.9414Z" fill="black" />
                                     <path d="M23.155 28.6761C23.155 31.8384 20.5826 34.4108 17.4203 34.4108H9.22786C7.65491 34.4108 6.21305 33.7718 5.1808 32.7232C4.13217 31.6909 3.49316 30.249 3.49316 28.6761C3.49316 25.5138 6.06558 22.9414 9.22786 22.9414H17.4203C18.9932 22.9414 20.4351 23.5804 21.4673 24.629C22.516 25.6613 23.155 27.1032 23.155 28.6761Z" fill="black" />
                                 </svg>
-                                <h4 className="text-[#262626] text-lg">
+                                <h4 className="text-dark text-lg">
                                     Refer a Friend
                                 </h4>
                             </div>
@@ -203,13 +203,13 @@ const UserProfile = () => {
                                 </svg>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursor-pointer" onClick={() => navigate("/dashboard/user/terms&conditions")}>
+                        <li className="flex md:h-14 sm:h-12 h-12 items-center px-5 justify-between border-t border-light_border cursor-pointer" onClick={() => navigate("/dashboard/user/terms&conditions")}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path d="M26.4319 33.1661C25.5291 33.1661 24.7934 32.432 24.7934 31.5276V20.0582C24.7934 18.2477 23.327 16.7812 21.5165 16.7812H13.324C12.4196 16.7812 11.6855 17.5153 11.6855 18.4197C11.6855 19.3242 12.4098 20.0582 13.324 20.0582C14.2383 20.0582 14.9625 20.7923 14.9625 21.6967V31.5276C14.9625 32.432 14.2498 33.1661 13.324 33.1661C12.3983 33.1661 11.6855 33.9001 11.6855 34.8046C11.6855 35.709 12.4196 36.4431 13.324 36.4431H26.4319C27.3363 36.4431 28.0704 35.709 28.0704 34.8046C28.0704 33.9001 27.3347 33.1661 26.4319 33.1661Z" fill="black" />
                                     <path opacity="0.35" d="M19.8774 13.5047C22.5921 13.5047 24.7928 11.304 24.7928 8.58928C24.7928 5.87455 22.5921 3.67383 19.8774 3.67383C17.1626 3.67383 14.9619 5.87455 14.9619 8.58928C14.9619 11.304 17.1626 13.5047 19.8774 13.5047Z" fill="black" />
                                 </svg>
-                                <h4 className="text-[#262626] text-lg">
+                                <h4 className="text-dark text-lg">
                                     Terms and Conditions
                                 </h4>
                             </div>
@@ -220,7 +220,7 @@ const UserProfile = () => {
                                 </svg>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursoir-pointer">
+                        <li className="flex md:h-14 sm:h-12 h-12 items-center px-5 justify-between border-t border-light_border cursoir-pointer">
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 40 41" fill="none">
                                     <g clip-path="url(#clip0_1_2778)">
@@ -233,7 +233,7 @@ const UserProfile = () => {
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <h4 className="text-[#262626] text-lg">
+                                <h4 className="text-dark text-lg">
                                     Night Mode
                                 </h4>
                             </div>
@@ -247,7 +247,7 @@ const UserProfile = () => {
                                 </button>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursor-pointer" onClick={() => setDeleteAc(true)}>
+                        <li className="flex md:h-14 sm:h-12 h-12 items-center px-5 justify-between border-t border-light_border cursor-pointer" onClick={() => setDeleteAc(true)}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path opacity="0.35" d="M19.8158 36.1745C28.8364 36.1745 36.1491 28.8618 36.1491 19.8411C36.1491 10.8205 28.8364 3.50781 19.8158 3.50781C10.7951 3.50781 3.48242 10.8205 3.48242 19.8411C3.48242 28.8618 10.7951 36.1745 19.8158 36.1745Z" fill="black" />
@@ -255,7 +255,7 @@ const UserProfile = () => {
                                     <path d="M32.5538 16.5747H19.8154V23.108H32.5538V16.5747Z" fill="black" />
                                     <path d="M19.8155 23.108C21.6196 23.108 23.0822 21.6455 23.0822 19.8414C23.0822 18.0372 21.6196 16.5747 19.8155 16.5747C18.0114 16.5747 16.5488 18.0372 16.5488 19.8414C16.5488 21.6455 18.0114 23.108 19.8155 23.108Z" fill="black" />
                                 </svg>
-                                <h4 className="text-[#262626] text-lg">
+                                <h4 className="text-dark text-lg">
                                     Delete Account
                                 </h4>
                             </div>
@@ -266,7 +266,7 @@ const UserProfile = () => {
                                 </svg>
                             </div>
                         </li>
-                        <li className="flex h-14 items-center px-5 justify-between border-t border-[#EEECEC] cursor-pointer" onClick={() => setSignOut(true)}>
+                        <li className="flex md:h-14 sm:h-12 h-12 items-center px-5 justify-between border-t border-light_border cursor-pointer" onClick={() => setSignOut(true)}>
                             <div className="flex gap-4 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 40 40" fill="none">
                                     <path opacity="0.35" d="M19.8158 36.5685C28.8364 36.5685 36.1491 29.2558 36.1491 20.2352C36.1491 11.2145 28.8364 3.90186 19.8158 3.90186C10.7951 3.90186 3.48242 11.2145 3.48242 20.2352C3.48242 29.2558 10.7951 36.5685 19.8158 36.5685Z" fill="black" />
@@ -274,7 +274,7 @@ const UserProfile = () => {
                                     <path d="M32.5538 16.9688H19.8154V23.5021H32.5538V16.9688Z" fill="black" />
                                     <path d="M19.8155 23.5021C21.6196 23.5021 23.0822 22.0395 23.0822 20.2354C23.0822 18.4313 21.6196 16.9688 19.8155 16.9688C18.0114 16.9688 16.5488 18.4313 16.5488 20.2354C16.5488 22.0395 18.0114 23.5021 19.8155 23.5021Z" fill="black" />
                                 </svg>
-                                <h4 className="text-[#262626] text-lg">
+                                <h4 className="text-dark text-lg">
                                     Signout
                                 </h4>
                             </div>
@@ -291,8 +291,8 @@ const UserProfile = () => {
             </div>
             {/* User Profile Edit */}
             <div className={`font-plus w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${profileEdit ? " block" : "hidden"}`}>
-                <div className=" bg-white px-10 py-7 rounded-2xl relative">
-                    <div className="w-96">
+                <div className=" bg-white sm:px-10 px-6 py-7 rounded-2xl relative">
+                    <div className="sm:w-96 w-72">
                         <div className="flex justify-between items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 42 42" fill="none" onClick={() => { setProfileEdit(false) }}>
                                 <path opacity="0.35" d="M17.7796 24.636C18.7842 23.6315 28.775 13.6406 29.7796 12.636C31.7887 10.6269 31.7887 7.37147 29.7796 5.36233C27.7705 3.35318 24.515 3.35318 22.5059 5.36233C21.5013 6.3669 11.5105 16.3578 10.5059 17.3623C8.49674 19.3715 8.49674 22.6269 10.5059 24.636C12.515 26.6452 15.7722 26.6452 17.7796 24.636Z" fill="black" />
@@ -332,9 +332,9 @@ const UserProfile = () => {
                 </div>
             </div>
             {/* Edit user Sound setting */}
-            <div className={`font-plus w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${sound ? " block" : "hidden"}`}>
-                <div className=" bg-white px-10 py-7 rounded-2xl relative">
-                    <div className="w-96">
+            <div className={`font-plus w-full h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${sound ? " block" : "hidden"}`}>
+                <div className=" bg-white sm:px-10 px-5 py-7 rounded-2xl relative">
+                    <div className="sm:w-96 w-72">
                         <div className="flex justify-between items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 42 42" fill="none" onClick={() => { setSound(false) }}>
                                 <path opacity="0.35" d="M17.7796 24.636C18.7842 23.6315 28.775 13.6406 29.7796 12.636C31.7887 10.6269 31.7887 7.37147 29.7796 5.36233C27.7705 3.35318 24.515 3.35318 22.5059 5.36233C21.5013 6.3669 11.5105 16.3578 10.5059 17.3623C8.49674 19.3715 8.49674 22.6269 10.5059 24.636C12.515 26.6452 15.7722 26.6452 17.7796 24.636Z" fill="black" />
@@ -346,9 +346,9 @@ const UserProfile = () => {
                                 <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill="black" />
                             </svg>
                         </div>
-                        <div className="h-60">
-                            <div className="mt-10 flex items-center justify-between py-5 border-b border-[#EEECEC]">
-                                <h6 className="text-xl">Turn on Sound notifications</h6>
+                        <div className="sm:h-60 h-40">
+                            <div className="mt-10 flex items-center justify-between py-5 border-b border-light_border">
+                                <h6 className="sm:text-xl">Turn on Sound notifications</h6>
                                 <div className="flex gap-2 items-center">
                                     <button
                                         onClick={handleToggle1}
@@ -365,16 +365,16 @@ const UserProfile = () => {
             </div>
             {/* user paypal setting */}
             <div className={`font-plus w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${paypal ? " block" : "hidden"}`}>
-                <div className=" bg-white px-10 py-7 rounded-2xl relative">
-                    <div className="w-72 h-72 flex justify-center items-center">
+                <div className=" bg-white px-10 sm:py-7 py-4 rounded-2xl relative">
+                    <div className="sm:w-72 w-60 sm:h-72 h-60 flex justify-center items-center">
                         <div className="">
-                            <div className="w-40 h-40 wrong_img mx-auto">
+                            <div className="sm:w-40 w-32 sm:h-40 h-32 wrong_img mx-auto">
 
                             </div>
-                            <h6 className="text-3xl font-bold font-plus">Action not allowed.</h6>
+                            <h6 className="sm:text-3xl text-xl font-bold font-plus">Action not allowed.</h6>
                         </div>
                     </div>
-                    <div className="absolute top-12 right-10 cursor-pointer" onClick={() => { setPaypal(false) }} >
+                    <div className="absolute sm:top-12 top-6 sm:right-10 right-5 cursor-pointer" onClick={() => { setPaypal(false) }} >
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
                             <path opacity="0.35" d="M33.0721 9.27209C32.6781 9.66409 27.6101 14.7341 24.0001 18.3441C20.3901 14.7341 15.3221 9.66609 14.9281 9.27209C13.3661 7.71009 10.8341 7.71009 9.27209 9.27209C7.71009 10.8341 7.71009 13.3661 9.27209 14.9281C9.66409 15.3221 14.7341 20.3901 18.3441 24.0001C14.7341 27.6101 9.66609 32.6781 9.27209 33.0721C7.71009 34.6341 7.71009 37.1661 9.27209 38.7281C10.8341 40.2901 13.3661 40.2901 14.9281 38.7281C15.2121 38.4441 38.4441 15.2121 38.7281 14.9281C40.2901 13.3661 40.2901 10.8341 38.7281 9.27209C37.1661 7.71009 34.6341 7.71009 33.0721 9.27209Z" fill="black" />
                             <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill="black" />
@@ -384,7 +384,7 @@ const UserProfile = () => {
             </div>
             {/* Edit user Security */}
             <div className={`font-plus w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${security ? " block" : "hidden"}`}>
-                <div className=" bg-white px-10 py-7 rounded-2xl relative">
+                <div className=" bg-white sm:px-10 px-5 sm:py-7 py-4 rounded-2xl relative">
                     <UserSecurity setSecurity={setSecurity} />
                 </div>
             </div>

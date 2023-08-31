@@ -7,8 +7,8 @@ const BlogCard = () => {
                     <img src="/img/blog_pro.png" alt="img" />
                 </div>
                 <div>
-                    <h2 className="text-lg font-plus ">Singleton of Glen Ord 38-year old and the Singleton range.</h2>
-                    <span className=" text-dark font-plus ">Steve Austin • 23 August, 2022</span>
+                    <h2 className="sm:text-lg font-plus ">Singleton of Glen Ord 38-year old and the Singleton range.</h2>
+                    <span className=" text-dark font-plus text-sm  sm:text-base">Steve Austin • 23 August, 2022</span>
                 </div>
             </div>
         </Link>

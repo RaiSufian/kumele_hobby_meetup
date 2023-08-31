@@ -19,14 +19,14 @@ const ChatCard = () => {
                 <div className="">
                     <h4 className="text-lg font-bold">Getting High</h4>
                     <p className="text-sm text-[#38579E]">Hosted by Alkesh Kumar</p>
-                    <span className="text-sm text-[#808080]">8th Oct, 2022</span>
+                    <span className="text-sm text-light_text">8th Oct, 2022</span>
                 </div>
                 <div className=" text-right">
                     <p className="text-[#262626] text-sm">4 days left to rate & review</p>
                     <div className="w-full bg-gray-200 rounded-full dark:bg-gray-700 p-0.5">
                         <div className="bg-theme h-1.5 rounded-full" style={{ width: "45%" }}></div>
                     </div>
-                    <span className="text-[#808080] text-sm">Scanned list: 13</span>
+                    <span className="text-light_text text-sm">Scanned list: 13</span>
                 </div>
             </div>
             <button className="bg-black text-white w-20 text-sm font-medium py-0.5 mt-2 rounded-md "> Chat </button>
