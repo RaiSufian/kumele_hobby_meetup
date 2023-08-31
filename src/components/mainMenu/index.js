@@ -1,14 +1,14 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-const MainMenu = () => {
+const MainMenu = ({ isOpen }) => {
     const location = useLocation();
     const pathvalues = location.pathname.split("/");
     const [path, setPath] = useState(pathvalues[1]);
     console.log("current path name is", path);
 
     return (
-        <div className="w-20 bg-white border-r border-[#CFCFCF] fixed main_menu left-0 z-10 -translate-x-full lg:-translate-x-0">
+        <div className={`w-20 bg-white border-r border-[#CFCFCF] fixed main_menu left-0 z-10 ${isOpen ? "" : "-translate-x-full"} transition-transform duration-200 ease-in lg:-translate-x-0`}>
             <nav>
                 <ul className="flex flex-col items-center pt-5 gap-3">
                     <li className="py-1 px-3 cursor-pointer relative w-20 flex justify-center">
@@ -31,8 +31,6 @@ const MainMenu = () => {
                                 </svg>
                             </Link>
                         }
-
-
                     </li>
                     <li className="py-1 px-3 cursor-pointer relative w-20 flex justify-center">
                         {path == "blogs" ?
@@ -66,9 +64,6 @@ const MainMenu = () => {
                                     <path d="M15.8199 29.8666C16.7477 29.8666 17.4999 29.0309 17.4999 28C17.4999 26.969 16.7477 26.1333 15.8199 26.1333C14.8921 26.1333 14.1399 26.969 14.1399 28C14.1399 29.0309 14.8921 29.8666 15.8199 29.8666Z" fill="black" />
                                 </svg>
                             </Link>}
-
-
-
                     </li>
                     <li className="py-1 px-3 cursor-pointer relative w-20 flex justify-center">
                         {path == "shop" ?
@@ -147,8 +142,6 @@ const MainMenu = () => {
                                 </Link>
                         }
 
-
-
                     </li>
                     <li className="py-1 px-3 cursor-pointer relative w-20 flex justify-center">
                         {
@@ -168,9 +161,6 @@ const MainMenu = () => {
                                     <path d="M25.9998 40C25.9998 41.104 25.1038 42 23.9998 42C22.8958 42 21.9998 41.104 21.9998 40C21.9998 38.896 22.8958 38 23.9998 38C25.1038 38 25.9998 38.896 25.9998 40ZM15.9998 38C14.8958 38 13.9998 38.896 13.9998 40C13.9998 41.104 14.8958 42 15.9998 42C17.1038 42 17.9998 41.104 17.9998 40C17.9998 38.896 17.1038 38 15.9998 38ZM19.9998 22C16.6858 22 13.9998 24.686 13.9998 28C13.9998 31.314 16.6858 34 19.9998 34C23.3138 34 25.9998 31.314 25.9998 28C25.9998 24.686 23.3138 22 19.9998 22ZM35.9998 30C32.6858 30 29.9998 32.686 29.9998 36C29.9998 39.314 32.6858 42 35.9998 42C39.3138 42 41.9998 39.314 41.9998 36C41.9998 32.686 39.3138 30 35.9998 30ZM39.9998 22C38.8958 22 37.9998 22.896 37.9998 24C37.9998 25.104 38.8958 26 39.9998 26C41.1038 26 41.9998 25.104 41.9998 24C41.9998 22.896 41.1038 22 39.9998 22ZM31.9998 22C30.8958 22 29.9998 22.896 29.9998 24C29.9998 25.104 30.8958 26 31.9998 26C33.1038 26 33.9998 25.104 33.9998 24C33.9998 22.896 33.1038 22 31.9998 22Z" fill="black" />
                                 </svg>
                             </Link>}
-
-
-
                     </li>
 
                     <li className="py-1 px-3 cursor-pointer relative w-20 flex justify-center">

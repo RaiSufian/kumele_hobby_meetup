@@ -2,13 +2,14 @@ import Header from "../components/header";
 import MainMenu from '../components/mainMenu';
 import { useState } from "react";
 const Dashboardlayout = ({ children }) => {
-    const [menu, setmenu] = useState(false);
+
+    const [isOpen, setOpen] = useState(false);
     return (
         <div className="bg-page_bg">
-            <Header menu={menu} setmenu={setmenu} />
+            <Header isOpen={isOpen} setOpen={setOpen} />
             <div className="flex">
-                <MainMenu menu={menu} setmenu={setmenu} />
-                <div className="flex-1 mt-24 lg:ml-24">
+                <MainMenu isOpen={isOpen} setOpen={setOpen} />
+                <div className="flex-1 mt-16 md:mt-24 lg:ml-24">
                     {children}
                 </div>
             </div>

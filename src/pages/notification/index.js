@@ -5,7 +5,7 @@ const Notification = () => {
     return (
         <Dashboardlayout>
             <div className="px-8 py-6 w-full">
-                <div className="flex items-start gap-10">
+                <div className="flex items-center gap-10">
                     <Link to="/dashboard">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 42 42" fill="none">
                             <path opacity="0.35" d="M17.7791 24.636C18.7837 23.6315 28.7745 13.6406 29.7791 12.636C31.7883 10.6269 31.7883 7.37147 29.7791 5.36233C27.77 3.35318 24.5145 3.35318 22.5054 5.36233C21.5008 6.3669 11.51 16.3578 10.5054 17.3623C8.49625 19.3715 8.49625 22.6269 10.5054 24.636C12.5145 26.6452 15.7717 26.6452 17.7791 24.636Z" fill="black" />
@@ -13,9 +13,9 @@ const Notification = () => {
                         </svg>
                     </Link>
 
-                    <h2 className="text-2xl font-bold font-plus">Notifications</h2>
+                    <h2 className="md:text-2xl text-xl font-bold font-plus">Notifications</h2>
                 </div>
-                <div className="mt-7">
+                <div className="md:mt-7 mt-3">
                     <ul className=" flex flex-wrap">
                         {list.map((value, index) => {
                             return (

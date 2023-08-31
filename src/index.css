@@ -10,10 +10,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.slick-dots{
+  display: none !important;
+}
 .main_menu {
   top: 81px;
   height: calc(100vh - 81px);
+}
+
+@media screen and (max-width:768px) {
+  .main_menu {
+    top: 60px;
+    height: calc(100vh - 60px);
+  }
 }
 
 .profile_shadow {
@@ -167,12 +176,27 @@ code {
   cursor: pointer;
 }
 
+
 .slider::-moz-range-thumb {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #38a169;
   cursor: pointer;
+}
+
+.hamburger-react {
+  transform: scale(0.7) !important;
+  width: 35px !important;
+  height: 35px !important;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .hamburger-react {
+    transform: scale(0.7) !important;
+    display: block;
+  }
 }
 
 /* Rangwe sldier style end */
@@ -183,7 +207,8 @@ code {
     max-height: calc(100vh - 145px);
   }
 }
-@media screen  and (max-width: 1024px) {
+
+@media screen and (max-width: 1024px) {
   .custom_auto_h {
     max-height: calc(100vh - 120px);
   }

@@ -3,7 +3,7 @@ import React from 'react'
 const SliderEvent = ({ name }) => {
     return (
         <div className='absolute z-20 xl:top-20 lg:top-16 md:top-6 top-1/3 md:-translate-y-0 -translate-y-1/2 w-full left-1/2 -translate-x-1/2 text-white text-center '>
-            <h2 className='xl:text-5xl md:text-4xl  text-2xl  font-fredoka font-semibold' >{name}</h2>
+            <h2 className='xl:text-5xl md:text-4xl  text-3xl  font-fredoka font-semibold' >{name}</h2>
             <div className='xl:mt-8 md:mt-3 mt-1'>
                 <ul >
                     <li className='inline-block xl:-mr-9 lg:-mr-7 sm:-mr-5 -mr-3 relative z-40'>

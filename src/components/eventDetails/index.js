@@ -1,20 +1,20 @@
 const EventDetails = ({ setEvent }) => {
     return (
         <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
-            <div className="w-[930px] bg-white p-14 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out">
-                <span className="absolute top-4 right-4 cursor-pointer" onClick={() => setEvent(false)}>
+            <div className="md:w-[690px] w-[520px] bg-white lg:p-14 p-10 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out">
+                <span className="absolute top-3 right-3 cursor-pointer z-10" onClick={() => setEvent(false)}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" fill="none">
                         <path opacity="0.35" d="M33.0721 9.27209C32.6781 9.66409 27.6101 14.7341 24.0001 18.3441C20.3901 14.7341 15.3221 9.66609 14.9281 9.27209C13.3661 7.71009 10.8341 7.71009 9.27209 9.27209C7.71009 10.8341 7.71009 13.3661 9.27209 14.9281C9.66409 15.3221 14.7341 20.3901 18.3441 24.0001C14.7341 27.6101 9.66609 32.6781 9.27209 33.0721C7.71009 34.6341 7.71009 37.1661 9.27209 38.7281C10.8341 40.2901 13.3661 40.2901 14.9281 38.7281C15.2121 38.4441 38.4441 15.2121 38.7281 14.9281C40.2901 13.3661 40.2901 10.8341 38.7281 9.27209C37.1661 7.71009 34.6341 7.71009 33.0721 9.27209Z" fill="black" />
                         <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill="black" />
                     </svg>
                 </span>
-                <div className="h-[500px] relative overflow-y-auto pb-12 custom_scroll">
-                    <div className="w-full h-[380px] overflow-hidden">
+                <div className="md:h-[400px] h-[320px]  relative overflow-y-auto pb-12 custom_scroll">
+                    <div className="w-full">
                         <img src="/img/event1.png" className="object-cover" alt="detail_img"/>
                     </div>
                     <div className="py-6">
-                        <div className="flex items-center justify-between px-1">
-                            <h1 className="font-plus text-xl font-bold">Group meditation</h1>
+                        <div className="md:flex items-center justify-between px-1">
+                            <h1 className="font-plus text-xl font-bold text-start">Group meditation</h1>
                             <div className="flex items-center">
                                 <span className="text-[#808080] font-plus text-lg">Starts in </span>
                                 <div className="w-6 h-6 time-icon mx-1">  </div>
@@ -22,8 +22,7 @@ const EventDetails = ({ setEvent }) => {
                             </div>
 
                         </div>
-                        <div className="flex item-center justify-between">
-
+                        <div className="md:flex item-center justify-between">
                             <ul className="py-3 flex item-center gap-2">
                                 <li className="flex items-center">
                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -78,8 +77,8 @@ const EventDetails = ({ setEvent }) => {
 
                             ridiculus mus.s quis lectus maximus fermentum.</p>
                     </div>
-                    <div className="flex mt-5 items-center">
-                        <div className="flex gap-3 items-center w-2/5">
+                    <div className="flex mt-5 items-center justify-between">
+                        <div className="flex gap-3 items-center w-2/5 flex-1">
                             <img src="/img/profile1.png" className="w-16 h-16" alt="profile"/>
                             <div className="text-start">
                                 <div className="flex items-center justify-between gap-5">
@@ -94,10 +93,10 @@ const EventDetails = ({ setEvent }) => {
                         </div>
                     </div>
                 </div>
-                <div className="absolute bottom-0 left-0 w-full footer_shadow z-20 bg-white">
-                    <div className="flex gap-10 py-4 px-14">
-                        <button onClick={() => setEvent(false)} className="w-1/2 border-2 border-black text-lg font-plus font-medium h-12 flex items-center justify-center rounded-lg">Decline</button>
-                        <button className="w-1/2 bg-black text-white text-lg font-plus font-medium h-12 flex items-center justify-center rounded-lg">Interested</button>
+                <div className="absolute bottom-0 left-0 w-full footer_shadow z-20 bg-white rounded-b-xl">
+                    <div className="flex md:gap-10 gap-2 py-4 md:px-14 px-8">
+                        <button onClick={() => setEvent(false)} className="w-1/2 border-2 border-black text-lg font-plus font-medium md:h-12 h-9 flex items-center justify-center rounded-lg">Decline</button>
+                        <button className="w-1/2 bg-black text-white text-lg font-plus font-medium md:h-12 h-9 flex items-center justify-center rounded-lg">Interested</button>
                     </div>
                 </div>
 
