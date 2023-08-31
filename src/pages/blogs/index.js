@@ -8,7 +8,7 @@ const Blogs = () => {
         <Dashboardlayout >
             <div className="min-h-screen sm:px-4 px-1">
                 <div className="md:flex justify-between">
-                    <ul className="flex-1 text-center mt-2 md:mt-0">
+                    <ul className="flex-1 text-center md:text-left mt-2 md:mt-0">
                         <li className={`inline-block sm:px-6 px-3 mt-2 sm:mt-0 py-1 text-lg font-plus border  rounded-3xl mx-1 cursor-pointer ${active === "all" ? 'bg-theme border-theme' : 'border-dark'}`} onClick={() => setactive("all")}>
                             All
                         </li>
