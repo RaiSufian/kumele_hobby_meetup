@@ -8,7 +8,7 @@ const MainMenu = ({ isOpen }) => {
     console.log("current path name is", path);
 
     return (
-        <div className={`w-20 bg-white border-r border-[#CFCFCF] fixed main_menu left-0 z-10 ${isOpen ? "" : "-translate-x-full"} transition-transform duration-200 ease-in lg:-translate-x-0`}>
+        <div className={`w-20 bg-white border-r border-[#CFCFCF] fixed main_menu left-0 z-20 ${isOpen ? "" : "-translate-x-full"} transition-transform duration-200 ease-in lg:-translate-x-0`}>
             <nav>
                 <ul className="flex flex-col items-center pt-5 gap-3">
                     <li className="py-1 px-3 cursor-pointer relative w-20 flex justify-center">

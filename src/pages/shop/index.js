@@ -156,8 +156,8 @@ const Shop = () => {
         <>
             < Dashboardlayout>
                 <div className="min-h-screen  px-4 mt-5">
-                    <div className="bg-light_border rounded-lg w-96 p-1 relative">
-                        <div className=" flex relative z-20">
+                    <div className="bg-light_border rounded-lg sm:w-96 w-72 p-1 relative">
+                        <div className=" flex relative z-10">
                             <div className="w-1/2 h-9 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setShop("sub") }}>
                                 Subscriptions
                             </div>
@@ -169,9 +169,9 @@ const Shop = () => {
                     </div>
 
 
-                    <div className={`mt-5 pr-10 transition-all duration-700 ease-in ${shop == "sub" ? "block" : "hidden"}`}>
-                        <div className="flex">
-                            <div className="w-1/2 px-2">
+                    <div className={`mt-5 lg:pr-10 transition-all duration-700 ease-in ${shop == "sub" ? "block" : "hidden"}`}>
+                        <div className="md:flex">
+                            <div className="md:w-1/2 w-full  px-2">
                                 {subscript1.map((value, index) => {
                                     return (
                                         <ShoppingCard value={value} key={index} setPayModal={setPayModal} />
@@ -179,7 +179,7 @@ const Shop = () => {
                                 })}
 
                             </div>
-                            <div className="w-1/2 px-2">
+                            <div className="md:w-1/2 w-full  px-2">
                                 {subscript2.map((value, index) => {
                                     return (
                                         <ShoppingCard value={value} key={index} setPayModal={setPayModal} />
@@ -190,12 +190,12 @@ const Shop = () => {
                         </div>
                     </div>
 
-                    <div className={`mt-5 pr-10 transition-all duration-700 ease-in ${shop == "guest" ? "block" : "hidden"}`}>
+                    <div className={`mt-5 lg:pr-10 transition-all duration-700 ease-in ${shop == "guest" ? "block" : "hidden"}`}>
                         <div className="flex flex-wrap">
 
                             {guest.map((value, index) => {
                                 return (
-                                    <div className="w-1/2 px-2">
+                                    <div className="md:w-1/2 w-full  px-2">
                                         <ShoppingCard value={value} key={index} setPayModal={setPayModal} />
                                     </div>
                                 )
@@ -206,7 +206,7 @@ const Shop = () => {
             </ Dashboardlayout>
             {noteModal ?
                 <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
-                    <div className="w-[410px] bg-white p-12 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out">
+                    <div className="sm:w-[410px] w-[350px] bg-white sm:p-12 p-8 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out">
                         <span className="absolute top-10 right-7 cursor-pointer" onClick={() => setNotemodel(false)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
                                 <path opacity="0.35" d="M33.0721 9.27209C32.6781 9.66409 27.6101 14.7341 24.0001 18.3441C20.3901 14.7341 15.3221 9.66609 14.9281 9.27209C13.3661 7.71009 10.8341 7.71009 9.27209 9.27209C7.71009 10.8341 7.71009 13.3661 9.27209 14.9281C9.66409 15.3221 14.7341 20.3901 18.3441 24.0001C14.7341 27.6101 9.66609 32.6781 9.27209 33.0721C7.71009 34.6341 7.71009 37.1661 9.27209 38.7281C10.8341 40.2901 13.3661 40.2901 14.9281 38.7281C15.2121 38.4441 38.4441 15.2121 38.7281 14.9281C40.2901 13.3661 40.2901 10.8341 38.7281 9.27209C37.1661 7.71009 34.6341 7.71009 33.0721 9.27209Z" fill="black" />

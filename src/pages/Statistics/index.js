@@ -17,15 +17,15 @@ const Statistics = () => {
                     </span>
                     <h2 className=" text-xl font-bold">History &  Statistics</h2>
                 </div>
-                <div className="flex">
-                    <div className="w-1/2 ">
-                        <div className="p-5">
+                <div className="xl:flex">
+                    <div className="lg:w-1/2 ">
+                        <div className="sm:p-5 p-2">
                             <h5 className="text-xl">Reward Rings</h5>
-                            <div className="flex items-center">
-                                <div className="w-1/2 relative">
+                            <div className="sm:flex items-center">
+                                <div className="lg:w-1/2 sm:w-4/5 relative">
                                     <PieChat />
                                 </div>
-                                <div className="w-1/2">
+                                <div className="flex-1">
                                     <ul>
                                         <li className="flex items-start gap-2 mt-3">
                                             <div className="w-8 h-8 bg-theme rounded-full">
@@ -78,7 +78,7 @@ const Statistics = () => {
                         </div>
 
                     </div>
-                    <div className="w-1/2">
+                    <div className="lg:w-1/2">
                         <div className="p-5">
                             <div className="flex items-center justify-between">
                                 <h5 className="text-xl">Money Earned in USD</h5>
@@ -97,7 +97,7 @@ const Statistics = () => {
                                     </option>
                                 </select>
                             </div>
-                            <div className="mt-2">
+                            <div className="mt-2 w-[370px] sm:w-full overflow-x-auto py-4">
                                 <BarChat />
                             </div>
 
@@ -105,15 +105,15 @@ const Statistics = () => {
                     </div>
                 </div>
                 <div className="my-5">
-                    <div className="bg-light_border rounded-lg w-[600px] p-1 relative mx-auto">
-                        <div className=" flex relative z-20">
-                            <div className="w-1/2 h-9 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setEvents("past") }}>
+                    <div className="bg-light_border rounded-lg sm:w-[600px] w-[420px] p-1 relative mx-auto">
+                        <div className=" flex relative z-20 px-2">
+                            <div className="w-1/2 h-9 sm:text-lg text-base font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setEvents("past") }}>
                                 Past Events
                             </div>
-                            <div className="w-1/2 h-9 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setEvents("current") }}>
+                            <div className="w-1/2 h-9 sm:text-lg text-base font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setEvents("current") }}>
                                 Current Events
                             </div>
-                            <div className="w-1/2 h-9 text-lg font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setEvents("futrue") }}>
+                            <div className="w-1/2 h-9 sm:text-lg text-base font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setEvents("futrue") }}>
                                 Futrue Events
                             </div>
                         </div>
@@ -122,13 +122,13 @@ const Statistics = () => {
                 </div>
 
                 <div className="flex mx-auto max-w-5xl pb-7 flex-wrap">
-                    <div className="w-1/2 px-2 mt-2">
+                    <div className="lg:w-1/2 sm:w-4/5 px-2 mt-2">
                         <EventStatCard />
                     </div>
-                    <div className="w-1/2 px-2 mt-2">
+                    <div className="lg:w-1/2 sm:w-4/5 px-2 mt-2">
                         <EventStatCard />
                     </div>
-                    <div className="w-1/2 px-2 mt-2">
+                    <div className="lg:w-1/2 sm:w-4/5 px-2 mt-2">
                         <EventStatCard />
                     </div>
                 </div>

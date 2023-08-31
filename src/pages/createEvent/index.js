@@ -22,13 +22,13 @@ const CreateEvent = () => {
     };
     return (
         <Dashboardlayout>
-            <div className="mx-4 mb-4 pb-4 layout_bg rounded-lg font-plus">
-                <div className="px-5 py-4 bg-white border-b border-light_border rounded-t-lg">
+            <div className="md:mx-4 mx-2 mb-4 pb-4 layout_bg rounded-lg font-plus">
+                <div className="md:px-5 px-2 py-4 bg-white border-b border-light_border rounded-t-lg">
                     <h2 className=" text-xl font-bold">Create event</h2>
                 </div>
-                <div className="my-4 mx-4 bg-white rounded-lg p-4">
-                    <div className="flex">
-                        <div className="w-1/2 px-2">
+                <div className="my-4 md:mx-4 mx-1 bg-white rounded-lg sm:p-4 p-1">
+                    <div className="md:flex">
+                        <div className="md:w-1/2 px-2">
                             <div >
                                 <h3>Event Category</h3>
                                 <div className="flex flex-wrap">
@@ -161,21 +161,21 @@ const CreateEvent = () => {
                                         <path opacity="0.35" d="M12 8.71082C13.6569 8.71082 15 7.36767 15 5.71082C15 4.05396 13.6569 2.71082 12 2.71082C10.3431 2.71082 9 4.05396 9 5.71082C9 7.36767 10.3431 8.71082 12 8.71082Z" fill="#A6A6A6" />
                                     </svg></span>
                                 </h3>
-                                <div className="flex mt-1">
-                                    <div className="rounded-lg w-1/2 flex px-3">
+                                <div className="sm:flex mt-1">
+                                    <div className="rounded-lg sm:w-1/2 flex px-3">
                                         <input type="number" placeholder="81-150" className="text-center h-8 rounded-l-lg w-1/2 border border-[#F4F4F4] border-r-0" />
                                         <button className="text-center h-8 w-1/2 bg-[#F4C755] text-lg rounded-r-lg">
                                             Pay
                                         </button>
                                     </div>
-                                    <button className="h-8 w-1/2 bg-[#F4F4F4] rounded-lg border border-[#F00] text-light_text">
+                                    <button className="h-8 sm:w-1/2 w-full mt-1 sm:mt-1 bg-[#F4F4F4] rounded-lg border border-[#F00] text-light_text">
                                         100
                                     </button>
                                 </div>
                                 <p className="text-xs text-[#4D4D4D] mt-1"><span className="text-[#F00]">*</span> Max 150 Guests</p>
                             </div>
-                            <div className="mt-2 flex ">
-                                <div className="w-1/2 pr-3">
+                            <div className="mt-2 sm:flex ">
+                                <div className="sm:w-1/2 pr-3">
                                     <h3>Paid Event</h3>
                                     <div className="flex gap-2 items-center">
                                         <button className="h-8 flex-1 bg-[#F1F1F1] rounded-lg">0$</button>
@@ -188,7 +188,7 @@ const CreateEvent = () => {
                                         </button>
                                     </div>
                                 </div>
-                                <div className="w-1/2 pr-3">
+                                <div className="sm:w-1/2 pr-3">
                                     <h3>Pay in Cash</h3>
                                     <div className="flex gap-2 items-center">
                                         <button className="h-8 flex-1 bg-[#F4C755] rounded-lg">8$</button>
@@ -203,7 +203,7 @@ const CreateEvent = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-1/2  px-2">
+                        <div className="md:w-1/2  px-2">
                             <div>
                                 <h3>Event Name</h3>
                                 <input className="rounded-md bg-[#F1F1F1] w-full h-10 p-2 custom_input mt-1" type="text" placeholder="Add a title" />
@@ -229,12 +229,12 @@ const CreateEvent = () => {
                                 <h3>Date</h3>
                                 <input className="rounded-md bg-[#F1F1F1] w-full h-10 p-2 custom_input mt-1" type="date" placeholder="Wednesday, 13th April, 2022" />
                             </div>
-                            <div className="flex">
-                                <div className="mt-3 w-1/2 pr-2">
+                            <div className="lg:flex">
+                                <div className="mt-3 lg:w-1/2 pr-2">
                                     <h3>Event Start time</h3>
                                     <input className="rounded-md bg-[#F1F1F1] w-full h-10 p-2 custom_input mt-1" type="time" placeholder="Wednesday, 13th April, 2022" />
                                 </div>
-                                <div className="mt-3 w-1/2">
+                                <div className="mt-3 lg:w-1/2">
                                     <h3>Event End time</h3>
                                     <input className="rounded-md bg-[#F1F1F1] w-full h-10 p-2 custom_input mt-1" type="time" placeholder="Wednesday, 13th April, 2022" />
                                 </div>
@@ -243,12 +243,12 @@ const CreateEvent = () => {
                                 <h3>Event Address</h3>
                                 <input className="rounded-md bg-[#F1F1F1] w-full h-10 p-2 custom_input mt-1" type="email" placeholder="Enter address" />
                             </div>
-                            <div className="flex">
-                                <div className="mt-3 w-1/2 pr-2">
+                            <div className="lg:flex">
+                                <div className="mt-3 lg:w-1/2 pr-2">
                                     <h3>Zip Code</h3>
                                     <input className="rounded-md bg-[#F1F1F1] border border-[#F00]  text-center w-full h-10 p-2 custom_input mt-1" type="number" placeholder="2017" />
                                 </div>
-                                <div className="mt-3 w-1/2">
+                                <div className="mt-3 lg:w-1/2">
                                     <h3>Check User Availability </h3>
                                     <input className="rounded-md bg-[#F1F1F1] border border-[#f00] text-center w-full h-10 p-2 custom_input mt-1" type="number" placeholder="20" />
                                 </div>

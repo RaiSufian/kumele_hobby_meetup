@@ -6,8 +6,8 @@ const Addpayment = ({ setPayModal }) => {
         <>
             {payment ?
                 <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
-                    <div className=" bg-white p-20 rounded-3xl relative">
-                        <div className="w-96">
+                    <div className=" bg-white sm:p-20 p-6 rounded-3xl relative">
+                        <div className="sm:w-96 w-72">
                             <div className="w-52 h-52 login_gif mx-auto">
 
                             </div>
@@ -23,7 +23,7 @@ const Addpayment = ({ setPayModal }) => {
                 </div>
                 :
                 <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
-                    <div className="w-[480px] bg-white py-12 px-8 rounded-xl relative text-center animate-fadeIn duration-1000 ease-in-out">
+                    <div className="sm:w-[480px] w-[360px] bg-white py-12 sm:px-8 px-4 rounded-xl relative text-center animate-fadeIn duration-1000 ease-in-out">
                         <div className="flex justify-between items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 42 42" fill="none" onClick={() => setPayModal(false)}>
                                 <path opacity="0.35" d="M17.7791 24.636C18.7837 23.6315 28.7745 13.6406 29.7791 12.636C31.7883 10.6269 31.7883 7.37147 29.7791 5.36233C27.77 3.35318 24.5145 3.35318 22.5054 5.36233C21.5008 6.3669 11.51 16.3578 10.5054 17.3623C8.49625 19.3715 8.49625 22.6269 10.5054 24.636C12.5145 26.6452 15.7717 26.6452 17.7791 24.636Z" fill="black" />

@@ -7,8 +7,12 @@ const ChatRoom = () => {
     return (
         <Dashboardlayout>
             <div className=" px-5">
-                <div className="flex gap-4">
-                    <div className="flex-1 main_menu mt-3 overflow-y-auto custom_scroll">
+                <div className="md:flex gap-4 flex-row-reverse  flex-wrap">
+
+                    <div className="md:w-3/5 sm:w-4/5 mx-auto mt-2">
+                        <Chatbox />
+                    </div>
+                    <div className="flex-1 main_menu mt-3 overflow-y-auto custom_scroll md:mt-2">
                         <h3 className="text-xl font-bold font-plus">Chats</h3>
                         {
                             groups.map((value, index) => {
@@ -18,9 +22,6 @@ const ChatRoom = () => {
                             })
                         }
 
-                    </div>
-                    <div className="w-3/5">
-                        <Chatbox />
                     </div>
                 </div>
             </div>

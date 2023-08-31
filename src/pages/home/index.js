@@ -28,7 +28,7 @@ const Home = () => {
     return (
         <>
             <Dashboardlayout>
-                <div className="xl:px-8 md:px-4 px-2 md:py-6 py-2 w-full">
+                <div className="xl:px-8 md:px-4 px-2 md:py-3 py-2 w-full">
                     <div className="flex justify-between items-center relative">
                         <h2 className="text-2xl font-bold font-plus">Explore</h2>
                         <button onClick={() => setlist(!list)} className="text-xl md:hidden block"><Icon icon="solar:menu-dots-bold" /></button>
