@@ -18,19 +18,19 @@ const Login = () => {
 
     return (
         <AuthLayout >
-            <div className="px-3">
-                <h3 className="text-5xl font-bold font-plus">Advertisers & Bloggers
+            <div className="px-3 xl:pr-20">
+                <h3 className="lg:text-5xl text-4xl font-bold font-plus">
                     Login</h3>
-                <p className="text-light font-plus py-2"> Don’t  have an account? <Link to="/Signup" className="text-[#38579E] font-semibold">Signup</Link></p>
-                <form className="pr-8" onSubmit={getlogin}>
-                    <div className="bg-[#F4F4F4] rounded-lg flex gap-3 p-2 mt-5">
+                <p className="text-light font-plus py-2"> Don’t  have an account? <Link to="/Signup" className="text-theme_blue font-semibold">Signup</Link></p>
+                <form className="lg:pr-8" onSubmit={getlogin}>
+                    <div className="bg-bg_light rounded-lg flex gap-3 p-2 mt-5">
                         <span className=""><svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 39 38" fill="none">
                             <path opacity="0.35" d="M3.43066 26.9154V11.082C3.43066 8.45845 5.55708 6.33203 8.18066 6.33203H30.3473C32.9709 6.33203 35.0973 8.45845 35.0973 11.082V26.9154C35.0973 29.5389 32.9709 31.6654 30.3473 31.6654H8.18066C5.55708 31.6654 3.43066 29.5389 3.43066 26.9154Z" fill="black" />
                             <path d="M35.0973 11.0823C35.0973 10.3255 34.9042 9.61929 34.5891 8.98438L21.6263 16.7617C20.1712 17.6357 18.3599 17.6357 16.9032 16.7617L3.93891 8.98438C3.62383 9.61929 3.43066 10.3255 3.43066 11.0823V14.2189L14.457 20.8356C15.9406 21.7255 17.6015 22.1704 19.264 22.1704C20.9249 22.1704 22.589 21.7255 24.0694 20.8356L35.0973 14.2189V11.0823Z" fill="black" />
                         </svg></span>
-                        <input type="email" placeholder="Enter email" className="w-full bg-[#F4F4F4] text-light custom_input" />
+                        <input type="email" placeholder="Enter email" className="w-full bg-bg_light text-light custom_input" />
                     </div>
-                    <div className="bg-[#F4F4F4] rounded-lg flex gap-3 p-2 mt-5">
+                    <div className="bg-bg_light rounded-lg flex gap-3 p-2 mt-5">
                         <span className=""><svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 39 38" fill="none">
                             <path opacity="0.35" d="M28.7642 33.2487H9.76416C7.14058 33.2487 5.01416 31.1223 5.01416 28.4987V15.832C5.01416 13.2084 7.14058 11.082 9.76416 11.082H28.7642C31.3877 11.082 33.5142 13.2084 33.5142 15.832V28.4987C33.5142 31.1223 31.3877 33.2487 28.7642 33.2487Z" fill="black" />
                             <path d="M12.9308 11.082C12.9308 7.58445 15.7666 4.7487 19.2642 4.7487C22.7617 4.7487 25.5975 7.58445 25.5975 11.082H28.7642C28.7642 5.83487 24.5113 1.58203 19.2642 1.58203C14.017 1.58203 9.76416 5.83487 9.76416 11.082H12.9308Z" fill="black" />
@@ -38,7 +38,7 @@ const Login = () => {
                             <path d="M27.1807 24.543C28.4923 24.543 29.5557 23.4796 29.5557 22.168C29.5557 20.8563 28.4923 19.793 27.1807 19.793C25.869 19.793 24.8057 20.8563 24.8057 22.168C24.8057 23.4796 25.869 24.543 27.1807 24.543Z" fill="black" />
                             <path d="M11.3477 24.543C12.6593 24.543 13.7227 23.4796 13.7227 22.168C13.7227 20.8563 12.6593 19.793 11.3477 19.793C10.036 19.793 8.97266 20.8563 8.97266 22.168C8.97266 23.4796 10.036 24.543 11.3477 24.543Z" fill="black" />
                         </svg></span>
-                        <input type="email" placeholder="Enter Password" className="w-full bg-[#F4F4F4] text-light custom_input" />
+                        <input type="email" placeholder="Enter Password" className="w-full bg-bg_light text-light custom_input" />
                         <span className="cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 39 38" fill="none">
                                 <path opacity="0.35" d="M3.85674 24.7396C1.20465 21.3671 1.20465 16.6313 3.85674 13.2588C6.96957 9.30208 12.1059 4.75 19.2642 4.75C26.4224 4.75 31.5587 9.30208 34.6716 13.2604C37.3237 16.6329 37.3237 21.3687 34.6716 24.7412C31.5587 28.6979 26.4224 33.25 19.2642 33.25C12.1059 33.25 6.96957 28.6979 3.85674 24.7396Z" fill="black" />
@@ -51,7 +51,7 @@ const Login = () => {
                             <input type="checkbox" className="w-5 h-5 border-2 border-gray-400" />
                             <span className="text-[#262626] text-xl">Remember me</span>
                         </div>
-                        <Link to="#" className="font-bold text-[#38579E] text-xl">Forgot Password?
+                        <Link to="#" className="font-bold text-theme_blue text-lg font-plus">Forgot Password?
                         </Link>
                     </div>
                     <div className="py-2 text-center">
@@ -89,13 +89,13 @@ const Login = () => {
                         </ul>
                     </div>
 
-                    <button className="w-full bg-black text-white mt-3 rounded-xl text-xl font-plus py-3" >Login</button>
+                    <button className="w-full bg-black text-white mt-3 rounded-lg text-lg font-plus py-2" >Login</button>
 
                 </form>
             </div>
             {login ?
              <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
-                <div className=" bg-white p-20 rounded-3xl relative">
+                <div className=" bg-white p-10 rounded-3xl relative">
                     <div className="w-96">
                         <div className="w-52 h-52 login_gif mx-auto">
 

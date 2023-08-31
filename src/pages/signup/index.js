@@ -326,20 +326,20 @@ const Signup = () => {
     }
     return (
         <AuthLayout>
-            <div className="px-3">
-                <h3 className="text-5xl font-bold font-plus">Advertisers & Bloggers Signup</h3>
+            <div className="px-3 xl:mr-16">
+                <h3 className="lg:text-5xl text-4xl font-bold font-plus"> Signup</h3>
                 <p className="text-light font-plus py-2"> Already have an account? <Link to="/login" className="text-[#38579E] font-semibold">Signin</Link></p>
                 <form className="pr- 8 " onSubmit={submitSignup}>
-                    <div className="bg-[#F4F4F4] rounded-lg flex gap-3 p-2 mt-5">
+                    <div className="bg-bg_light rounded-lg flex gap-3 p-2 mt-5">
                         <span className="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 37 38" fill="none">
                                 <path opacity="0.35" d="M28.2637 26H8.26367V34H28.2637V26Z" fill="black" />
                                 <path opacity="0.35" d="M18.2637 20C23.7865 20 28.2637 15.5228 28.2637 10C28.2637 4.47715 23.7865 0 18.2637 0C12.7408 0 8.26367 4.47715 8.26367 10C8.26367 15.5228 12.7408 20 18.2637 20Z" fill="black" />
                                 <path d="M36.1499 30.812C35.6039 27.962 32.9499 26 30.0479 26H24.2639L18.2639 34L12.2639 26H8.26591C3.57792 26 0.923917 27.962 0.377917 30.812C-0.358083 34.646 2.56192 38 6.26392 38H30.2639C33.9659 38 36.8859 34.646 36.1499 30.812Z" fill="black" />
                             </svg></span>
-                        <input type="text" placeholder="Enter name" className="w-full bg-[#F4F4F4] text-light custom_input" />
+                        <input type="text" placeholder="Enter name" className="w-full bg-bg_light text-light custom_input" />
                     </div>
-                    <div className="bg-[#F4F4F4] rounded-lg flex gap-3 p-2 mt-5">
+                    <div className="bg-bg_light rounded-lg flex gap-3 p-2 mt-5">
 
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 39 38" fill="none">
@@ -347,35 +347,35 @@ const Signup = () => {
                                 <path d="M35.0973 11.0823C35.0973 10.3255 34.9042 9.61929 34.5891 8.98438L21.6263 16.7617C20.1712 17.6357 18.3599 17.6357 16.9032 16.7617L3.93891 8.98438C3.62383 9.61929 3.43066 10.3255 3.43066 11.0823V14.2189L14.457 20.8356C15.9406 21.7255 17.6015 22.1704 19.264 22.1704C20.9249 22.1704 22.589 21.7255 24.0694 20.8356L35.0973 14.2189V11.0823Z" fill="black" />
                             </svg>
                         </span>
-                        <input type="email" placeholder="Enter email" className="w-full bg-[#F4F4F4] text-light custom_input" />
+                        <input type="email" placeholder="Enter email" className="w-full bg-bg_light text-light custom_input" />
 
                     </div>
                     <div className="mt-5">
                         <label className="text-xl items-center font-plus font-semibold">Gander</label>
                         <div className="flex items-start gap-8 mt-1">
-                            <div className="flex gap-2 text-xl items-center font-plus">
-                                <input type="radio" name="gander" className="w-5 h-5" />
+                            <div className="flex gap-2 lg:text-xl text-lg items-center font-plus flex-wrap">
+                                <input type="radio" name="gander" className="lg:w-5 w-4 lg:h-5 h-4" />
                                 <label>Male</label>
                             </div>
-                            <div className="flex gap-2 text-xl items-center font-plus">
-                                <input type="radio" name="gander" className="w-5 h-5" />
+                            <div className="flex gap-2 lg:text-xl text-lg items-center font-plus">
+                                <input type="radio" name="gander" className="lg:w-5 w-4 lg:h-5 h-4" />
                                 <label>Female</label>
                             </div>
-                            <div className="flex gap-2 text-xl items-center font-plus">
-                                <input type="radio" name="gander" className="w-5 h-5" />
+                            <div className="flex gap-2 lg:text-xl text-lg items-center font-plus">
+                                <input type="radio" name="gander" className="lg:w-5 w-4 lg:h-5 h-4" />
                                 <label>Non-Binary</label>
                             </div>
                         </div>
                     </div>
                     <div className="mt-5">
                         <label className="text-xl items-center font-plus font-semibold">Date of birth</label>
-                        <div className="bg-[#F4F4F4] rounded-lg flex gap-3 p-2 mt-1">
+                        <div className="bg-bg_light rounded-lg flex gap-3 p-2 mt-1">
 
-                            <input type="date" placeholder="Enter Date of birth" className="w-full bg-[#F4F4F4] text-light custom_input" />
+                            <input type="date" placeholder="Enter Date of birth" className="w-full bg-bg_light text-light custom_input" />
 
                         </div>
                     </div>
-                    <div className="bg-[#F4F4F4] rounded-lg flex gap-3 p-2 mt-5">
+                    <div className="bg-bg_light rounded-lg flex gap-3 p-2 mt-5">
                         <span className=""><svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 39 38" fill="none">
                             <path opacity="0.35" d="M28.7642 33.2487H9.76416C7.14058 33.2487 5.01416 31.1223 5.01416 28.4987V15.832C5.01416 13.2084 7.14058 11.082 9.76416 11.082H28.7642C31.3877 11.082 33.5142 13.2084 33.5142 15.832V28.4987C33.5142 31.1223 31.3877 33.2487 28.7642 33.2487Z" fill="black" />
                             <path d="M12.9308 11.082C12.9308 7.58445 15.7666 4.7487 19.2642 4.7487C22.7617 4.7487 25.5975 7.58445 25.5975 11.082H28.7642C28.7642 5.83487 24.5113 1.58203 19.2642 1.58203C14.017 1.58203 9.76416 5.83487 9.76416 11.082H12.9308Z" fill="black" />
@@ -383,7 +383,7 @@ const Signup = () => {
                             <path d="M27.1807 24.543C28.4923 24.543 29.5557 23.4796 29.5557 22.168C29.5557 20.8563 28.4923 19.793 27.1807 19.793C25.869 19.793 24.8057 20.8563 24.8057 22.168C24.8057 23.4796 25.869 24.543 27.1807 24.543Z" fill="black" />
                             <path d="M11.3477 24.543C12.6593 24.543 13.7227 23.4796 13.7227 22.168C13.7227 20.8563 12.6593 19.793 11.3477 19.793C10.036 19.793 8.97266 20.8563 8.97266 22.168C8.97266 23.4796 10.036 24.543 11.3477 24.543Z" fill="black" />
                         </svg></span>
-                        <input type="password" placeholder="Enter Password" className="w-full bg-[#F4F4F4] text-light custom_input" />
+                        <input type="password" placeholder="Enter Password" className="w-full bg-bg_light text-light custom_input" />
                         <span className="cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 39 38" fill="none">
                                 <path opacity="0.35" d="M3.85674 24.7396C1.20465 21.3671 1.20465 16.6313 3.85674 13.2588C6.96957 9.30208 12.1059 4.75 19.2642 4.75C26.4224 4.75 31.5587 9.30208 34.6716 13.2604C37.3237 16.6329 37.3237 21.3687 34.6716 24.7412C31.5587 28.6979 26.4224 33.25 19.2642 33.25C12.1059 33.25 6.96957 28.6979 3.85674 24.7396Z" fill="black" />
@@ -391,7 +391,7 @@ const Signup = () => {
                             </svg>
                         </span>
                     </div>
-                    <div className="bg-[#F4F4F4] rounded-lg flex gap-3 p-2 mt-5">
+                    <div className="bg-bg_light rounded-lg flex gap-3 p-2 mt-5">
                         <span className=""><svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 39 38" fill="none">
                             <path opacity="0.35" d="M28.7642 33.2487H9.76416C7.14058 33.2487 5.01416 31.1223 5.01416 28.4987V15.832C5.01416 13.2084 7.14058 11.082 9.76416 11.082H28.7642C31.3877 11.082 33.5142 13.2084 33.5142 15.832V28.4987C33.5142 31.1223 31.3877 33.2487 28.7642 33.2487Z" fill="black" />
                             <path d="M12.9308 11.082C12.9308 7.58445 15.7666 4.7487 19.2642 4.7487C22.7617 4.7487 25.5975 7.58445 25.5975 11.082H28.7642C28.7642 5.83487 24.5113 1.58203 19.2642 1.58203C14.017 1.58203 9.76416 5.83487 9.76416 11.082H12.9308Z" fill="black" />
@@ -399,7 +399,7 @@ const Signup = () => {
                             <path d="M27.1807 24.543C28.4923 24.543 29.5557 23.4796 29.5557 22.168C29.5557 20.8563 28.4923 19.793 27.1807 19.793C25.869 19.793 24.8057 20.8563 24.8057 22.168C24.8057 23.4796 25.869 24.543 27.1807 24.543Z" fill="black" />
                             <path d="M11.3477 24.543C12.6593 24.543 13.7227 23.4796 13.7227 22.168C13.7227 20.8563 12.6593 19.793 11.3477 19.793C10.036 19.793 8.97266 20.8563 8.97266 22.168C8.97266 23.4796 10.036 24.543 11.3477 24.543Z" fill="black" />
                         </svg></span>
-                        <input type="password" placeholder="Confirm Password" className="w-full bg-[#F4F4F4] text-light custom_input" />
+                        <input type="password" placeholder="Confirm Password" className="w-full bg-bg_light text-light custom_input" />
                         <span className="cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 39 38" fill="none">
                                 <path opacity="0.35" d="M3.85674 24.7396C1.20465 21.3671 1.20465 16.6313 3.85674 13.2588C6.96957 9.30208 12.1059 4.75 19.2642 4.75C26.4224 4.75 31.5587 9.30208 34.6716 13.2604C37.3237 16.6329 37.3237 21.3687 34.6716 24.7412C31.5587 28.6979 26.4224 33.25 19.2642 33.25C12.1059 33.25 6.96957 28.6979 3.85674 24.7396Z" fill="black" />
@@ -409,22 +409,22 @@ const Signup = () => {
                     </div>
                     <div className="mt-5">
                         <label className="text-xl items-center font-plus font-semibold">Referral code (Optional)</label>
-                        <div className="bg-[#F4F4F4] rounded-lg flex gap-3 p-2 mt-1">
-                            <input type="number" placeholder="e.g. DF3R435" className="w-full bg-[#F4F4F4] text-light custom_input" />
+                        <div className="bg-bg_light rounded-lg flex gap-3 p-2 mt-1">
+                            <input type="number" placeholder="e.g. DF3R435" className="w-full bg-bg_light text-light custom_input" />
                         </div>
                     </div>
                     <div className="mt-6 px-1">
-                        <div className="flex gap-3 items-center mt-2">
-                            <input type="checkbox" className="w-5 h-5 border-2 border-gray-400" />
-                            <label className="text-lg font-plus ">I am a legal adult (18/21+)</label>
+                        <div className="flex gap-3 lg:items-center items-start mt-2">
+                            <input type="checkbox" className="w-5 h-5 border-2 mt-1 lg:mt-0 border-gray-400" />
+                            <label className="text-lg font-plus flex-1">I am a legal adult (18/21+)</label>
                         </div>
-                        <div className="flex gap-3 items-center mt-2">
-                            <input type="checkbox" className="w-5 h-5 border-2 border-gray-400" />
-                            <label className="text-lg font-plus ">Subscribe to newsletter</label>
+                        <div className="flex gap-3 lg:items-center items-start mt-2">
+                            <input type="checkbox" className="w-5 h-5 border-2 mt-1 lg:mt-0 border-gray-400" />
+                            <label className="text-lg font-plus flex-1">Subscribe to newsletter</label>
                         </div>
-                        <div className="flex gap-3 items-center mt-2">
-                            <input type="checkbox" className="w-5 h-5 border-2 border-gray-400" />
-                            <label className="text-lg font-plus ">By creating an account you agree to Terms & Conditions</label>
+                        <div className="flex gap-3 lg:items-center items-start mt-2">
+                            <input type="checkbox" className="w-5 h-5 border-2 mt-1 lg:mt-0 border-gray-400" />
+                            <label className="text-lg font-plus flex-1">By creating an account you agree to Terms & Conditions</label>
                         </div>
                     </div>
 
@@ -462,15 +462,15 @@ const Signup = () => {
                         </ul>
                     </div>
 
-                    <button className="w-full bg-black text-white mt-3 rounded-xl text-xl font-plus py-3">Signup</button>
+                    <button className="w-full bg-black text-white mt-3 rounded-lg text-xl font-plus py-2">Signup</button>
 
                 </form>
             </div >
             {sign == 1 ?
-            <div className="w-full  h-screen bg-black bg-opacity-20 absolute top-0 left-0 z-50 flex items-center justify-center">
-                <div className="xl:max-w-5xl lg:max-w-4xl bg-white p-10 rounded-3xl relative">
+            <div className="w-full  min-h-screen bg-black bg-opacity-20 absolute top-0 left-0 z-50 flex items-center justify-center">
+                <div className="xl:max-w-5xl lg:max-w-4xl bg-white p-5 rounded-3xl relative">
                     {/* header of pop up */}
-                    <div className="flex  gap-60 items-center justify-between flex-wrap ">
+                    <div className="flex items-center justify-between flex-wrap ">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 42 42" fill="none">
                                 <path opacity="0.35" d="M17.7791 24.636C18.7837 23.6315 28.7745 13.6406 29.7791 12.636C31.7883 10.6269 31.7883 7.37147 29.7791 5.36233C27.77 3.35318 24.5145 3.35318 22.5054 5.36233C21.5008 6.3669 11.51 16.3578 10.5054 17.3623C8.49625 19.3715 8.49625 22.6269 10.5054 24.636C12.5145 26.6452 15.7717 26.6452 17.7791 24.636Z" fill="black" />
@@ -489,7 +489,7 @@ const Signup = () => {
                     </div>
 
                     {/* Category Cards */}
-                    <div className="flex mt-5 flex-wrap mx-auto">
+                    <div className="flex mt-3 flex-wrap mx-auto">
                         {cat_data.map((value, index) => {
                             return (
                                 <div className="w-28 cursor-pointer py-3 border rounded-xl border-[#EEECEC] text-center m-2 cat_card hover:bg-theme" key={index}>
@@ -509,49 +509,47 @@ const Signup = () => {
                 </div>
             </div>
                 : sign == 2 ?
-                    <div className="w-full  h-screen bg-black bg-opacity-20 absolute top-0 left-0 z-50 flex items-center justify-center">
-                        <div className="xl:max-w-5xl lg:max-w-4xl bg-white p-10 rounded-3xl relative">
+                    <div className="w-full  min-h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
+                        <div className="xl:max-w-5xl lg:max-w-4xl bg-white p-5 rounded-3xl relative">
                             {/* header of pop up */}
-                            <div className="flex  gap-60 items-center justify-between flex-wrap ">
+                            <div className="flex items-center justify-between flex-wrap ">
                                 <span onClick={() => setSign(1)}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 42 42" fill="none">
                                         <path opacity="0.35" d="M17.7791 24.636C18.7837 23.6315 28.7745 13.6406 29.7791 12.636C31.7883 10.6269 31.7883 7.37147 29.7791 5.36233C27.77 3.35318 24.5145 3.35318 22.5054 5.36233C21.5008 6.3669 11.51 16.3578 10.5054 17.3623C8.49625 19.3715 8.49625 22.6269 10.5054 24.636C12.5145 26.6452 15.7717 26.6452 17.7791 24.636Z" fill="black" />
                                         <path d="M10.5069 24.636C11.5114 25.6406 21.5023 35.6315 22.5069 36.636C24.516 38.6452 27.7714 38.6452 29.7806 36.636C31.7897 34.6269 31.7897 31.3715 29.7806 29.3623C28.776 28.3578 18.7851 18.3669 17.7806 17.3623C15.7714 15.3532 12.516 15.3532 10.5069 17.3623C8.49771 19.3715 8.49771 22.6286 10.5069 24.636Z" fill="black" />
                                     </svg>
                                 </span>
-                                <h6 className="text-3xl font-bold font-plus">Earn Medals</h6>
+                                <h6 className="md:text-3xl text-2xl font-bold font-plus">Earn Medals</h6>
                                 <span onClick={() => setSign(0)}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" fill="none">
                                         <path opacity="0.35" d="M33.0721 9.27306C32.6781 9.66506 27.6101 14.7351 24.0001 18.3451C20.3901 14.7351 15.3221 9.66706 14.9281 9.27306C13.3661 7.71106 10.8341 7.71106 9.27209 9.27306C7.71009 10.8351 7.71009 13.3671 9.27209 14.9291C9.66409 15.3231 14.7341 20.3911 18.3441 24.0011C14.7341 27.6111 9.66609 32.6791 9.27209 33.0731C7.71009 34.6351 7.71009 37.1671 9.27209 38.7291C10.8341 40.2911 13.3661 40.2911 14.9281 38.7291C15.2121 38.4451 38.4441 15.2131 38.7281 14.9291C40.2901 13.3671 40.2901 10.8351 38.7281 9.27306C37.1661 7.71106 34.6341 7.71106 33.0721 9.27306Z" fill="black" />
                                         <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill="black" />
                                     </svg>
                                 </span>
-
-
                             </div>
 
                             {/* Earn Medals Cards */}
-                            <div className="mt-8">
-                                <div className="flex px-3 py-4 gap-4 items-center cursor-pointer border border-white  hover:border-gray-200 rounded-sm">
+                            <div className="md:mt-8 mt-4">
+                                <div className="flex md:px-3 px-1 md:py-4 py-2 gap-4 items-center cursor-pointer border border-white  hover:border-gray-200 rounded-sm">
                                     <div className="w-16 h-16 earn_madel"></div>
                                     <div className="flex-1">
-                                        <h4 className="text-2xl font-plus font-bold">Gold Status</h4>
-                                        <p className="text-[#4D4D4D] mt-2">User created a minimum of 4 events or user attended a minimum of 4 events without fail in the last 30 days. The user gets 8% discount of 1 in-app purchase of choice.</p>
+                                        <h4 className="lg:text-2xl text-xl font-plus font-bold">Gold Status</h4>
+                                        <p className="text-light_text lg:mt-2 mt-1 md:text-base text-sm">User created a minimum of 4 events or user attended a minimum of 4 events without fail in the last 30 days. The user gets 8% discount of 1 in-app purchase of choice.</p>
                                     </div>
                                 </div>
-                                <div className="flex px-3 py-4 gap-4 items-center cursor-pointer border border-white  hover:border-gray-200 rounded-sm">
+                                <div className="flex md:px-3 px-1 md:py-4 py-2 gap-4 items-center cursor-pointer border border-white  hover:border-gray-200 rounded-sm">
                                     <div className="w-16 h-16 earn_madel"></div>
                                     <div className="flex-1">
-                                        <h4 className="text-2xl font-plus font-bold">Bronze Status</h4>
-                                        <p className="text-[#4D4D4D] mt-2">User created a minimum of 3 events or user attended a minimum of 3 events without fail in the last 30 days. The user gets 4% discount of 1 in-app purchase of choice.
+                                        <h4 className="lg:text-2xl text-xl font-plus font-bold">Bronze Status</h4>
+                                        <p className="text-light_text lg:mt-2 mt-1 md:text-base text-sm">User created a minimum of 3 events or user attended a minimum of 3 events without fail in the last 30 days. The user gets 4% discount of 1 in-app purchase of choice.
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex px-3 py-4 gap-4 items-center cursor-pointer border border-white  hover:border-gray-200 rounded-sm">
+                                <div className="flex md:px-3 px-1 md:py-4 py-2 gap-4 items-center cursor-pointer border border-white  hover:border-gray-200 rounded-sm">
                                     <div className="w-16 h-16 earn_madel"></div>
                                     <div className="flex-1">
-                                        <h4 className="text-2xl font-plus font-bold">Silver Status</h4>
-                                        <p className="text-[#4D4D4D] mt-2">User created a minimum of 2 events or user attended a minimum of 2 events without fail in the last 30 days. The user gets 2% discount of 1 in-app purchase of choice.</p>
+                                        <h4 className="lg:text-2xl text-xl font-plus font-bold">Silver Status</h4>
+                                        <p className="text-light_text lg:mt-2 mt-1 md:text-base text-sm">User created a minimum of 2 events or user attended a minimum of 2 events without fail in the last 30 days. The user gets 2% discount of 1 in-app purchase of choice.</p>
                                     </div>
                                 </div>
                             </div>

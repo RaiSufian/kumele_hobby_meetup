@@ -20,7 +20,7 @@ const ProfileHero = ({ slide, setSlide }) => {
                     <Slider3 />
             }
 
-            <div className="hero_nav lg:absolute lg:bottom-24 lg:left-1/2 lg:-translate-x-1/2">
+            <div className="hero_nav lg:absolute lg:bottom-24 lg:left-1/2 lg:-translate-x-1/2 pb-2 md:pb-0">
                 <div className="flex justify-center gap-10">
                     <div className={`w-2  ${slide == 1 ? "bg-white" : "bg-theme"}  h-2 rounded-full cursor-pointer borderborder-theme hover:border-white`} onClick={() => setSlide(1)}></div>
                     <div className={`w-2  ${slide == 2 ? "bg-white" : "bg-theme"}  bg-theme h-2 rounded-full cursor-pointer border border-theme hover:border-white`} onClick={() => setSlide(2)}></div>
@@ -29,7 +29,7 @@ const ProfileHero = ({ slide, setSlide }) => {
                 </div>
             </div>
 
-            <div className="hero_footer lg:absolute w-full bottom-2">
+            <div className="hero_footer lg:absolute w-full bottom-2 hidden md:block">
                 <HeroFooter />
             </div>
         </div>
