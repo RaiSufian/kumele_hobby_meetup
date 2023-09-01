@@ -9,7 +9,7 @@ const ShoppingCard = ({value , setPayModal}) => {
                 <div className="flex-1">
                     <div className="flex justify-between text-xl font-bold font-plus">
                         <h2 className="">  {value.name}</h2>
-                        <span className={ `${value.active ? "text-[#38579E]" : "text-theme"} `}> $ {value.price}</span>
+                        <span className={ `${value.active ? "text-theme_blue" : "text-theme"} `}> $ {value.price}</span>
                     </div>
                     <p className="font-lg py-1">{value.des}</p>
                     <div className="mt-5">

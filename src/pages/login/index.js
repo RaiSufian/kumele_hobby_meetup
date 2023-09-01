@@ -4,18 +4,14 @@ import { useState } from "react";
 const Login = () => {
     const [login, setlogin] = useState(false);
     const navigate = useNavigate();
-
-
     const getlogin = (event) => {
         event.preventDefault();
         setlogin(true);
         setTimeout(() => {
             navigate("/dashboard")
-        }, 2000);
+        }, 1000);
 
     }
-
-
     return (
         <AuthLayout >
             <div className="px-3 xl:pr-20">
@@ -49,7 +45,7 @@ const Login = () => {
                     <div className="flex justify-between py-8 px-1 ">
                         <div className="flex gap-4 items-center">
                             <input type="checkbox" className="w-5 h-5 border-2 border-gray-400" />
-                            <span className="text-[#262626] text-xl">Remember me</span>
+                            <span className="text-dark text-xl">Remember me</span>
                         </div>
                         <Link to="#" className="font-bold text-theme_blue text-lg font-plus">Forgot Password?
                         </Link>

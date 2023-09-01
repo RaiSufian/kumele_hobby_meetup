@@ -39,11 +39,11 @@ const Statistics = () => {
                                                         </svg>
                                                     </span>
                                                 </h6>
-                                                <p className="text-[#262626]">Achieved 2 medals</p>
+                                                <p className="text-dark">Achieved 2 medals</p>
                                             </div>
                                         </li>
                                         <li className="flex items-start gap-2 mt-3">
-                                            <div className="w-8 h-8 bg-[#C4C4C4] rounded-full">
+                                            <div className="w-8 h-8 bg-light_bg rounded-full">
                                             </div>
                                             <div>
                                                 <h6 className="flex gap-1 text-lg items-center">Silver
@@ -54,11 +54,11 @@ const Statistics = () => {
                                                         </svg>
                                                     </span>
                                                 </h6>
-                                                <p className="text-[#262626]">Achieved 2 medals</p>
+                                                <p className="text-dark">Achieved 2 medals</p>
                                             </div>
                                         </li>
                                         <li className="flex items-start gap-2 mt-3">
-                                            <div className="w-8 h-8 bg-[#CD7F32] rounded-full">
+                                            <div className="w-8 h-8 bg-theme_orange rounded-full">
                                             </div>
                                             <div>
                                                 <h6 className="flex gap-1 text-lg items-center">Bronze
@@ -69,7 +69,7 @@ const Statistics = () => {
                                                         </svg>
                                                     </span>
                                                 </h6>
-                                                <p className="text-[#262626]">Achieved 2 medals</p>
+                                                <p className="text-dark">Achieved 2 medals</p>
                                             </div>
                                         </li>
                                     </ul>

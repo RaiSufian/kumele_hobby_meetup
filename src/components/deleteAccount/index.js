@@ -9,7 +9,7 @@ const DeleteAccount = ({ deleteAc, setDeleteAc }) => {
                     </div>
                     <h6 className="text-lg font-bold font-plus text-center">Are you sure? This action cannot be undone. Please type delete in capital letters.</h6>
                     <div className="py-2">
-                        <input type="text" placeholder="Enter DELETE to remove account..." className="w-full h-8 text-sm px-2 custom_input rounded-md bg-[#F1F1F1]" />
+                        <input type="text" placeholder="Enter DELETE to remove account..." className="w-full h-8 text-sm px-2 custom_input rounded-md bg-theme_white" />
                     <div className="mt-3 flex justify-center gap-2 ">
                             <button className="w-1/2 h-9  rounded-lg border-black border" onClick={()=>setDeleteAc(false)}>No</button>
                             <button className="w-1/2 h-9  rounded-lg bg-black text-white">Yes</button>

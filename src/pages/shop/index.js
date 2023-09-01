@@ -217,7 +217,7 @@ const Shop = () => {
                             <div className="home_pop2 w-28 h-28"></div>
                             <div className="py-1 text-start">
                                 <h3 className="text-2xl font-bold font-plus">Subscription Expiration</h3>
-                                <p className=" font-plus text-sm py-6 text-[#525252]">Your Yearly Gold subscription will be expiring within one month and will be updated automatically. If you want to update or cancel your subsciption, do it before the charge.</p>
+                                <p className=" font-plus text-sm py-6 text-theme_dark">Your Yearly Gold subscription will be expiring within one month and will be updated automatically. If you want to update or cancel your subsciption, do it before the charge.</p>
 
                             </div>
                         </div>

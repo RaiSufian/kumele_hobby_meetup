@@ -10,9 +10,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.slick-dots{
+
+.slick-dots {
   display: none !important;
 }
+
+.slick-prev {
+  left: -10px !important;
+  z-index: 20;
+  opacity: 0;
+}
+
+.slick-next {
+  right: -10px !important;
+  z-index: 20;
+  opacity: 0;
+}
+
 .main_menu {
   top: 81px;
   height: calc(100vh - 81px);
@@ -147,6 +161,10 @@ code {
 
 .layout_bg {
   background: rgba(255, 255, 255, 0.50);
+}
+
+.button_shadow {
+  box-shadow: 0px 5.43589px 38.05126px 0px rgba(0, 0, 0, 0.16);
 }
 
 /* Range slider style start*/

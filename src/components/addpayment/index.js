@@ -34,15 +34,15 @@ const Addpayment = ({ setPayModal }) => {
                         </div>
                         <div className="text-start py-4">
                             <h2 className="text-lg font-plus">Amount to pay</h2>
-                            <span className="text-2xl font-plus font-bold text-[#38579E]">$23.07</span>
+                            <span className="text-2xl font-plus font-bold text-theme_blue">$23.07</span>
                         </div>
                         <div className="rounded-sm border border-light_border   event_shadow">
                             <div className="flex items-start gap-3 px-4 py-2">
                                 <input type="radio" name="paypal" className="mt-1 w-4 h-4" />
                                 <div className="flex-1 flex items-center justify-between">
                                     <div className="">
-                                        <span className="text-[#2D2D2D]">•••• •••• •••• 4634</span>
-                                        <p className="text-[#2D2D2D]">Expires 12-08-23</p>
+                                        <span className="text-text_dark">•••• •••• •••• 4634</span>
+                                        <p className="text-text_dark">Expires 12-08-23</p>
                                     </div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="28" viewBox="0 0 65 39" fill="none">
                                         <path d="M19.0166 38.8873C29.3484 38.8873 37.724 30.4029 37.724 19.9368C37.724 9.47075 29.3484 0.986328 19.0166 0.986328C8.68471 0.986328 0.309082 9.47075 0.309082 19.9368C0.309082 30.4029 8.68471 38.8873 19.0166 38.8873Z" fill="#EA001B" />
@@ -53,7 +53,7 @@ const Addpayment = ({ setPayModal }) => {
                             <div className=" border-t border-light_border ">
                                 <div className="py-2 flex justify-between px-4">
                                     <span className="">Pay with Crypto</span>
-                                    <Link to="" className="text-[#38579E] font-bold"> Crypto</Link>
+                                    <Link to="" className="text-theme_blue font-bold"> Crypto</Link>
                                 </div>
                             </div>
 

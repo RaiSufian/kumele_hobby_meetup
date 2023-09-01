@@ -78,15 +78,15 @@ const UserSecurity = ({ setSecurity }) => {
                         <form>
                             <div className="mt-4">
                                 <label className="text-sm">Current password</label>
-                                <input type="password" className="text-sm h-8 bg-[#F4F4F4] w-full rounded-md custom_input py-1 px-3" placeholder="Enter current password" />
+                                <input type="password" className="text-sm h-8 bg-bg_light w-full rounded-md custom_input py-1 px-3" placeholder="Enter current password" />
                             </div>
                             <div className="mt-4">
                                 <label className="text-sm">New password</label>
-                                <input type="password" className="text-sm h-8 bg-[#F4F4F4] w-full rounded-md custom_input py-1 px-3" placeholder="Enter new password" />
+                                <input type="password" className="text-sm h-8 bg-bg_light w-full rounded-md custom_input py-1 px-3" placeholder="Enter new password" />
                             </div>
                             <div className="mt-4">
                                 <label className="text-sm">Confirm new password</label>
-                                <input type="password" className="text-sm h-8 bg-[#F4F4F4] w-full rounded-md custom_input py-1 px-3" placeholder="Re-enter new password" />
+                                <input type="password" className="text-sm h-8 bg-bg_light w-full rounded-md custom_input py-1 px-3" placeholder="Re-enter new password" />
                             </div>
                             <div className="text-right mt-10">
                                 <button className="h-9 bg-black text-white rounded-md px-10">Update password</button>

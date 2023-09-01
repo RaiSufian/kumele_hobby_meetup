@@ -77,7 +77,7 @@ const BlogDetail = () => {
 
                         <div className="mt-7">
                             <h5 className="text-3xl">Comments</h5>
-                            <input type="text" className="w-full h-10 p-2 my-5 custom_input bg-[#F1F1F1] rounded-lg" placeholder="Add your commint" />
+                            <input type="text" className="w-full h-10 p-2 my-5 custom_input bg-theme_white rounded-lg" placeholder="Add your commint" />
                             <div className="flex gap-3 sm:text-lg sm:font-medium justify-center">
                                 <button className="md:w-80 sm:w-60 w-1/2 h-12 bg-black text-white rounded-md">Login/Signup to Comment</button>
                                 <button className="md:w-80 sm:w-60 w-1/2 h-12 border-2 border-black rounded-md">Publish Comment</button>
@@ -86,21 +86,21 @@ const BlogDetail = () => {
                                 <li className="mt-8 sm:flex gap-2 items-center">
                                     <img src="/img/user-1.png" alt="user_profile" className="w-20 h-20 rounded-full" />
                                     <div>
-                                        <span className="lg:text-xl text-lg font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
+                                        <span className="lg:text-xl text-lg font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-theme_blue'> reply</span> </span>
                                         <p className="text-light_text">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
                                     </div>
                                 </li>
                                 <li className="mt-8 sm:flex gap-2 items-center">
                                     <img src="/img/user-1.png" alt="user_profile" className="w-20 h-20 rounded-full" />
                                     <div>
-                                        <span className="lg:text-xl text-lg font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
+                                        <span className="lg:text-xl text-lg font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-theme_blue'> reply</span> </span>
                                         <p className="text-light_text">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
                                     </div>
                                 </li>
                                 <li className="mt-8 sm:flex gap-2 items-center">
                                     <img src="/img/user-1.png" alt="user_profile" className="w-20 h-20 rounded-full" />
                                     <div>
-                                        <span className="lg:text-xl text-lg font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-[#38579E]'> reply</span> </span>
+                                        <span className="lg:text-xl text-lg font-plus text-black font-medium">Josh Durrant • <span className="text-lg font-normal"> 23 August, 2022  </span>• <span className='text-theme_blue'> reply</span> </span>
                                         <p className="text-light_text">What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
                                     </div>
                                 </li>
@@ -117,7 +117,7 @@ const BlogDetail = () => {
                                 </span>
                             </button>
                             <button className="flex items-center gap-6">
-                                <span className="sm:text-2xl text-xl font-plus font-semibold text-[#38579E]">
+                                <span className="sm:text-2xl text-xl font-plus font-semibold text-theme_blue">
                                     Next
                                 </span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">

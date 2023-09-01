@@ -4,7 +4,7 @@ const EventsCatBlock = ({ name, setEvent }) => {
         <div className="mt-3 bg-white p-3 rounded-md">
             <div className="flex items-start justify-between">
                 <h2 className="text-xl font-extrabold font-plus">{name}</h2>
-                <span className="text-[#38579E] font-semibold font-plus texxt-lg">View all</span>
+                <span className="text-theme_blue font-semibold font-plus texxt-lg">View all</span>
             </div>
             <div className="flex mt-5 flex-wrap">
                 <div className="xl:w-1/3 sm:w-1/2">

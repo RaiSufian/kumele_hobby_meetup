@@ -18,7 +18,7 @@ const EventDetails = ({ setEvent }) => {
                             <div className="flex items-center">
                                 <span className="text-light_text font-plus text-lg">Starts in </span>
                                 <div className="w-6 h-6 time-icon mx-1">  </div>
-                                <span className="text-xl text-[#38579E] font-semibold">7 hrs</span>
+                                <span className="text-xl text-theme_blue font-semibold">7 hrs</span>
                             </div>
 
                         </div>
@@ -29,7 +29,7 @@ const EventDetails = ({ setEvent }) => {
                                         <path opacity="0.35" d="M7.94773 13.9609C11.2399 13.9609 13.9086 11.2921 13.9086 7.99997C13.9086 4.70785 11.2399 2.03906 7.94773 2.03906C4.65561 2.03906 1.98682 4.70785 1.98682 7.99997C1.98682 11.2921 4.65561 13.9609 7.94773 13.9609Z" fill="black" stroke="black" stroke-width="1.58958" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                         <path d="M10.0016 9.45631C10.0016 7.20441 7.48477 7.53557 7.48477 6.34339C7.48477 5.68107 8.01462 5.5486 8.21332 5.5486C8.41202 5.5486 8.54448 5.61483 8.67695 5.68107C9.00811 5.81353 9.4055 5.68107 9.6042 5.41614C9.86913 5.01874 9.73667 4.48888 9.33927 4.29019C9.14057 4.15772 8.80941 4.09149 8.47825 4.09149V3.76033C8.47825 3.42917 8.21332 3.23047 7.94839 3.23047C7.68346 3.23047 7.41853 3.4954 7.41853 3.76033V4.22395C6.49128 4.48888 5.89519 5.3499 5.89519 6.40962C5.89519 8.79399 8.34579 8.33036 8.34579 9.58877C8.34579 9.8537 8.21332 10.3173 7.61723 10.3173C7.3523 10.3173 7.08737 10.2511 6.95491 10.1186C6.62374 9.98617 6.22635 10.1186 6.02765 10.3836C5.76272 10.7147 5.89519 11.2446 6.22635 11.4433C6.55751 11.642 6.88867 11.7744 7.3523 11.7744V12.1718C7.3523 12.503 7.61723 12.7017 7.88216 12.7017C8.21332 12.7017 8.41202 12.4368 8.41202 12.1718V11.7082C9.47174 11.4433 10.0016 10.516 10.0016 9.45631Z" fill="black" />
                                     </svg></span>
-                                    <span className="text-[#262626] text-xs font-plus">
+                                    <span className="text-dark text-xs font-plus">
                                         Free
                                     </span>
                                 </li>
@@ -39,7 +39,7 @@ const EventDetails = ({ setEvent }) => {
                                         <path d="M8.81182 3.95975L9.14298 7.66876C9.20921 8.19862 8.81182 8.66225 8.21572 8.72848C7.61963 8.79471 7.22224 8.39732 7.15601 7.80123C7.15601 7.735 7.15601 7.66876 7.15601 7.60253L7.48717 3.95975C7.48717 3.56236 7.81833 3.29743 8.21572 3.36366C8.54689 3.42989 8.81182 3.69482 8.81182 3.95975Z" fill="black" />
                                         <path d="M9.34203 10.1193L7.48752 8.52977C7.09012 8.1986 7.02389 7.53628 7.42129 7.13889C7.75245 6.74149 8.41477 6.67526 8.81217 7.07265C8.8784 7.13889 8.94463 7.20512 8.94463 7.27135L10.4017 9.32455C10.6004 9.65572 10.5342 10.0531 10.2693 10.2518C9.93812 10.3843 9.60696 10.318 9.34203 10.1193Z" fill="black" />
                                     </svg></span>
-                                    <span className="text-[#262626] text-xs font-plus">
+                                    <span className="text-dark text-xs font-plus">
                                         7:45-9:30
                                     </span>
                                 </li>
@@ -50,7 +50,7 @@ const EventDetails = ({ setEvent }) => {
                                         <path opacity="0.35" d="M7.3584 9.32422H12.657C13.9353 9.32422 14.9751 10.3641 14.9751 11.6424C14.9751 12.9206 13.9353 13.9605 12.657 13.9605H7.3584V9.32422Z" fill="black" />
                                         <path d="M9.67615 11.6424C9.67615 12.9206 8.63631 13.9605 7.35802 13.9605H4.0464C3.41057 13.9605 2.82773 13.7022 2.41046 13.2783C1.98658 12.861 1.72827 12.2782 1.72827 11.6424C1.72827 10.3641 2.76812 9.32422 4.0464 9.32422H7.35802C7.99385 9.32422 8.5767 9.58252 8.99396 10.0064C9.41785 10.4237 9.67615 11.0065 9.67615 11.6424Z" fill="black" />
                                     </svg></span>
-                                    <span className="text-[#262626] text-xs font-plus">
+                                    <span className="text-dark text-xs font-plus">
                                         12 guests
                                     </span>
                                 </li>
@@ -83,7 +83,7 @@ const EventDetails = ({ setEvent }) => {
                             <div className="text-start">
                                 <div className="flex items-center justify-between gap-5">
                                     <h1 className="text-xl font-semibold font-plus">Alkash Kumar</h1>
-                                    <button className="text-white rounded-md bg-[#38579E] px-2">Follow</button>
+                                    <button className="text-white rounded-md bg-theme_blue px-2">Follow</button>
                                 </div>
                                 <span className=" font-plus font-medium pt-2">Host</span>
                             </div>

@@ -121,7 +121,7 @@ const CreateEvent = () => {
                             <div className="mt-2">
                                 <h3>Event Image</h3>
 
-                                <div className="cursor-pointer w-full h-48 border border-[#BCBCBC] rounded-lg flex items-center justify-center">
+                                <div className="cursor-pointer w-full h-48 border border-theme_border rounded-lg flex items-center justify-center">
                                     <div className="text-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" className="mx-auto">
                                             <g clip-path="url(#clip0_191_15192)">
@@ -163,22 +163,22 @@ const CreateEvent = () => {
                                 </h3>
                                 <div className="sm:flex mt-1">
                                     <div className="rounded-lg sm:w-1/2 flex px-3">
-                                        <input type="number" placeholder="81-150" className="text-center h-8 rounded-l-lg w-1/2 border border-[#F4F4F4] border-r-0" />
-                                        <button className="text-center h-8 w-1/2 bg-[#F4C755] text-lg rounded-r-lg">
+                                        <input type="number" placeholder="81-150" className="text-center h-8 rounded-l-lg w-1/2 border border-bg_light border-r-0" />
+                                        <button className="text-center h-8 w-1/2 bg-theme_yellow text-lg rounded-r-lg">
                                             Pay
                                         </button>
                                     </div>
-                                    <button className="h-8 sm:w-1/2 w-full mt-1 sm:mt-1 bg-[#F4F4F4] rounded-lg border border-[#F00] text-light_text">
+                                    <button className="h-8 sm:w-1/2 w-full mt-1 sm:mt-1 bg-bg_light rounded-lg border border-theme_red text-light_text">
                                         100
                                     </button>
                                 </div>
-                                <p className="text-xs text-[#4D4D4D] mt-1"><span className="text-[#F00]">*</span> Max 150 Guests</p>
+                                <p className="text-xs text-light_text mt-1"><span className="text-theme_red">*</span> Max 150 Guests</p>
                             </div>
                             <div className="mt-2 sm:flex ">
                                 <div className="sm:w-1/2 pr-3">
                                     <h3>Paid Event</h3>
                                     <div className="flex gap-2 items-center">
-                                        <button className="h-8 flex-1 bg-[#F1F1F1] rounded-lg">0$</button>
+                                        <button className="h-8 flex-1 bg-theme_white rounded-lg">0$</button>
                                         <button
                                             onClick={handleToggle1}
                                             className={`w-12 h-6 rounded-full relative ${isOn1 ? 'bg-black' : 'bg-gray-300'
@@ -191,7 +191,7 @@ const CreateEvent = () => {
                                 <div className="sm:w-1/2 pr-3">
                                     <h3>Pay in Cash</h3>
                                     <div className="flex gap-2 items-center">
-                                        <button className="h-8 flex-1 bg-[#F4C755] rounded-lg">8$</button>
+                                        <button className="h-8 flex-1 bg-theme_yellow rounded-lg">8$</button>
                                         <button
                                             onClick={handleToggle2}
                                             className={`w-12 h-6 rounded-full relative ${isOn2 ? 'bg-black' : 'bg-gray-300'
@@ -206,11 +206,11 @@ const CreateEvent = () => {
                         <div className="md:w-1/2  px-2">
                             <div>
                                 <h3>Event Name</h3>
-                                <input className="rounded-md bg-[#F1F1F1] w-full h-10 p-2 custom_input mt-1" type="text" placeholder="Add a title" />
+                                <input className="rounded-md bg-theme_white w-full h-10 p-2 custom_input mt-1" type="text" placeholder="Add a title" />
                             </div>
                             <div className="mt-3">
                                 <h3>Description</h3>
-                                <textarea className="rounded-md bg-[#F1F1F1] w-full  p-2 custom_input mt-1" rows="4" cols="50">>
+                                <textarea className="rounded-md bg-theme_white w-full  p-2 custom_input mt-1" rows="4" cols="50">>
 
                                 </textarea>
                             </div>
@@ -227,30 +227,30 @@ const CreateEvent = () => {
                             </div>
                             <div className="mt-3">
                                 <h3>Date</h3>
-                                <input className="rounded-md bg-[#F1F1F1] w-full h-10 p-2 custom_input mt-1" type="date" placeholder="Wednesday, 13th April, 2022" />
+                                <input className="rounded-md bg-theme_white w-full h-10 p-2 custom_input mt-1" type="date" placeholder="Wednesday, 13th April, 2022" />
                             </div>
                             <div className="lg:flex">
                                 <div className="mt-3 lg:w-1/2 pr-2">
                                     <h3>Event Start time</h3>
-                                    <input className="rounded-md bg-[#F1F1F1] w-full h-10 p-2 custom_input mt-1" type="time" placeholder="Wednesday, 13th April, 2022" />
+                                    <input className="rounded-md bg-theme_white w-full h-10 p-2 custom_input mt-1" type="time" placeholder="Wednesday, 13th April, 2022" />
                                 </div>
                                 <div className="mt-3 lg:w-1/2">
                                     <h3>Event End time</h3>
-                                    <input className="rounded-md bg-[#F1F1F1] w-full h-10 p-2 custom_input mt-1" type="time" placeholder="Wednesday, 13th April, 2022" />
+                                    <input className="rounded-md bg-theme_white w-full h-10 p-2 custom_input mt-1" type="time" placeholder="Wednesday, 13th April, 2022" />
                                 </div>
                             </div>
                             <div className="mt-4">
                                 <h3>Event Address</h3>
-                                <input className="rounded-md bg-[#F1F1F1] w-full h-10 p-2 custom_input mt-1" type="email" placeholder="Enter address" />
+                                <input className="rounded-md bg-theme_white w-full h-10 p-2 custom_input mt-1" type="email" placeholder="Enter address" />
                             </div>
                             <div className="lg:flex">
                                 <div className="mt-3 lg:w-1/2 pr-2">
                                     <h3>Zip Code</h3>
-                                    <input className="rounded-md bg-[#F1F1F1] border border-[#F00]  text-center w-full h-10 p-2 custom_input mt-1" type="number" placeholder="2017" />
+                                    <input className="rounded-md bg-theme_white border border-theme_red  text-center w-full h-10 p-2 custom_input mt-1" type="number" placeholder="2017" />
                                 </div>
                                 <div className="mt-3 lg:w-1/2">
                                     <h3>Check User Availability </h3>
-                                    <input className="rounded-md bg-[#F1F1F1] border border-[#f00] text-center w-full h-10 p-2 custom_input mt-1" type="number" placeholder="20" />
+                                    <input className="rounded-md bg-theme_white border border-theme_red text-center w-full h-10 p-2 custom_input mt-1" type="number" placeholder="20" />
                                 </div>
                             </div>
 
@@ -258,7 +258,7 @@ const CreateEvent = () => {
                                 <button className="h-12 bg-black text-white font rounded-lg text-lg w-full">
                                     Check User Availability
                                 </button>
-                                <p className="text-sm text-[#4D4D4D]"> <span className="text-[#f00]">*</span> To use this, Please choose event category, zip code and number of guests.  </p>
+                                <p className="text-sm text-light_text"> <span className="text-theme_red">*</span> To use this, Please choose event category, zip code and number of guests.  </p>
                             </div>
 
                         </div>

@@ -28,11 +28,11 @@ const Slider4 = ({ slide, setSlide }) => {
         speed: 500,
         autoplaySpeed: 4000,
         cssEase: "linear"
-
     };
+    
     return (
         <>
-            <div className='relative bg-[#151515]'>
+            <div className='relative bg-theme_silver'>
                 <div className="absolute lg:top-[6%] lg:left-[6%] top-4 sm:left-4 left-1/2 -translate-x-1/2 sm:translate-x-1 z-10">
                     <img src="/img/logo2.png" alt="logo" className="lg:w-44 xl:w-48 md:w-36 sm:w-32 w-40 " />
                 </div>
@@ -69,7 +69,7 @@ const Slider4 = ({ slide, setSlide }) => {
                 </Slider>
                 <div className='py-5 md:py-0 px-2 md:px-0 absolute bottom-1 md:bottom-2 md:left-1/2 md:-translate-x-1/2 text-center text-white w-full'>
                     <div>
-                        <h2 className='xl:text-5xl lg:text-4xl md:text-2xl text-2xl font-medium font-fredoka'>“Hobby Meetup | Create or Attend Events Within <span className='text-theme'>4</span><span className='text-[#38579E]'>8</span> Hours” </h2>
+                        <h2 className='xl:text-5xl lg:text-4xl md:text-2xl text-2xl font-medium font-fredoka'>“Hobby Meetup | Create or Attend Events Within <span className='text-theme'>4</span><span className='text-theme_blue'>8</span> Hours” </h2>
                         <p className='xl:text-3xl lg:text-2xl md:text-xl text-lg mt-3'>We play. We overcome. We unite. We live.</p>
                         <div className='flex justify-center xl:mt-5 lg:mt-2 md:mt-1 mt-5  '>
                             <Link to="/login">
@@ -77,7 +77,7 @@ const Slider4 = ({ slide, setSlide }) => {
                             </Link>
 
                             <Link to="/Signup">
-                                <button className='bg-[#38579E] md:text-2xl text-xl font-plus xl:w-56 lg:w-48 md:w-40 w-32  xl:py-3 lg:py-2 py-2 text-black font-medium rounded-r-full flex items-center justify-center'>Signup</button>
+                                <button className='bg-theme_blue md:text-2xl text-xl font-plus xl:w-56 lg:w-48 md:w-40 w-32  xl:py-3 lg:py-2 py-2 text-black font-medium rounded-r-full flex items-center justify-center'>Signup</button>
                             </Link>
 
                         </div>

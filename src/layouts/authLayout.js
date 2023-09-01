@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 const AuthLayout = ({ children }) => {
     return (
         <div className="sm:max-h-screen overflow-hidden">
-            <div className="relative bg-[#7929FF]">
+            <div className="relative ]">
                 <img src="/img/authheader.png" alt="bg_img" className="w-100 h-auto" />
                 <Link to="/">
                     <img src="/img/icon.png" alt="logo_icon" className="absolute xl:top-16 md:top-8 sm:top-6 top-4 xl:left-36 md:left-24 sm:left-16 left-12  md:w-20 sm:w-14 w-10 cursor-pointer" />

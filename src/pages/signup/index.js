@@ -328,7 +328,7 @@ const Signup = () => {
         <AuthLayout>
             <div className="px-3 xl:mr-16">
                 <h3 className="lg:text-5xl text-4xl font-bold font-plus"> Signup</h3>
-                <p className="text-light font-plus py-2"> Already have an account? <Link to="/login" className="text-[#38579E] font-semibold">Signin</Link></p>
+                <p className="text-light font-plus py-2"> Already have an account? <Link to="/login" className="text-theme_blue font-semibold">Signin</Link></p>
                 <form className="pr- 8 " onSubmit={submitSignup}>
                     <div className="bg-bg_light rounded-lg flex gap-3 p-2 mt-5">
                         <span className="">

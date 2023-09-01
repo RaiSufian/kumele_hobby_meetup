@@ -9,7 +9,7 @@ const Chatbox = () => {
                     </svg>
                     <div className="">
                         <h5 className="font-bold text-lg font-plus">Group Meditation</h5>
-                        <span className="text-sm text-[#262626]">93 guests</span>
+                        <span className="text-sm text-dark">93 guests</span>
                     </div>
                 </div>
                 <div>
@@ -34,7 +34,7 @@ const Chatbox = () => {
             </div>
             <div className="h-80 px-3 flex flex-col justify-end">
                 <div className="flex items-center justify-center w-full">
-                    <span className="text-sm px-5 py-1 bg-[#F4F4F4] rounded-xl">Today</span>
+                    <span className="text-sm px-5 py-1 bg-bg_light rounded-xl">Today</span>
                 </div>
                 <div className="flex items-center justify-end w-full">
                     <span className="text-sm p-2 rounded-br-none rounded-xl bg-theme">
@@ -56,8 +56,8 @@ const Chatbox = () => {
                 </div>
             </div>
             <div className="p-2">
-                <div className="h-11 bg-[#F4F4F4] flex items-center justify-around px-3 gap-2">
-                    <input type="text" className="flex-1 custom_input bg-[#F4F4F4] text-sm" placeholder="Type a message" />
+                <div className="h-11 bg-bg_light flex items-center justify-around px-3 gap-2">
+                    <input type="text" className="flex-1 custom_input bg-bg_light text-sm" placeholder="Type a message" />
                     <div className="flex gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 33 32" fill="none" className="cursor-pointer">
                             <path opacity="0.35" d="M26.2213 13.3413C25.8517 13.3413 22.9682 13.3413 19.5741 13.3413C19.5741 9.9472 19.5741 7.06363 19.5741 6.69405C19.5741 5.22501 18.3842 4.03516 16.9152 4.03516C15.4462 4.03516 14.2563 5.22501 14.2563 6.69405C14.2563 7.06363 14.2563 9.9472 14.2563 13.3413C10.8622 13.3413 7.97867 13.3413 7.60909 13.3413C6.14005 13.3413 4.9502 14.5311 4.9502 16.0002C4.9502 17.4692 6.14005 18.6591 7.60909 18.6591C7.87498 18.6591 25.9554 18.6591 26.2213 18.6591C27.6904 18.6591 28.8802 17.4692 28.8802 16.0002C28.8802 14.5311 27.6904 13.3413 26.2213 13.3413Z" fill="black" />

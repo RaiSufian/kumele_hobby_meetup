@@ -8,7 +8,7 @@ const MainMenu = ({ isOpen }) => {
     console.log("current path name is", path);
 
     return (
-        <div className={`w-20 bg-white border-r border-[#CFCFCF] fixed main_menu left-0 z-20 ${isOpen ? "" : "-translate-x-full"} transition-transform duration-200 ease-in lg:-translate-x-0`}>
+        <div className={`w-20 bg-white border-r border-white_border fixed main_menu left-0 z-20 ${isOpen ? "" : "-translate-x-full"} transition-transform duration-200 ease-in lg:-translate-x-0`}>
             <nav>
                 <ul className="flex flex-col items-center pt-5 gap-3">
                     <li className="py-1 px-3 cursor-pointer relative w-20 flex justify-center">
@@ -19,7 +19,7 @@ const MainMenu = ({ isOpen }) => {
                                     <path d="M32.6411 44.7999H22.0337V34.1925C22.0337 32.239 23.616 30.6567 25.5695 30.6567H29.1053C31.0588 30.6567 32.6411 32.239 32.6411 34.1925V44.7999Z" fill="#38579E" />
                                     <path d="M42.3627 23.9918C41.9261 23.9918 41.4859 23.884 41.0775 23.6577L28.9868 16.9397C27.9544 16.3669 26.7239 16.3669 25.6915 16.9397L13.6008 23.6577C12.3191 24.3684 10.7068 23.9087 9.99431 22.627C9.28361 21.347 9.74327 19.7329 11.025 19.0205L23.1156 12.3025C25.7604 10.8316 28.9179 10.8333 31.5627 12.3025L43.6533 19.0205C44.9333 19.7312 45.3947 21.3453 44.684 22.627C44.1978 23.5003 43.2944 23.9918 42.3627 23.9918Z" fill="#38579E" />
                                 </svg>
-                                <div className="absolute w-3 h-full bg-[#38579E] top-0 left-0 rounded-full -translate-x-1/2">
+                                <div className="absolute w-3 h-full bg-theme_blue top-0 left-0 rounded-full -translate-x-1/2">
 
                                 </div>
                             </Link> :
@@ -46,7 +46,7 @@ const MainMenu = ({ isOpen }) => {
                                     <path d="M19.18 29.8666C20.1078 29.8666 20.86 29.0309 20.86 28C20.86 26.969 20.1078 26.1333 19.18 26.1333C18.2522 26.1333 17.5 26.969 17.5 28C17.5 29.0309 18.2522 29.8666 19.18 29.8666Z" fill="#38579E" />
                                     <path d="M15.8206 29.8666C16.7485 29.8666 17.5006 29.0309 17.5006 28C17.5006 26.969 16.7485 26.1333 15.8206 26.1333C14.8928 26.1333 14.1406 26.969 14.1406 28C14.1406 29.0309 14.8928 29.8666 15.8206 29.8666Z" fill="#38579E" />
                                 </svg>
-                                <div className="absolute w-3 h-full bg-[#38579E] top-0 left-0 rounded-full -translate-x-1/2">
+                                <div className="absolute w-3 h-full bg-theme_blue top-0 left-0 rounded-full -translate-x-1/2">
 
                                 </div>
                             </Link>
@@ -75,7 +75,7 @@ const MainMenu = ({ isOpen }) => {
                                     <path d="M30.1005 29.8667C30.1005 28.8363 29.2643 28 28.2339 28C27.2035 28 26.3672 28.8363 26.3672 29.8667C26.3672 30.3464 26.3672 36.8536 26.3672 37.3333C26.3672 38.3637 27.2035 39.2 28.2339 39.2C29.2643 39.2 30.1005 38.3637 30.1005 37.3333C30.1005 36.8536 30.1005 30.3464 30.1005 29.8667Z" fill="#38579E" />
                                     <path d="M19.9497 22.4002L21.4635 16.3466C21.6707 15.5141 22.4155 14.9335 23.2723 14.9335H33.1937C34.0523 14.9335 34.7971 15.5141 35.0043 16.3466L36.5182 22.4002H40.3673L38.6275 15.4413C38.0041 12.9493 35.7641 11.2002 33.1955 11.2002H23.2723C20.7019 11.2002 18.4619 12.9493 17.8403 15.4413L16.1006 22.4002H19.9497Z" fill="#38579E" />
                                 </svg>
-                                <div className="absolute w-3 h-full bg-[#38579E] top-0 left-0 rounded-full -translate-x-1/2">
+                                <div className="absolute w-3 h-full bg-theme_blue top-0 left-0 rounded-full -translate-x-1/2">
 
                                 </div>
                             </Link>
@@ -101,7 +101,7 @@ const MainMenu = ({ isOpen }) => {
                                         <path d="M29.1589 21.5462C30.5603 21.5462 31.6964 20.4101 31.6964 19.0087C31.6964 17.6073 30.5603 16.4712 29.1589 16.4712C27.7574 16.4712 26.6213 17.6073 26.6213 19.0087C26.6213 20.4101 27.7574 21.5462 29.1589 21.5462Z" fill="#38579E" />
                                         <path d="M12.2419 21.5462C13.6433 21.5462 14.7794 20.4101 14.7794 19.0087C14.7794 17.6073 13.6433 16.4712 12.2419 16.4712C10.8404 16.4712 9.70435 17.6073 9.70435 19.0087C9.70435 20.4101 10.8404 21.5462 12.2419 21.5462Z" fill="#38579E" />
                                     </svg>
-                                    <div className="absolute w-3 h-full bg-[#38579E] top-0 left-0 rounded-full -translate-x-1/2">
+                                    <div className="absolute w-3 h-full bg-theme_blue top-0 left-0 rounded-full -translate-x-1/2">
 
                                     </div>
                                 </Link>
@@ -127,7 +127,7 @@ const MainMenu = ({ isOpen }) => {
                                     <path opacity="0.35" d="M39.1996 41.9999H36.3996C34.8526 41.9999 33.5996 40.7469 33.5996 39.1999V18.1999C33.5996 16.6529 34.8526 15.3999 36.3996 15.3999H39.1996C40.7466 15.3999 41.9996 16.6529 41.9996 18.1999V39.1999C41.9996 40.7469 40.7466 41.9999 39.1996 41.9999Z" fill="#38579E" />
                                     <path d="M16.4895 29.4C15.8525 29.4 15.2155 29.1564 14.7297 28.6706C13.7581 27.699 13.7581 26.1226 14.7297 25.151L20.9513 18.9294C21.9229 17.9578 23.4993 17.9578 24.4709 18.9294C25.4425 19.901 25.4425 21.4774 24.4709 22.449L18.2493 28.6706C17.7635 29.1564 17.1265 29.4 16.4895 29.4Z" fill="#38579E" />
                                 </svg>
-                                <div className="absolute w-3 h-full bg-[#38579E] top-0 left-0 rounded-full -translate-x-1/2">
+                                <div className="absolute w-3 h-full bg-theme_blue top-0 left-0 rounded-full -translate-x-1/2">
 
                                 </div>
                             </Link> :
@@ -151,7 +151,7 @@ const MainMenu = ({ isOpen }) => {
                                     <path d="M40 10H16C12.686 10 10 12.686 10 16V18H46V16C46 12.686 43.314 10 40 10Z" fill="#38579E" />
                                     <path d="M26 40C26 41.104 25.104 42 24 42C22.896 42 22 41.104 22 40C22 38.896 22.896 38 24 38C25.104 38 26 38.896 26 40ZM16 38C14.896 38 14 38.896 14 40C14 41.104 14.896 42 16 42C17.104 42 18 41.104 18 40C18 38.896 17.104 38 16 38ZM20 22C16.686 22 14 24.686 14 28C14 31.314 16.686 34 20 34C23.314 34 26 31.314 26 28C26 24.686 23.314 22 20 22ZM36 30C32.686 30 30 32.686 30 36C30 39.314 32.686 42 36 42C39.314 42 42 39.314 42 36C42 32.686 39.314 30 36 30ZM40 22C38.896 22 38 22.896 38 24C38 25.104 38.896 26 40 26C41.104 26 42 25.104 42 24C42 22.896 41.104 22 40 22ZM32 22C30.896 22 30 22.896 30 24C30 25.104 30.896 26 32 26C33.104 26 34 25.104 34 24C34 22.896 33.104 22 32 22Z" fill="#38579E" />
                                 </svg>
-                                <div className="absolute w-3 h-full bg-[#38579E] top-0 left-0 rounded-full -translate-x-1/2">
+                                <div className="absolute w-3 h-full bg-theme_blue top-0 left-0 rounded-full -translate-x-1/2">
 
                                 </div>
                             </Link> : <Link to="/create/event">

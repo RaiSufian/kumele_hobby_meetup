@@ -30,7 +30,7 @@ const ContactUs = ({ content, setContent }) => {
                             <div className="mt-2 text-sm">
                                 Comment
                                 <div>
-                                    <textarea className="mt-1 bg-[#F4F4F4] w-full rounded-md custom_input " rows={6}>
+                                    <textarea className="mt-1 bg-bg_light w-full rounded-md custom_input " rows={6}>
                                     </textarea>
                                 </div>
                             </div>

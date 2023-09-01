@@ -24,7 +24,7 @@ const Notification = () => {
                                     <div className=" text-start">
                                         <div className="flex justify-between">
                                             <h6 className="text-md font-plus font-semibold">Karaoke Evening</h6>
-                                            <span className="text-[#38579E] text-sm font-plus font-semibold">12:33 PM</span>
+                                            <span className="text-theme_blue text-sm font-plus font-semibold">12:33 PM</span>
                                         </div>
 
                                         <div className="flex items-center py-1">
@@ -45,7 +45,7 @@ const Notification = () => {
                                                     </div>
                                                 </svg>
                                             </span>
-                                            <span className="bg-[#4a454e] h-7 px-4 text-xs font-plus text-white flex items-center rounded-r-3xl" >
+                                            <span className="bg-bg_dark h-7 px-4 text-xs font-plus text-white flex items-center rounded-r-3xl" >
                                                 Music
                                             </span>
                                         </div>

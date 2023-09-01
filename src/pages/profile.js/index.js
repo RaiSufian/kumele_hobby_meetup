@@ -43,7 +43,7 @@ const UserProfile = () => {
                         <div className="">
                             <div className="md:flex items-center gap-3">
                                 <h3 className="text-xl font-bold">Alkesh Kumar</h3>
-                                <button className="w-24 h-6 rounded-md text-sm bg-[#38579E] text-white">Follow</button>
+                                <button className="w-24 h-6 rounded-md text-sm bg-theme_blue text-white">Follow</button>
                             </div>
                             <p className="text-dark text-sm md:w-4/5"> Hello, I am Alkesh Kumar from Cuberto  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
                         </div>
@@ -52,21 +52,21 @@ const UserProfile = () => {
                         <div className="w-1/3 sm:h-20 h-16 flex items-center justify-center">
                             <Link to="/dashboard/user/follower" className="cursor-pointer">
                                 <p className="text-sm ">Following</p>
-                                <span className="text-lg font-bold text-[#38579E]">8</span>
+                                <span className="text-lg font-bold text-theme_blue">8</span>
                             </Link>
 
                         </div>
                         <div className="w-1/3 sm:h-20 h-16 flex items-center justify-center border border-t-0 border-b-0 border-light_border">
                             <Link to="/dashboard/user/follower" className="cursor-pointer">
                                 <p className="text-sm ">Followers</p>
-                                <span className="text-lg font-bold text-[#38579E]">23</span>
+                                <span className="text-lg font-bold text-theme_blue">23</span>
                             </Link>
                         </div>
                         <div className="w-1/3 sm:h-20 h-16 flex items-center justify-center">
                             <Link to="/dashboard/user/follower" className="cursor-pointer">
 
                                 <p className="text-sm ">Gold Status</p>
-                                <span className="text-lg font-bold text-[#38579E]">23</span>
+                                <span className="text-lg font-bold text-theme_blue">23</span>
                             </Link>
                         </div>
                     </div>
@@ -313,15 +313,15 @@ const UserProfile = () => {
                             <form>
                                 <div className="mt-4">
                                     <label className="text-sm">First name</label>
-                                    <input type="text" className="text-sm h-8 bg-[#F4F4F4] w-full rounded-md custom_input py-1 px-3" placeholder="Enter your firstname" />
+                                    <input type="text" className="text-sm h-8 bg-bg_light w-full rounded-md custom_input py-1 px-3" placeholder="Enter your firstname" />
                                 </div>
                                 <div className="mt-4">
                                     <label className="text-sm">Last name</label>
-                                    <input type="text" className="text-sm h-8 bg-[#F4F4F4] w-full rounded-md custom_input py-1 px-3" placeholder="Enter your lastname" />
+                                    <input type="text" className="text-sm h-8 bg-bg_light w-full rounded-md custom_input py-1 px-3" placeholder="Enter your lastname" />
                                 </div>
                                 <div className="mt-4">
                                     <label className="text-sm">About</label>
-                                    <textarea className="bg-[#F4F4F4] w-full rounded-md custom_input py-1 px-3" rows={5}></textarea>
+                                    <textarea className="bg-bg_light w-full rounded-md custom_input py-1 px-3" rows={5}></textarea>
                                 </div>
                                 <div className="text-right mt-4">
                                     <button className="h-8 bg-black text-white rounded-md px-10">Update</button>

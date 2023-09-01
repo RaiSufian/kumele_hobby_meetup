@@ -6,7 +6,7 @@ const SidebarSub = () => {
             <div className="text-end">
                 <div className="flex items-center justify-between">
                     <h2 className="font-semibold font-plus text-2xl">Notifications</h2>
-                    <Link className="text-[#38579E] font-semibold font-plus texxt-lg" to="/user/notificaitons">View all</Link>
+                    <Link className="text-theme_blue font-semibold font-plus texxt-lg" to="/user/notificaitons">View all</Link>
                 </div>
 
                 <ul className="mt-5">
@@ -17,7 +17,7 @@ const SidebarSub = () => {
                                 <div className=" text-start">
                                     <div className="flex justify-between">
                                         <h6 className="text-md font-plus font-semibold">Karaoke Evening</h6>
-                                        <span className="text-[#38579E] text-sm font-plus font-semibold">12:33 PM</span>
+                                        <span className="text-theme_blue text-sm font-plus font-semibold">12:33 PM</span>
                                     </div>
 
                                     <div className="flex items-center py-1">
@@ -38,7 +38,7 @@ const SidebarSub = () => {
                                                 </div>
                                             </svg>
                                         </span>
-                                        <span className="bg-[#4a454e] h-7 px-4 text-xs font-plus text-white flex items-center rounded-r-3xl" >
+                                        <span className="bg- h-7 px-4 text-xs font-plus text-white flex items-center rounded-r-3xl" >
                                             Music
                                         </span>
                                     </div>
