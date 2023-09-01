@@ -1,8 +1,10 @@
 import Dashboardlayout from "../../layouts/dashboardlayout";
 import BlogCard from "../../components/blogCard";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 const Blogs = () => {
-    const [active, setactive] = useState("all")
+    const [active, setactive] = useState("all");
+    const styleMode = useSelector((state) => state.styleModer.mode);
     return (
 
         <Dashboardlayout >

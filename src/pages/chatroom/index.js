@@ -1,9 +1,10 @@
 import Dashboardlayout from "../../layouts/dashboardlayout";
 import Chatbox from "../../components/chatBox";
 import ChatCard from "../../components/chatCard";
-
+import { useSelector } from "react-redux";
 const ChatRoom = () => {
-    const groups = [0, 1, 2, 3, 4, 5]
+    const groups = [0, 1, 2, 3, 4, 5];
+    const styleMode = useSelector((state) => state.styleModer.mode);
     return (
         <Dashboardlayout>
             <div className=" px-5">

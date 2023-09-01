@@ -1,4 +1,6 @@
+import { useSelector } from "react-redux";
 const SignOut = ({ signOut, setSignOut }) => {
+    const styleMode = useSelector((state) => state.styleModer.mode);
     return (
         <div className={`font-plus w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${signOut ? " block" : "hidden"}`}>
             <div className=" bg-white py-7 rounded-2xl relative">

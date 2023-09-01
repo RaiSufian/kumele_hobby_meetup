@@ -1,5 +1,7 @@
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 const AuthLayout = ({ children }) => {
+    const styleMode = useSelector((state) => state.styleModer.mode);
     return (
         <div className="sm:max-h-screen overflow-hidden">
             <div className="relative ]">
@@ -11,7 +13,7 @@ const AuthLayout = ({ children }) => {
             </div>
             <div className="sm:flex lg:gap-6 gap-1 items-center">
                 <div className=" sm:w-1/2 flex justify-center items-center lg:px-10">
-                    <img src="/img/authimg1.png"/>
+                    <img src="/img/authimg1.png" />
                 </div>
                 <div className=" sm:w-1/2 pt-8 custom_auto_h overflow-y-auto">
                     {children}

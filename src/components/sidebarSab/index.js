@@ -1,6 +1,8 @@
+import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 const SidebarSub = () => {
-    const list = [0, 1, 2, 3, 4]
+    const list = [0, 1, 2, 3, 4];
+     const styleMode = useSelector((state) => state.styleModer.mode);
     return (
         <div className="bg-white p-3 rounded-md">
             <div className="text-end">
