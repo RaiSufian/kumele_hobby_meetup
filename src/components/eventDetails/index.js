@@ -3,7 +3,7 @@ const EventDetails = ({ setEvent }) => {
     const styleMode = useSelector((state) => state.styleModer.mode);
     return (
         <div className={` ${styleMode ? "bg-white" : "bg-black"} w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
-            <div className={` ${styleMode ? "bg-white" : "bg-white"} md:w-[690px] w-[520px]  lg:p-14 p-10 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out `}>
+            <div className={` ${styleMode ? "bg-black" : "bg-white"} md:w-[690px] w-[520px]  lg:p-14 p-10 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out `}>
                 <span className="absolute top-3 right-3 cursor-pointer z-10" onClick={() => setEvent(false)}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" fill="none">
                         <path opacity="0.35" d="M33.0721 9.27209C32.6781 9.66409 27.6101 14.7341 24.0001 18.3441C20.3901 14.7341 15.3221 9.66609 14.9281 9.27209C13.3661 7.71009 10.8341 7.71009 9.27209 9.27209C7.71009 10.8341 7.71009 13.3661 9.27209 14.9281C9.66409 15.3221 14.7341 20.3901 18.3441 24.0001C14.7341 27.6101 9.66609 32.6781 9.27209 33.0721C7.71009 34.6341 7.71009 37.1661 9.27209 38.7281C10.8341 40.2901 13.3661 40.2901 14.9281 38.7281C15.2121 38.4441 38.4441 15.2121 38.7281 14.9281C40.2901 13.3661 40.2901 10.8341 38.7281 9.27209C37.1661 7.71009 34.6341 7.71009 33.0721 9.27209Z" fill={` ${styleMode ? "white" : "black"}`} />
@@ -59,18 +59,18 @@ const EventDetails = ({ setEvent }) => {
                             </ul>
                             <button className={` ${styleMode ? "bg-white text-black" : "bg-black text-white "} rounded-md w-20 h-8 flex items-center justify-center gap-1 `}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 25" fill="none">
-                                    <path d="M8.98152 12.3145L15.2715 9.41152C14.5365 8.72152 14.0685 7.76152 14.0185 6.68652L7.72852 9.58952C8.46452 10.2775 8.93152 11.2385 8.98152 12.3145Z" fill="white" />
-                                    <path d="M15.2725 15.5885L8.98249 12.6855C8.93249 13.7605 8.46449 14.7215 7.72949 15.4115L14.0195 18.3145C14.0695 17.2385 14.5365 16.2775 15.2725 15.5885Z" fill="white" />
-                                    <path opacity="0.35" d="M5 8.5C2.791 8.5 1 10.291 1 12.5C1 14.709 2.791 16.5 5 16.5C7.209 16.5 9 14.709 9 12.5C9 10.291 7.209 8.5 5 8.5Z" fill="white" />
-                                    <path opacity="0.35" d="M18 2.5C15.791 2.5 14 4.291 14 6.5C14 8.709 15.791 10.5 18 10.5C20.209 10.5 22 8.709 22 6.5C22 4.291 20.209 2.5 18 2.5Z" fill="white" />
-                                    <path opacity="0.35" d="M18 14.5C15.791 14.5 14 16.291 14 18.5C14 20.709 15.791 22.5 18 22.5C20.209 22.5 22 20.709 22 18.5C22 16.291 20.209 14.5 18 14.5Z" fill="white" />
+                                    <path d="M8.98152 12.3145L15.2715 9.41152C14.5365 8.72152 14.0685 7.76152 14.0185 6.68652L7.72852 9.58952C8.46452 10.2775 8.93152 11.2385 8.98152 12.3145Z" fill={` ${styleMode ? "black" : "white"}`} />
+                                    <path d="M15.2725 15.5885L8.98249 12.6855C8.93249 13.7605 8.46449 14.7215 7.72949 15.4115L14.0195 18.3145C14.0695 17.2385 14.5365 16.2775 15.2725 15.5885Z" fill={` ${styleMode ? "black" : "white"}`} />
+                                    <path opacity="0.35" d="M5 8.5C2.791 8.5 1 10.291 1 12.5C1 14.709 2.791 16.5 5 16.5C7.209 16.5 9 14.709 9 12.5C9 10.291 7.209 8.5 5 8.5Z" fill={` ${styleMode ? "black" : "white"}`} />
+                                    <path opacity="0.35" d="M18 2.5C15.791 2.5 14 4.291 14 6.5C14 8.709 15.791 10.5 18 10.5C20.209 10.5 22 8.709 22 6.5C22 4.291 20.209 2.5 18 2.5Z" fill={` ${styleMode ? "black" : "white"}`} />
+                                    <path opacity="0.35" d="M18 14.5C15.791 14.5 14 16.291 14 18.5C14 20.709 15.791 22.5 18 22.5C20.209 22.5 22 20.709 22 18.5C22 16.291 20.209 14.5 18 14.5Z" fill={` ${styleMode ? "black" : "white"}`} />
                                 </svg>
                                 Share
                             </button>
 
                         </div>
                     </div>
-                    <div className={`p-2 text-start ${styleMode ? "text-[#BCBCBC)]" : ""} `}>
+                    <div className={`p-2 text-start ${styleMode ? "text-[#BCBCBC]" : ""} `}>
                         <p>Maecenas quam nunc, sagittis non condimentum at, rutrum sit amet eros. Fusce rutrum, lectus in blandit sagittis, mi tortor
 
                             ullamcorper mi, vitae vestibulum libero quam a nisi. In eu mauris et neque sodales porta eu eget dui.

@@ -7,13 +7,13 @@ const Addpayment = ({ setPayModal }) => {
     return (
         <>
             {payment ?
-                <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
+                <div className={` w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${styleMode ? "bg-white" : "bg-black"} `}>
                     <div className={` ${styleMode ? "bg-black" : "bg-white"}  sm:p-20 p-6 rounded-3xl relative`}>
                         <div className="sm:w-96 w-72">
                             <div className="w-52 h-52 login_gif mx-auto">
 
                             </div>
-                            <p className={` ${styleMode ? "text-white" : ""}text-4xl font-bold text-center mt-5`}>Payment successful</p>
+                            <p className={` ${styleMode ? "text-white" : ""} text-4xl font-bold text-center mt-5`}>Payment successful</p>
                         </div>
                         <div className="absolute top-9 right-9" onClick={() => setPayModal(false)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -24,8 +24,8 @@ const Addpayment = ({ setPayModal }) => {
                     </div>
                 </div>
                 :
-                <div className="w-full  h-screen bg-black bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center">
-                    <div className="sm:w-[480px] w-[360px] bg-white py-12 sm:px-8 px-4 rounded-xl relative text-center animate-fadeIn duration-1000 ease-in-out">
+                <div className={` w-full  h-screen bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${styleMode ? "bg-white" : "bg-black"}`}>
+                    <div className={` sm:w-[480px] w-[360px]  py-12 sm:px-8 px-4 rounded-xl relative text-center animate-fadeIn duration-1000 ease-in-out  ${styleMode ? "bg-black" :  "bg-white" }`}>
                         <div className="flex justify-between items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 42 42" fill="none" onClick={() => setPayModal(false)}>
                                 <path opacity="0.35" d="M17.7791 24.636C18.7837 23.6315 28.7745 13.6406 29.7791 12.636C31.7883 10.6269 31.7883 7.37147 29.7791 5.36233C27.77 3.35318 24.5145 3.35318 22.5054 5.36233C21.5008 6.3669 11.51 16.3578 10.5054 17.3623C8.49625 19.3715 8.49625 22.6269 10.5054 24.636C12.5145 26.6452 15.7717 26.6452 17.7791 24.636Z" fill={` ${styleMode ? "white" : "black"}`} />
@@ -61,7 +61,7 @@ const Addpayment = ({ setPayModal }) => {
 
                         </div>
                         <div className="mt-4">
-                            <button className={ ` ${ styleMode ? "border-white text-white " : " border-black " } border  rounded-xl py-2 w-full flex items-center gap-2 justify-center `}>
+                            <button className={` ${styleMode ? "border-white text-white " : " border-black "} border  rounded-xl py-2 w-full flex items-center gap-2 justify-center `}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 36 36" fill="none">
                                     <path d="M27.8312 16.9853H19.0849V8.23898C19.0849 7.85236 18.9313 7.48158 18.6579 7.20821C18.3845 6.93483 18.0138 6.78125 17.6271 6.78125C17.2405 6.78125 16.8697 6.93483 16.5964 7.20821C16.323 7.48158 16.1694 7.85236 16.1694 8.23898V16.9853H7.42306C7.03645 16.9853 6.66567 17.1389 6.39229 17.4123C6.11891 17.6857 5.96533 18.0564 5.96533 18.4431C5.96533 18.8297 6.11891 19.2004 6.39229 19.4738C6.66567 19.7472 7.03645 19.9008 7.42306 19.9008H16.1694V28.6471C16.1694 29.0338 16.323 29.4045 16.5964 29.6779C16.8697 29.9513 17.2405 30.1049 17.6271 30.1049C18.0138 30.1049 18.3845 29.9513 18.6579 29.6779C18.9313 29.4045 19.0849 29.0338 19.0849 28.6471V19.9008H27.8312C28.2178 19.9008 28.5886 19.7472 28.862 19.4738C29.1354 19.2004 29.2889 18.8297 29.2889 18.4431C29.2889 18.0564 29.1354 17.6857 28.862 17.4123C28.5886 17.1389 28.2178 16.9853 27.8312 16.9853Z" fill={` ${styleMode ? "white" : "black"}`} />
                                 </svg>
@@ -69,7 +69,7 @@ const Addpayment = ({ setPayModal }) => {
                             </button>
                         </div>
                         <div className="mt-6 text-end">
-                            <button className={`${styleMode ? " bg-white text-black" : " bg-black text-white" } py-2 rounded-lg w-32 `} onClick={() => setPayment(true)}>Pay now</button>
+                            <button className={`${styleMode ? " bg-white text-black" : " bg-black text-white"} py-2 rounded-lg w-32 `} onClick={() => setPayment(true)}>Pay now</button>
                         </div>
                     </div>
                 </div>}

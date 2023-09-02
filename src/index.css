@@ -10,6 +10,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.input_dark {
+  color-scheme: dark;
+}
 
 .slick-dots {
   display: none !important;

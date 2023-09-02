@@ -13,7 +13,7 @@ const DeleteAccount = ({ deleteAc, setDeleteAc }) => {
                     <div className="py-2">
                         <input type="text" placeholder="Enter DELETE to remove account..." className={` ${styleMode ? "bg-[#242424] text-[#BCBCBC]" : "bg-theme_white"} w-full h-8 text-sm px-2 custom_input rounded-md  `} />
                         <div className="mt-3 flex justify-center gap-2 ">
-                            <button className={`w-1/2 h-9  rounded-lg ${styleMode ? "border-white text-black" : "border-black border"} `} onClick={() => setDeleteAc(false)}>No</button>
+                            <button className={`w-1/2 h-9 border rounded-lg ${styleMode ? "border-white text-white" : "border-black border"} `} onClick={() => setDeleteAc(false)}>No</button>
                             <button className={` ${styleMode ? "text-black bg-white" : "bg-black text-white"} w-1/2 h-9  rounded-lg  `}>Yes</button>
                         </div>
                     </div>

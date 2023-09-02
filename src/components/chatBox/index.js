@@ -10,7 +10,7 @@ const Chatbox = () => {
                         <path d="M9.25596 21.03C10.0931 21.8672 18.4188 30.1929 19.256 31.03C20.9302 32.7043 23.6431 32.7043 25.3174 31.03C26.9917 29.3557 26.9917 26.6429 25.3174 24.9686C24.4802 24.1315 16.1545 15.8057 15.3174 14.9686C13.6431 13.2943 10.9302 13.2943 9.25596 14.9686C7.58167 16.6429 7.58167 19.3572 9.25596 21.03Z" fill={` ${styleMode ? "white" : "black"}`} />
                     </svg>
                     <div className="">
-                        <h5 className={` ${styleMode ? "text-black" : "text-white"}  font-bold text-lg font-plus `}>Group Meditation</h5>
+                        <h5 className={` ${styleMode ? "text-white" : "text-black"}  font-bold text-lg font-plus `}>Group Meditation</h5>
                         <span className={` text-sm  ${styleMode ? "text-theme_border" : "text-dark"}`}>93 guests</span>
                     </div>
                 </div>

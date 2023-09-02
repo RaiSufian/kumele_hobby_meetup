@@ -8,7 +8,7 @@ const GuideLine = () => {
     return (
         <Dashboardlayout >
             <div className="min-h-screen  m-4 font-plus">
-                <div className="bg-white rounded-lg">
+                <div className={` rounded-lg ${styleMode ? "bg-black text-white" : "bg-white"}`}>
                     <div className="flex items-center sm:gap-10 gap-4 p-5 border-b border-light_border">
                         <Link to="/dashboard/profile">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 36 36" fill="none">
@@ -19,7 +19,7 @@ const GuideLine = () => {
                         <h2 className=" text-xl font-bold">Guideline</h2>
                     </div>
                     <div className="sm:p-5 p-1">
-                        <div className="bg-light_border rounded-lg sm:w-[660px] w-full p-1 relative">
+                        <div className={`_border rounded-lg sm:w-[660px] w-full p-1 relative ${styleMode ? "bg-[#454545] text-white" : "bg-light"} `}>
                             <div className=" flex relative z-20">
                                 <div className="w-1/3 p-1 h-10 sm:text-lg text-sm font-plus font-medium flex items-center justify-center cursor-pointer" onClick={() => { setGuide(0) }}>
                                     Community Guidelines
@@ -31,7 +31,7 @@ const GuideLine = () => {
                                     Popular
                                 </div>
                             </div>
-                            <div className={`h-10 w-1/3 bg-white absolute top-1 ${guide == 0 ? 'left-1' : ''} ${guide == 1 ? 'left-1/2 -translate-x-1/2' : ''}  ${guide == 2 ? 'right-1' : ''}  rounded-lg transition-all duration-75 ease-in`}></div>
+                            <div className={`h-10 w-1/3 ${styleMode  ? "bg-black" : ""} absolute top-1 ${guide == 0 ? 'left-1' : ''} ${guide == 1 ? 'left-1/2 -translate-x-1/2' : ''}  ${guide == 2 ? 'right-1' : ''}  rounded-lg transition-all duration-75 ease-in`}></div>
                         </div>
                         <div className={`my-6 px-2 ${guide == 0 ? "block " : "hidden"}`}>
                             <h2 className="font-semibold text-xl">Kumele Terms of use</h2>

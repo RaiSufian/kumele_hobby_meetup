@@ -10,12 +10,12 @@ const ShoppingCard = ({value , setPayModal}) => {
                 </div>
                 <div className="flex-1">
                     <div className="flex justify-between text-xl font-bold font-plus">
-                        <h2 className={` ${styleMode ? "text-white" : ""} `}>  {value.name}</h2>
-                        <span className={ `${value.active ? "text-theme_blue" : "text-theme"} ${styleMode ? "text-white" : "text-black"} `}> $ {value.price}</span>
+                        <h2 className={` ${value.active  ? "text-black" :  styleMode ? "text-white" : ""} `}>  {value.name}</h2>
+                        <span className={ `${value.active ? "text-theme_blue" : "text-theme"}  `}> $ {value.price}</span>
                     </div>
-                    <p className="font-lg py-1">{value.des}</p>
+                    <p className={`font-lg py-1 ${value.active  ? "text-black" :  styleMode ? "text-white" : ""} `} >{value.des}</p>
                     <div className="mt-5">
-                        <button className={`${styleMode ? "text-black bg-white" : "bg-black text-white"}  float-right w-48 rounded-lg text-lg py-1 `} onClick={()=>setPayModal(true)}>  {value.button}</button>
+                        <button className={`${value.active  ? "text-white bg-black" :   styleMode ? "text-black bg-white" : "bg-black text-white"}  float-right w-48 rounded-lg text-lg py-1 `} onClick={()=>setPayModal(true)}>  {value.button}</button>
                     </div>
 
 

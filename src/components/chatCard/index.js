@@ -19,9 +19,9 @@ const ChatCard = () => {
             </div>
             <div className="flex py-1 justify-between">
                 <div className="">
-                    <h4 className={`text-lg font-bold ${styleMode ? "text-black" : ""} `}>Getting High</h4>
+                    <h4 className={`text-lg font-bold ${styleMode ? "text-white" : ""} `}>Getting High</h4>
                     <p className="text-sm text-theme_blue">Hosted by Alkesh Kumar</p>
-                    <span className={`text-sm  ${styleMode ? "text-[#BCBCBC ]" : "text-light_text"}  `}>8th Oct, 2022</span>
+                    <span className={`text-sm  ${styleMode ? "text-[#BCBCBC]" : "text-light_text"}  `}>8th Oct, 2022</span>
                 </div>
                 <div className=" text-right">
                     <p className={`${styleMode ? "text-[#BCBCBC]" : "text-dark"}  text-sm `}>4 days left to rate & review</p>

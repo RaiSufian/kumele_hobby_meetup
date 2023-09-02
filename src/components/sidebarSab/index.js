@@ -2,12 +2,12 @@ import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 const SidebarSub = () => {
     const list = [0, 1, 2, 3, 4];
-     const styleMode = useSelector((state) => state.styleModer.mode);
+    const styleMode = useSelector((state) => state.styleModer.mode);
     return (
-        <div className="bg-white p-3 rounded-md">
+        <div className={`  p-3 rounded-md  ${styleMode ? "bg-black" : "bg-white"}`}>
             <div className="text-end">
                 <div className="flex items-center justify-between">
-                    <h2 className="font-semibold font-plus text-2xl">Notifications</h2>
+                    <h2 className={`${styleMode ? "text-white" : "text-black"} font-semibold font-plus text-2xl `}>Notifications</h2>
                     <Link className="text-theme_blue font-semibold font-plus texxt-lg" to="/user/notificaitons">View all</Link>
                 </div>
 
@@ -18,12 +18,12 @@ const SidebarSub = () => {
                                 <img src="/img/profileSub.png" alt="profile_img" className="w-16 h-16" />
                                 <div className=" text-start">
                                     <div className="flex justify-between">
-                                        <h6 className="text-md font-plus font-semibold">Karaoke Evening</h6>
+                                        <h6 className={` ${styleMode ? "text-white" : "text-black"}  text-md font-plus font-semibold `}>Karaoke Evening</h6>
                                         <span className="text-theme_blue text-sm font-plus font-semibold">12:33 PM</span>
                                     </div>
 
-                                    <div className="flex items-center py-1">
-                                        <span className="bg-black h-7 px-3 flex items-center rounded-l-3xl">
+                                    <div className={`flex items-center py-1 `}>
+                                        <span className={`${styleMode ? "border border-white border-r-0" : ""}  bg-black h-7 px-3 flex items-center rounded-l-3xl `}>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                 <g clip-path="url(#clip0_243_10765)">
                                                     <path opacity="0.35" d="M15.2593 15.2589L17.181 13.893L17.4493 6.92303C17.481 6.21803 17.031 5.58803 16.3568 5.3797C15.7685 5.19803 15.046 5.02637 14.4235 5.02637C13.8151 5.02637 13.1126 5.19053 12.5326 5.3672C11.8368 5.57887 11.3843 6.2447 11.4443 6.96887L11.9185 12.1847C11.9185 12.1839 14.986 15.4114 15.2593 15.2589Z" fill="white" />
@@ -40,11 +40,11 @@ const SidebarSub = () => {
                                                 </div>
                                             </svg>
                                         </span>
-                                        <span className="bg- h-7 px-4 text-xs font-plus text-white flex items-center rounded-r-3xl" >
+                                        <span className={`bg- h-7 bg-[#4A454E] px-4 text-xs font-plus text-white flex items-center rounded-r-3xl  ${styleMode ? "border border-white border-l-0" : ""} `} >
                                             Music
                                         </span>
                                     </div>
-                                    <p className="text-light_text font-plus text-sm">
+                                    <p className={`  font-plus text-sm ${styleMode ? "text-[#BCBCBC]" : "text-light_text"}`}>
                                         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                                     </p>
                                 </div>

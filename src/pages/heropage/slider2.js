@@ -1,6 +1,6 @@
 const Slider2 = () => {
     return (
-        <div className="max-w-6xl  mx-auto xl:pt-4 lg:pt-2">
+        <div className="max-w-6xl  mx-auto xl:pt-3 lg:pt-2">
             <div className="lg:flex text-start gap-10 px-8 ">
                 <div className="md:flex lg:w-1/2 md:w-4/5 sm:w-full mx-auto gap-3 md:py-4 sm:mt-2 md:mt-0">
                     <div className="flex-1 sm:w-full">
@@ -27,14 +27,14 @@ const Slider2 = () => {
                     </div>
                 </div>
             </div>
-            <div className="lg:flex xl:pt-4 pt-3 xl:pb-2 pb-2 xl:max-w-7xl max-w-4xl mx-auto justify-between sm:px-5 lg:px-1">
+            <div className="lg:flex pt-3 xl:pb-2 pb-2 xl:max-w-7xl max-w-4xl mx-auto justify-between sm:px-5 lg:px-1">
                 <div className="lg:max-w-lg">
                     <p className="text-theme_orange text-xl font-fredoka font-medium">From knitting to spirituality. Do what you love and share it on Kumele.</p>
                     <p className="text-theme_orange xl:text-md lg:text-sm font-fredoka xl:pt-3 pt-1">Coming to Web, IOS and Android. Follow us on social media.</p>
                 </div>
                 <div className="max-w-lg mx-auto lg:py-0 py-3">
                     <div className="sm:flex items-center gap-1">
-                        <img src="/img/image 27.png" alt="img" className="w-52 mx-auto sm:mx-1" />
+                        <img src="/img/image 27.png" alt="img" className="xl:w-48 w-52 mx-auto sm:mx-1" />
                         <h6 className="text-theme text-2xl font-medium">Download Free E-Book</h6>
                     </div>
                 </div>
