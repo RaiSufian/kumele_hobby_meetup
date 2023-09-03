@@ -3,7 +3,7 @@ const DeleteAccount = ({ deleteAc, setDeleteAc }) => {
     const styleMode = useSelector((state) => state.styleModer.mode);
     return (
         <div className={`font-plus w-full  h-screen ${styleMode ? "bg-white" : "bg-black"}  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${deleteAc ? " block" : "hidden"}`}>
-            <div className={` ${styleMode ? "bg-black" : "bg-white"}  py-7 rounded-2xl relative `}>
+            <div className={` ${styleMode ? "bg-black" : "bg-white"} modal  py-7 rounded-2xl relative `}>
                 <div className="w-72 px-3">
 
                     <div className="w-20 h-20 wrong_img mx-auto">

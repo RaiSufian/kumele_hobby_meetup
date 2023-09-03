@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 const EventDetails = ({ setEvent }) => {
     const styleMode = useSelector((state) => state.styleModer.mode);
     return (
-        <div className={` ${styleMode ? "bg-white" : "bg-black"} w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
+        <div className={` ${styleMode ? "bg-white" : "bg-black"} w-full modal  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
             <div className={` ${styleMode ? "bg-black" : "bg-white"} md:w-[690px] w-[520px]  lg:p-14 p-10 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out `}>
                 <span className="absolute top-3 right-3 cursor-pointer z-10" onClick={() => setEvent(false)}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" fill="none">

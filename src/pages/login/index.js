@@ -93,7 +93,7 @@ const Login = () => {
             </div>
             {login ?
                 <div className={` ${styleMode ? "bg-white" : "bg-black"} w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
-                    <div className={` ${styleMode  ? "bg-black" :  "bg-white "} p-10 rounded-3xl relative `} >
+                    <div className={` ${styleMode  ? "bg-black" :  "bg-white "} modal p-10 rounded-3xl relative `} >
                         <div className="md:w-72 w-60">
                             <div className="md:w-52 w-40 md:h-52 h-40 login_gif mx-auto">
 

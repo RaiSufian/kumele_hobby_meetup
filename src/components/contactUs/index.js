@@ -4,7 +4,7 @@ const ContactUs = ({ content, setContent }) => {
     return (
         <div className={`font-plus w-full  h-screen ${styleMode  ? "bg-white" : "bg-black "} bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${content ? " block" : "hidden"}`}>
             <div>
-                <div className={` ${styleMode  ? "bg-black border-light_border" : "bg-white border-light_border"}  px-4 py-3  rounded-t-2xl relative border-b  `}>
+                <div className={` ${styleMode  ? "bg-black border-light_border" : "bg-white border-light_border"} modal  px-4 py-3  rounded-t-2xl relative border-b  `}>
                     <div className="sm:w-[440px] w-[350px] cursor-pointer">
                         <div className="flex items-center gap-5  ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48" fill="none" onClick={() => { setContent(false) }}>

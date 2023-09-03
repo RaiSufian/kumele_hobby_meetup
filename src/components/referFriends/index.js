@@ -3,7 +3,7 @@ const ReferFriends = ({ referFrd, setReferFrd }) => {
     const styleMode = useSelector((state) => state.styleModer.mode);
     return (
         <div className={` ${styleMode ?  "bg-white": "bg-black"} font-plus w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${referFrd ? " block" : "hidden"}`}>
-            <div className={` ${styleMode ? "bg-black" : "bg-white"}  py-7 rounded-2xl relative `}>
+            <div className={` ${styleMode ? "bg-black" : "bg-white"} modal  py-7 rounded-2xl relative `}>
                 <div className="sm:w-96 w-80 ">
                     <div className="mt-7 text-center">
                         <h4 className={` ${styleMode ? "text-white" : "" } text-xl font-bold `}>Invite your friends to Kumele</h4>

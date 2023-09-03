@@ -303,7 +303,7 @@ const UserProfile = () => {
             </div>
             {/* User Profile Edit */}
             <div className={`${styleMode ? "bg-white" : "bg-black"} font-plus w-full h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${profileEdit ? " block" : "hidden"}`}>
-                <div className={`${styleMode ? "bg-black text-white" : "bg-white"} sm:px-10 px-6 py-7 rounded-2xl relative `} >
+                <div className={`${styleMode ? "bg-black text-white" : "bg-white"} modal sm:px-10 px-6 py-7 rounded-2xl relative `} >
                     <div className="sm:w-96 w-72">
                         <div className="flex justify-between items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 42 42" fill="none" onClick={() => { setProfileEdit(false) }}>
@@ -345,7 +345,7 @@ const UserProfile = () => {
             </div>
             {/* Edit user Sound setting */}
             <div className={`${styleMode ? "bg-white" : "bg-black"} font-plus w-full h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${sound ? " block" : "hidden"}`}>
-                <div className={`${styleMode ? "bg-black text-white" : "bg-white"}   sm:px-10 px-5 py-7 rounded-2xl relative`}  >
+                <div className={`${styleMode ? "bg-black text-white" : "bg-white"} modal  sm:px-10 px-5 py-7 rounded-2xl relative`}  >
                     <div className="sm:w-96 w-72">
                         <div className="flex justify-between items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 42 42" fill="none" onClick={() => { setSound(false) }}>
@@ -377,7 +377,7 @@ const UserProfile = () => {
             </div>
             {/* user paypal setting */}
             <div className={`${styleMode ? "bg-white" : "bg-black"} font-plus w-full h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${paypal ? " block" : "hidden"}`}>
-                <div className={`${styleMode ? "bg-black text-white" : "bg-white"}   sm:px-10 px-5 py-7 rounded-2xl relative`}  >
+                <div className={`${styleMode ? "bg-black text-white" : "bg-white"} modal  sm:px-10 px-5 py-7 rounded-2xl relative`}  >
                     <div className="sm:w-72 w-60 sm:h-72 h-60 flex justify-center items-center">
                         <div className="">
                             <div className="sm:w-40 w-32 sm:h-40 h-32 wrong_img mx-auto">
@@ -396,7 +396,7 @@ const UserProfile = () => {
             </div>
             {/* Edit user Security */}
             <div className={`${styleMode ? "bg-white" : "bg-black"} font-plus w-full h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${security ? " block" : "hidden"}`}>
-                <div className={`${styleMode ? "bg-black text-white" : "bg-white"}   sm:px-10 px-5 py-7 rounded-2xl relative`}  >
+                <div className={`${styleMode ? "bg-black text-white" : "bg-white"} modal  sm:px-10 px-5 py-7 rounded-2xl relative`}  >
 
                     <UserSecurity setSecurity={setSecurity} />
                 </div>
