@@ -55,13 +55,13 @@ const EventCard = ({ setEvent }) => {
                         </li>
                     </ul>
                     <div className="flex items-center">
-                        <p className={` ${styleMode ? "text-[#808080]" : "text-[#BCBCBC]"} text-sm font-plus `}>Starts in </p>
+                        <p className={` ${styleMode ? "text-[#808080]" : "text-[#BCBCBC]"} text-xs font-plus `}>Starts in </p>
                         <span className="px-1"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
                             <path opacity="0.35" d="M8.1496 14.6224C11.8075 14.6224 14.7728 11.6571 14.7728 7.99921C14.7728 4.3413 11.8075 1.37598 8.1496 1.37598C4.49169 1.37598 1.52637 4.3413 1.52637 7.99921C1.52637 11.6571 4.49169 14.6224 8.1496 14.6224Z" fill={` ${styleMode ? "white" : "black"}`} />
                             <path d="M8.81182 3.95975L9.14298 7.66876C9.20921 8.19862 8.81182 8.66225 8.21572 8.72848C7.61963 8.79471 7.22224 8.39732 7.15601 7.80123C7.15601 7.735 7.15601 7.66876 7.15601 7.60253L7.48717 3.95975C7.48717 3.56236 7.81833 3.29743 8.21572 3.36366C8.54689 3.42989 8.81182 3.69482 8.81182 3.95975Z" fill={` ${styleMode ? "white" : "black"}`} />
                             <path d="M9.34203 10.1193L7.48752 8.52977C7.09012 8.1986 7.02389 7.53628 7.42129 7.13889C7.75245 6.74149 8.41477 6.67526 8.81217 7.07265C8.8784 7.13889 8.94463 7.20512 8.94463 7.27135L10.4017 9.32455C10.6004 9.65572 10.5342 10.0531 10.2693 10.2518C9.93812 10.3843 9.60696 10.318 9.34203 10.1193Z" fill={` ${styleMode ? "white" : "black"}`} />
                         </svg></span>
-                        <span className="text-sm font-plus font-bold text-theme_blue">3 Days</span>
+                        <span className="text-xs font-plus font-bold text-theme_blue">3 Days</span>
                     </div>
                     <div className={` ${styleMode ? "bg-[#6B6B6B]" : "bg-light_border "} absolute right-4 bottom-3  rounded-full cursor-pointer `}>
                         <div className="relative w-5 h-5 " onClick={() => setEvent(true)}>

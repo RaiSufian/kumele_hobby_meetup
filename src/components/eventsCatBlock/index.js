@@ -5,7 +5,7 @@ const EventsCatBlock = ({ name, setEvent }) => {
     return (
         <div className={` ${styleMode ? "bg-black" : "bg-white"} mt-3  p-3 rounded-md `}>
             <div className="flex items-start justify-between">
-                <h2 className={`${styleMode  ? "text-black" : ""} text-xl font-extrabold font-plus `}>{name}</h2>
+                <h2 className={`${styleMode  ? "text-black" : ""} text-xl font-bold font-plus `}>{name}</h2>
                 <span className="text-theme_blue font-semibold font-plus texxt-lg">View all</span>
             </div>
             <div className="flex mt-5 flex-wrap">

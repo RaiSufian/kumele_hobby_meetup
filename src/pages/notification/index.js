@@ -6,9 +6,9 @@ const Notification = () => {
     const styleMode = useSelector((state) => state.styleModer.mode);
     return (
         <Dashboardlayout>
-            <div className={`  px-4 py-3 w-full `}>
+            <div className={`  px-2 py-2 w-full `}>
                 <div className={`${styleMode ? "bg-black rounded-md" : ""} `}>
-                    <div className="flex items-center gap-10 px-4 py-5 border-b border-[#6B6B6B]">
+                    <div className={` flex items-center gap-10 px-4 py-5 border-b   ${styleMode ? "border-[#6B6B6B]" : ""}`}>
                         <Link to="/dashboard">
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 42 42" fill="none">
                                 <path opacity="0.35" d="M17.7791 24.636C18.7837 23.6315 28.7745 13.6406 29.7791 12.636C31.7883 10.6269 31.7883 7.37147 29.7791 5.36233C27.77 3.35318 24.5145 3.35318 22.5054 5.36233C21.5008 6.3669 11.51 16.3578 10.5054 17.3623C8.49625 19.3715 8.49625 22.6269 10.5054 24.636C12.5145 26.6452 15.7717 26.6452 17.7791 24.636Z" fill={` ${styleMode ? "white" : "black"}`} />
@@ -16,22 +16,22 @@ const Notification = () => {
                             </svg>
                         </Link>
 
-                        <h2 className= {` md:text-2xl text-xl font-bold font-plus ${styleMode ? "text-white" : ""} `}>Notifications</h2>
+                        <h2 className={` md:text-2xl text-xl font-bold font-plus ${styleMode ? "text-white" : ""} `}>Notifications</h2>
                     </div>
                     <div className="md:mt-7 mt-3 p-4">
-                        <ul className=" flex flex-wrap">
+                        <ul className=" flex flex-wrap ">
                             {list.map((value, index) => {
                                 return (
-                                    <li className="flex gap-3 py-2 xl:w-1/2 lg:w-1/2 mt-5" key={index}>
+                                    <li className="flex gap-3 py-2 xl:w-1/2 lg:w-1/2 mt-5 relative box-border pr-4" key={index}>
                                         <img src="/img/profileSub.png" alt="profile_img" className="w-16 h-16" />
-                                        <div className=" text-start">
+                                        <div className=" text-start relative">
                                             <div className="flex justify-between">
-                                                <h6 className={`text-md font-plus font-semibold ${styleMode  ? "text-white" : ""}`}>Karaoke Evening</h6>
+                                                <h6 className={`text-md font-plus font-semibold ${styleMode ? "text-white" : ""}`}>Karaoke Evening</h6>
                                                 <span className="text-theme_blue text-sm font-plus font-semibold">12:33 PM</span>
                                             </div>
 
                                             <div className="flex items-center py-1">
-                                                <span className={`bg-black h-7 px-3 flex items-center rounded-l-3xl ${styleMode ? "border border-white border-r-0"  : ""}`}>
+                                                <span className={`bg-black h-7 px-3 flex items-center rounded-l-3xl ${styleMode ? "border border-white border-r-0" : ""}`}>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                         <g clip-path="url(#clip0_243_10765)">
                                                             <path opacity="0.35" d="M15.2593 15.2589L17.181 13.893L17.4493 6.92303C17.481 6.21803 17.031 5.58803 16.3568 5.3797C15.7685 5.19803 15.046 5.02637 14.4235 5.02637C13.8151 5.02637 13.1126 5.19053 12.5326 5.3672C11.8368 5.57887 11.3843 6.2447 11.4443 6.96887L11.9185 12.1847C11.9185 12.1839 14.986 15.4114 15.2593 15.2589Z" fill="white" />
@@ -48,14 +48,21 @@ const Notification = () => {
                                                         </div>
                                                     </svg>
                                                 </span>
-                                                <span className={` ${styleMode  ? "border border-white border-l-0" : "" } bg-bg_dark h-7 px-4 text-xs font-plus text-white flex items-center rounded-r-3xl `} >
+                                                <span className={` ${styleMode ? "border border-white border-l-0" : ""} bg-bg_dark h-7 px-4 text-xs font-plus text-white flex items-center rounded-r-3xl `} >
                                                     Music
                                                 </span>
                                             </div>
-                                            <div className="flex items-start">
+                                            <div className="flex items-start pr-5">
                                                 <p className="text-light_text font-plus text-sm">
-                                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                                                    Amet  Amet   Amet   Amet  Amet  minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
                                                 </p>
+                                                <div className="cursor-pointer">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none">
+                                                        <path opacity="0.35" d="M22.6668 29.3333H9.3335C7.12416 29.3333 5.3335 27.5427 5.3335 25.3333V8H26.6668V25.3333C26.6668 27.5427 24.8762 29.3333 22.6668 29.3333Z" fill={` ${styleMode ? "white" : "black"}`} />
+                                                        <path d="M21.3332 5.33366H10.6665V4.00033C10.6665 3.26433 11.2638 2.66699 11.9998 2.66699H19.9998C20.7358 2.66699 21.3332 3.26433 21.3332 4.00033V5.33366Z" fill={` ${styleMode ? "white" : "black"}`} />
+                                                        <path d="M25.3333 4C24.532 4 7.468 4 6.66667 4C5.19333 4 4 5.19333 4 6.66667C4 8.14 5.19333 9.33333 6.66667 9.33333C7.468 9.33333 24.532 9.33333 25.3333 9.33333C26.8067 9.33333 28 8.14 28 6.66667C28 5.19333 26.8067 4 25.3333 4Z" fill={` ${styleMode ? "white" : "black"}`} />
+                                                    </svg>
+                                                </div>
                                             </div>
 
                                         </div>
@@ -66,7 +73,9 @@ const Notification = () => {
                         </ul>
                     </div>
                 </div>
+                <div className="fade_bar  w-full fixed bottom-0 right-0 h-52 opacity-30">
 
+                </div>
             </div>
         </Dashboardlayout>
     )
