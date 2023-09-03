@@ -383,7 +383,6 @@ const Signup = () => {
                                             <option key={index} className={`${styleMode ? "text-white" : ""} `}>
                                                 {value}
                                             </option>
-
                                         )
                                     })}
                                 </select>
@@ -422,7 +421,7 @@ const Signup = () => {
                             <path d="M27.1807 24.543C28.4923 24.543 29.5557 23.4796 29.5557 22.168C29.5557 20.8563 28.4923 19.793 27.1807 19.793C25.869 19.793 24.8057 20.8563 24.8057 22.168C24.8057 23.4796 25.869 24.543 27.1807 24.543Z" fill={` ${styleMode ? "white" : "black"}`} />
                             <path d="M11.3477 24.543C12.6593 24.543 13.7227 23.4796 13.7227 22.168C13.7227 20.8563 12.6593 19.793 11.3477 19.793C10.036 19.793 8.97266 20.8563 8.97266 22.168C8.97266 23.4796 10.036 24.543 11.3477 24.543Z" fill={` ${styleMode ? "white" : "black"}`} />
                         </svg></span>
-                        <input type="password" placeholder="Enter Password" className={` ${styleMode ? "text-[#808080] bg-[#242424]" : "bg-bg_light text-light "} w-full custom_input`} />
+                        <input type="password" placeholder="Enter Password" valur="" className={` ${styleMode ? "text-[#808080] bg-[#242424]" : "bg-bg_light text-light "} w-full custom_input`} />
                         <span className="cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 39 38" fill="none">
                                 <path opacity="0.35" d="M3.85674 24.7396C1.20465 21.3671 1.20465 16.6313 3.85674 13.2588C6.96957 9.30208 12.1059 4.75 19.2642 4.75C26.4224 4.75 31.5587 9.30208 34.6716 13.2604C37.3237 16.6329 37.3237 21.3687 34.6716 24.7412C31.5587 28.6979 26.4224 33.25 19.2642 33.25C12.1059 33.25 6.96957 28.6979 3.85674 24.7396Z" fill={` ${styleMode ? "white" : "black"}`} />
