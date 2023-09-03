@@ -319,12 +319,10 @@ const Signup = () => {
                 <path d="M11.3287 29.6094L9.78515 37.1264C9.58287 38.1123 10.217 39.0745 11.2029 39.2786C11.3268 39.3041 11.4489 39.3168 11.571 39.3168C12.4184 39.3168 13.1765 38.7228 13.3551 37.8608L15.0498 29.6094H11.3287Z" fill={` ${styleMode ? "white" : "black"}`} />
             </svg>,
         },
-
-
-
-
     ]
-
+    const days = ["DD", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+    const months = ["MM", "Jan", "Feb", "Mar", , "Apr", "May", , "June", "Jul", "Agu", "Sep", "Oct", "Nov", "Dec"];
+    const years = ["YYYY", "2021", "2022", "2023", "2024"]
     const signUpforward = () => {
         navigate("/dashboard")
     }
@@ -372,10 +370,48 @@ const Signup = () => {
                         </div>
                     </div>
                     <div className="mt-5">
-                        <label className={` ${styleMode ? "text-white" : "bg-bg_light "} text-xl items-center font-plus font-semibold `}>Date of birth</label>
-                        <div className={`${styleMode ? "bg-[#242424] input_dark " : "bg-bg_light"} rounded-lg flex gap-3 p-2 mt-1 `}>
+                        <label className={` ${styleMode ? "text-white" : ""} text-xl items-center font-plus font-semibold `}>Date of birth</label>
+                        {/* <div className={`${styleMode ? "bg-[#242424] input_dark " : "bg-bg_light"} rounded-lg flex gap-3 p-2 mt-1 `}>
                             <input type="date" placeholder="Enter Date of birth" className={` ${styleMode ? "text-[#808080] bg-[#242424]" : "bg-bg_light text-light "} w-full custom_input`} />
 
+                        </div> */}
+                        <div className={`flex items-center mt-1`}>
+                            <div className={`w-1/4  pr-3`}>
+                                <select className={`h-10 rounded-md w-full pl-2 custom_input  ${styleMode ? "bg-[#242424] text-[#808080]" : "bg-bg_light"} custom_scroll`}>
+                                    {days.map((value, index) => {
+                                        return (
+                                            <option key={index} className={`${styleMode ? "text-white" : ""} `}>
+                                                {value}
+                                            </option>
+
+                                        )
+                                    })}
+                                </select>
+                            </div>
+                            <div className={`w-1/4  pr-3`}>
+                                <select className={`h-10 rounded-md w-full pl-2 custom_input  ${styleMode ? "bg-[#242424] text-[#808080]" : "bg-bg_light"} custom_scroll`}>
+                                    {months.map((value, index) => {
+                                        return (
+                                            <option key={index} className={`${styleMode ? "text-white" : ""} `}>
+                                                {value}
+                                            </option>
+                                        )
+                                    })}
+
+                                </select>
+                            </div>
+                            <div className={`w-1/2 `}>
+                                <select className={`h-10 rounded-md w-full pl-2 custom_input  ${styleMode ? "bg-[#242424] text-[#808080]" : "bg-bg_light"} custom_scroll`}>
+                                    {years.map((value, index) => {
+                                        return (
+                                            <option key={index} className={`${styleMode ? "text-white" : ""} `}>
+                                                {value}
+                                            </option>
+                                        )
+                                    })}
+
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div className={`${styleMode ? "bg-[#242424]" : "bg-bg_light "} rounded-lg flex gap-3 p-2 mt-5 `}>
@@ -559,7 +595,7 @@ const Signup = () => {
                                 </div>
                                 {/* Footer */}
                                 <div className="text-end mt-3">
-                                    <button className={` ${styleMode  ?  "bg-white text-black" : "bg-black text-white "} rounded-md py-2 px-4 w-60 text-lg font-plus `} onClick={signUpforward}>Continue</button>
+                                    <button className={` ${styleMode ? "bg-white text-black" : "bg-black text-white "} rounded-md py-2 px-4 w-60 text-lg font-plus `} onClick={signUpforward}>Continue</button>
                                 </div>
                             </div>
                         </div>

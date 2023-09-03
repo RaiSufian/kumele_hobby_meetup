@@ -29,7 +29,7 @@ const Slider4 = ({ slide, setSlide }) => {
         autoplaySpeed: 4000,
         cssEase: "linear"
     };
-    
+
     return (
         <>
             <div className='relative bg-theme_silver'>
@@ -97,8 +97,8 @@ const Slider4 = ({ slide, setSlide }) => {
 
                 </div>
             </div>
-            {isVisible ? <div className="rounded-xl z-10 absolute lg:w-[650px] md:w-[450px] w-[320px] md:h-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black">
-                <div className="relative lg:p-6 p-3">
+            <div className={` rounded-xl z-10 absolute lg:w-[650px] md:w-[450px] w-[320px] md:h-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black  ${isVisible ? "block" : "hidden"}`}>
+                <div className="relative lg:p-6 p-3 modal">
                     <div >
                         <img src="/img/icon.png" className="lg:w-16 w-12" alt="logo" />
                     </div>
@@ -111,16 +111,16 @@ const Slider4 = ({ slide, setSlide }) => {
                             <form>
                                 <div className="h-8 rounded-md bg-white flex items-center p-1 gap-1 mt-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 25 27" fill="none">
-                                        <path opacity="0.35" d="M19.3823 18H5.67969V23.4811H19.3823V18Z" fill="black"  />
-                                        <path opacity="0.35" d="M12.531 13.8902C16.3149 13.8902 19.3823 10.8227 19.3823 7.03883C19.3823 3.25494 16.3149 0.1875 12.531 0.1875C8.74713 0.1875 5.67969 3.25494 5.67969 7.03883C5.67969 10.8227 8.74713 13.8902 12.531 13.8902Z" fill="black"   />
-                                        <path d="M24.7851 21.2969C24.411 19.3442 22.5927 18 20.6044 18H16.6416L12.5308 23.4811L8.42 18H5.68084C2.46894 18 0.650597 19.3442 0.276515 21.2969C-0.227743 23.9237 1.77284 26.2216 4.30921 26.2216H20.7524C23.2887 26.2216 25.2893 23.9237 24.7851 21.2969Z" fill="black"  />
+                                        <path opacity="0.35" d="M19.3823 18H5.67969V23.4811H19.3823V18Z" fill="black" />
+                                        <path opacity="0.35" d="M12.531 13.8902C16.3149 13.8902 19.3823 10.8227 19.3823 7.03883C19.3823 3.25494 16.3149 0.1875 12.531 0.1875C8.74713 0.1875 5.67969 3.25494 5.67969 7.03883C5.67969 10.8227 8.74713 13.8902 12.531 13.8902Z" fill="black" />
+                                        <path d="M24.7851 21.2969C24.411 19.3442 22.5927 18 20.6044 18H16.6416L12.5308 23.4811L8.42 18H5.68084C2.46894 18 0.650597 19.3442 0.276515 21.2969C-0.227743 23.9237 1.77284 26.2216 4.30921 26.2216H20.7524C23.2887 26.2216 25.2893 23.9237 24.7851 21.2969Z" fill="black" />
                                     </svg>
                                     <input type='text' className="flex-1 custom_input" placeholder='Enter name' />
                                 </div>
                                 <div className="h-8 rounded-md bg-white flex items-center p-1 gap-1 mt-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 27 27" fill="none">
-                                        <path opacity="0.35" d="M2.36816 18.5554V7.70751C2.36816 5.91 3.82504 4.45312 5.62255 4.45312H20.8097C22.6072 4.45312 24.064 5.91 24.064 7.70751V18.5554C24.064 20.3529 22.6072 21.8098 20.8097 21.8098H5.62255C3.82504 21.8098 2.36816 20.3529 2.36816 18.5554Z" fill="black"  />
-                                        <path d="M24.064 7.70688C24.064 7.18835 23.9317 6.70453 23.7158 6.26953L14.8346 11.598C13.8377 12.1968 12.5967 12.1968 11.5987 11.598L2.71638 6.26953C2.50051 6.70453 2.36816 7.18835 2.36816 7.70688V9.85586L9.92267 14.3892C10.9391 14.9989 12.0771 15.3037 13.2161 15.3037C14.354 15.3037 15.4942 14.9989 16.5084 14.3892L24.064 9.85586V7.70688Z" fill="black"   />
+                                        <path opacity="0.35" d="M2.36816 18.5554V7.70751C2.36816 5.91 3.82504 4.45312 5.62255 4.45312H20.8097C22.6072 4.45312 24.064 5.91 24.064 7.70751V18.5554C24.064 20.3529 22.6072 21.8098 20.8097 21.8098H5.62255C3.82504 21.8098 2.36816 20.3529 2.36816 18.5554Z" fill="black" />
+                                        <path d="M24.064 7.70688C24.064 7.18835 23.9317 6.70453 23.7158 6.26953L14.8346 11.598C13.8377 12.1968 12.5967 12.1968 11.5987 11.598L2.71638 6.26953C2.50051 6.70453 2.36816 7.18835 2.36816 7.70688V9.85586L9.92267 14.3892C10.9391 14.9989 12.0771 15.3037 13.2161 15.3037C14.354 15.3037 15.4942 14.9989 16.5084 14.3892L24.064 9.85586V7.70688Z" fill="black" />
                                     </svg>
                                     <input type='password' className="flex-1 custom_input" placeholder='Enter name' />
                                 </div>
@@ -146,7 +146,7 @@ const Slider4 = ({ slide, setSlide }) => {
                     </div>
                 </div>
             </div>
-                : null}
+
 
         </>
 

@@ -10,8 +10,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .input_dark {
   color-scheme: dark;
+}
+
+.modal {
+  animation: fadeIn 1s alternate;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /* Starting opacity */
+  }
+
+  100% {
+    opacity: 1;
+    /* Ending opacity */
+  }
 }
 
 .slick-dots {

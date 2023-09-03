@@ -29,9 +29,9 @@ const CreateEvent = () => {
                 <div className={`${styleMode ? " bg-black border-[#6B6B6B] text-white" : " bg-white border-light_border"}  md:px-5 px-2 py-4  border-b  rounded-t-lg  `}>
                     <h2 className=" text-xl font-bold">Create event</h2>
                 </div>
-                <div className={`my-4 md:mx-4 mx-1  rounded-lg sm:p-4 p-1 ${styleMode ? " bg-black" : " bg-white"} `}>
+                <div className={`my-4 md:mx-4 mx-1 font-plus rounded-lg sm:p-4 p-1 ${styleMode ? " bg-black" : " bg-white"} `}>
                     <div className="md:flex">
-                        <div className="md:w-1/2 px-2">
+                        <div className="md:w-1/2 px-2 font-plus">
                             <div className={`${styleMode ? "text-white" : ""} `}>
                                 <h3>Event Category</h3>
                                 <div className="flex flex-wrap mt-1">
@@ -208,7 +208,7 @@ const CreateEvent = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="md:w-1/2  px-2">
+                        <div className="md:w-1/2  px-2 font-plus">
                             <div className={`${styleMode ? "text-white" : ""} `}>
                                 <h3>Event Name</h3>
                                 <input className={`rounded-md w-full h-10 p-2 custom_input mt-1  ${styleMode ? "bg-[#242424] text-[#BCBCBC]" : "bg-theme_white "}`} type="text" placeholder="Add a title" />
@@ -233,17 +233,49 @@ const CreateEvent = () => {
                             </div>
                             <div className={`${styleMode ? "text-white" : ""} mt-5 `}>
                                 <h3>Date</h3>
-                                <input className={`rounded-md  w-full h-10 p-2 custom_input mt-1 ${styleMode ? "bg-[#242424] input_dark text-[#BCBCBC] " : "bg-theme_white"}`} type="date" placeholder="Wednesday, 13th April, 2022" />
+                                <div className={`flex items-center rounded-md px-2 ${styleMode ? "bg-[#242424] input_dark text-[#BCBCBC] " : "bg-theme_white"}`}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                                        <path opacity="0.35" d="M26.2507 30.4046H9.22201C6.87063 30.4046 4.96484 28.4988 4.96484 26.1474V10.5378H30.5078V26.1474C30.5078 28.4988 28.602 30.4046 26.2507 30.4046Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        <path d="M26.2507 4.86206H9.22201C6.87063 4.86206 4.96484 6.76785 4.96484 9.11922V10.5383H30.5078V9.11922C30.5078 6.76785 28.602 4.86206 26.2507 4.86206Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        <path d="M20.5734 27.5674C21.3571 27.5674 21.9924 26.932 21.9924 26.1483C21.9924 25.3646 21.3571 24.7292 20.5734 24.7292C19.7896 24.7292 19.1543 25.3646 19.1543 26.1483C19.1543 26.932 19.7896 27.5674 20.5734 27.5674Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        <path d="M14.8976 27.5671C15.6813 27.5671 16.3166 26.9318 16.3166 26.1481C16.3166 25.3643 15.6813 24.729 14.8976 24.729C14.1138 24.729 13.4785 25.3643 13.4785 26.1481C13.4785 26.9318 14.1138 27.5671 14.8976 27.5671Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        <path d="M9.22179 27.5671C10.0055 27.5671 10.6408 26.9318 10.6408 26.1481C10.6408 25.3643 10.0055 24.729 9.22179 24.729C8.43807 24.729 7.80273 25.3643 7.80273 26.1481C7.80273 26.9318 8.43807 27.5671 9.22179 27.5671Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        <path d="M9.22179 21.8906C10.0055 21.8906 10.6408 21.2553 10.6408 20.4715C10.6408 19.6878 10.0055 19.0525 9.22179 19.0525C8.43807 19.0525 7.80273 19.6878 7.80273 20.4715C7.80273 21.2553 8.43807 21.8906 9.22179 21.8906Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        <path d="M14.8976 21.8906C15.6813 21.8906 16.3166 21.2553 16.3166 20.4715C16.3166 19.6878 15.6813 19.0525 14.8976 19.0525C14.1138 19.0525 13.4785 19.6878 13.4785 20.4715C13.4785 21.2553 14.1138 21.8906 14.8976 21.8906Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        <path d="M20.5734 21.8916C21.3571 21.8916 21.9924 21.2562 21.9924 20.4725C21.9924 19.6888 21.3571 19.0535 20.5734 19.0535C19.7896 19.0535 19.1543 19.6888 19.1543 20.4725C19.1543 21.2562 19.7896 21.8916 20.5734 21.8916Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        <path d="M26.2491 21.8916C27.0329 21.8916 27.6682 21.2562 27.6682 20.4725C27.6682 19.6888 27.0329 19.0535 26.2491 19.0535C25.4654 19.0535 24.8301 19.6888 24.8301 20.4725C24.8301 21.2562 25.4654 21.8916 26.2491 21.8916Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        <path d="M26.2491 16.2148C27.0329 16.2148 27.6682 15.5795 27.6682 14.7958C27.6682 14.012 27.0329 13.3767 26.2491 13.3767C25.4654 13.3767 24.8301 14.012 24.8301 14.7958C24.8301 15.5795 25.4654 16.2148 26.2491 16.2148Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        <path d="M20.5734 16.2148C21.3571 16.2148 21.9924 15.5795 21.9924 14.7958C21.9924 14.012 21.3571 13.3767 20.5734 13.3767C19.7896 13.3767 19.1543 14.012 19.1543 14.7958C19.1543 15.5795 19.7896 16.2148 20.5734 16.2148Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        <path d="M14.8976 16.2148C15.6813 16.2148 16.3166 15.5795 16.3166 14.7958C16.3166 14.012 15.6813 13.3767 14.8976 13.3767C14.1138 13.3767 13.4785 14.012 13.4785 14.7958C13.4785 15.5795 14.1138 16.2148 14.8976 16.2148Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                    </svg>
+                                    <input className={`rounded-md  w-full h-10 p-2 custom_input mt-1 ${styleMode ? "bg-[#242424] input_dark text-[#BCBCBC] " : "bg-theme_white"}`} type="date" placeholder="Wednesday, 13th April, 2022" />
+
+                                </div>
                             </div>
                             <div className={`${styleMode ? "text-white" : ""} mt-5 lg:flex`}>
                                 <div className="mt-3 lg:w-1/2 pr-2">
                                     <h3>Event Start time</h3>
-                                    <input className={`rounded-md  w-full h-10 p-2 custom_input mt-1 ${styleMode ? "bg-[#242424] input_dark text-[#BCBCBC] " : "bg-theme_white"}`} type="time" placeholder="Wednesday, 13th April, 2022" />
+                                    <div className={`flex items-center rounded-md px-2  ${styleMode ? "bg-[#242424] input_dark text-[#BCBCBC] " : "bg-theme_white"}`}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                                            <path opacity="0.35" d="M26.2507 30.4054H9.22201C6.87063 30.4054 4.96484 28.4997 4.96484 26.1483V9.11963H30.5078V26.1483C30.5078 28.4997 28.602 30.4054 26.2507 30.4054Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                            <path d="M26.2507 4.86182H9.22201C6.87063 4.86182 4.96484 6.76761 4.96484 9.11898V10.538H30.5078V9.11898C30.5078 6.76761 28.602 4.86182 26.2507 4.86182Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                            <path d="M16.3171 26.148C16.3171 26.9313 15.6813 27.567 14.898 27.567C14.1147 27.567 13.479 26.9313 13.479 26.148C13.479 25.3646 14.1147 24.7289 14.898 24.7289C15.6813 24.7289 16.3171 25.3646 16.3171 26.148ZM9.22179 24.7289C8.43847 24.7289 7.80273 25.3646 7.80273 26.148C7.80273 26.9313 8.43847 27.567 9.22179 27.567C10.0051 27.567 10.6408 26.9313 10.6408 26.148C10.6408 25.3646 10.0051 24.7289 9.22179 24.7289ZM12.0599 13.3765C9.70852 13.3765 7.80273 15.2823 7.80273 17.6336C7.80273 19.985 9.70852 21.8908 12.0599 21.8908C14.4113 21.8908 16.3171 19.985 16.3171 17.6336C16.3171 15.2823 14.4113 13.3765 12.0599 13.3765ZM23.4123 19.0527C21.061 19.0527 19.1552 20.9585 19.1552 23.3098C19.1552 25.6612 21.061 27.567 23.4123 27.567C25.7637 27.567 27.6695 25.6612 27.6695 23.3098C27.6695 20.9585 25.7637 19.0527 23.4123 19.0527ZM26.2504 13.3765C25.4671 13.3765 24.8314 14.0122 24.8314 14.7955C24.8314 15.5788 25.4671 16.2146 26.2504 16.2146C27.0338 16.2146 27.6695 15.5788 27.6695 14.7955C27.6695 14.0122 27.0338 13.3765 26.2504 13.3765ZM20.5742 13.3765C19.7909 13.3765 19.1552 14.0122 19.1552 14.7955C19.1552 15.5788 19.7909 16.2146 20.5742 16.2146C21.3575 16.2146 21.9933 15.5788 21.9933 14.7955C21.9933 14.0122 21.3575 13.3765 20.5742 13.3765Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        </svg>
+                                        <input className={`rounded-md  w-full h-10 p-2 custom_input mt-1 ${styleMode ? "bg-[#242424] input_dark text-[#BCBCBC] " : "bg-theme_white"}`} type="time" placeholder="Wednesday, 13th April, 2022" />
+
+                                    </div>
                                 </div>
                                 <div className="mt-3 lg:w-1/2">
                                     <h3>Event End time</h3>
-                                    <input className={`rounded-md  w-full h-10 p-2 custom_input mt-1 ${styleMode ? "bg-[#242424] input_dark text-[#BCBCBC] " : "bg-theme_white"}`} type="time" placeholder="Wednesday, 13th April, 2022" />
-                                </div>
+                                    <div className={`flex items-center rounded-md px-2  ${styleMode ? "bg-[#242424] input_dark text-[#BCBCBC] " : "bg-theme_white"}`}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                                            <path opacity="0.35" d="M26.2507 30.4054H9.22201C6.87063 30.4054 4.96484 28.4997 4.96484 26.1483V9.11963H30.5078V26.1483C30.5078 28.4997 28.602 30.4054 26.2507 30.4054Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                            <path d="M26.2507 4.86182H9.22201C6.87063 4.86182 4.96484 6.76761 4.96484 9.11898V10.538H30.5078V9.11898C30.5078 6.76761 28.602 4.86182 26.2507 4.86182Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                            <path d="M16.3171 26.148C16.3171 26.9313 15.6813 27.567 14.898 27.567C14.1147 27.567 13.479 26.9313 13.479 26.148C13.479 25.3646 14.1147 24.7289 14.898 24.7289C15.6813 24.7289 16.3171 25.3646 16.3171 26.148ZM9.22179 24.7289C8.43847 24.7289 7.80273 25.3646 7.80273 26.148C7.80273 26.9313 8.43847 27.567 9.22179 27.567C10.0051 27.567 10.6408 26.9313 10.6408 26.148C10.6408 25.3646 10.0051 24.7289 9.22179 24.7289ZM12.0599 13.3765C9.70852 13.3765 7.80273 15.2823 7.80273 17.6336C7.80273 19.985 9.70852 21.8908 12.0599 21.8908C14.4113 21.8908 16.3171 19.985 16.3171 17.6336C16.3171 15.2823 14.4113 13.3765 12.0599 13.3765ZM23.4123 19.0527C21.061 19.0527 19.1552 20.9585 19.1552 23.3098C19.1552 25.6612 21.061 27.567 23.4123 27.567C25.7637 27.567 27.6695 25.6612 27.6695 23.3098C27.6695 20.9585 25.7637 19.0527 23.4123 19.0527ZM26.2504 13.3765C25.4671 13.3765 24.8314 14.0122 24.8314 14.7955C24.8314 15.5788 25.4671 16.2146 26.2504 16.2146C27.0338 16.2146 27.6695 15.5788 27.6695 14.7955C27.6695 14.0122 27.0338 13.3765 26.2504 13.3765ZM20.5742 13.3765C19.7909 13.3765 19.1552 14.0122 19.1552 14.7955C19.1552 15.5788 19.7909 16.2146 20.5742 16.2146C21.3575 16.2146 21.9933 15.5788 21.9933 14.7955C21.9933 14.0122 21.3575 13.3765 20.5742 13.3765Z" fill={`${styleMode ? "white" : "black"}  `} />
+                                        </svg>
+                                        <input className={`rounded-md  w-full h-10 p-2 custom_input mt-1 ${styleMode ? "bg-[#242424] input_dark text-[#BCBCBC] " : "bg-theme_white"}`} type="time" placeholder="Wednesday, 13th April, 2022" />
+
+                                    </div>                                </div>
                             </div>
                             <div className={`${styleMode ? "text-white" : ""} mt-5 `}>
                                 <h3>Event Address</h3>

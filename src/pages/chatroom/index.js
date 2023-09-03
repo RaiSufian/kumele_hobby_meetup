@@ -14,7 +14,7 @@ const ChatRoom = () => {
                         <Chatbox />
                     </div>
                     <div className="flex-1 main_menu mt-3 overflow-y-auto custom_scroll md:mt-2">
-                        <h3 className="text-xl font-bold font-plus">Chats</h3>
+                        <h3 className={` ${styleMode ? "text-white" : "font-plus"}  text-xl font-bold `} > Chats</h3>
                         {
                             groups.map((value, index) => {
                                 return (
