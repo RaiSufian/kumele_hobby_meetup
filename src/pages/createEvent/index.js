@@ -1,10 +1,10 @@
 import Dashboardlayout from "../../layouts/dashboardlayout";
 import React, { useState } from 'react';
 import { useSelector } from "react-redux";
+import EventDetails from "../../components/eventDetails";
 const CreateEvent = () => {
     const styleMode = useSelector((state) => state.styleModer.mode);
     const [sliderValue, setSliderValue] = useState(50);
-
 
     const handleSliderChange = (event) => {
         const newValue = parseInt(event.target.value);
@@ -23,6 +23,21 @@ const CreateEvent = () => {
     const handleToggle2 = () => {
         setIsOn2(!isOn2);
     };
+    // Preview Event Modals
+    const [event, setEvent] = useState(false);
+
+    // Check User Availablity 
+    const [checkAvaib, setCheckAviab] = useState(0);
+    const checkavial = () => {
+        setCheckAviab(1);
+        setTimeout(() => {
+            setCheckAviab(2);
+        }, 1500);
+    }
+
+    // Add users
+    const [addUser, setAddUser] = useState(false);
+
     return (
         <Dashboardlayout>
             <div className={` ${styleMode ? " bg-black" : " layout_bg"} md:mx-4 mx-2 mb-4 pb-4  rounded-lg font-plus `} >
@@ -169,7 +184,7 @@ const CreateEvent = () => {
                                 <div className="sm:flex mt-1">
                                     <div className="rounded-lg sm:w-1/2 flex px-3">
                                         <input type="number" placeholder="81-150" className={` text-center h-9 rounded-l-lg w-1/2 border custom_input  border-r-0 ${styleMode ? "border-white bg-black text-white" : "border-bg_light"} `} />
-                                        <button className=" text-center h-9 w-1/2 bg-theme_yellow text-lg rounded-r-lg text-black">
+                                        <button className=" text-center h-9 w-1/2 bg-theme_yellow text-lg rounded-r-lg text-black" onClick={() => setAddUser(true)}>
                                             Pay
                                         </button>
                                     </div>
@@ -293,7 +308,7 @@ const CreateEvent = () => {
                             </div>
 
                             <div className="mt-3">
-                                <button className={`h-12  font rounded-lg text-lg w-full ${styleMode ? "bg-white text-black" : "bg-black text-white"} `}>
+                                <button className={`h-12  font rounded-lg text-lg w-full ${styleMode ? "bg-white text-black" : "bg-black text-white"} `} onClick={() => checkavial()}>
                                     Check User Availability
                                 </button>
                                 <p className={`text-sm  ${styleMode ? " text-[#C4C4C4]" : " text-light_text"}`}> <span className="text-theme_red">*</span> To use this, Please choose event category, zip code and number of guests.  </p>
@@ -304,9 +319,129 @@ const CreateEvent = () => {
                 </div>
 
                 <div className="text-right px-5">
-                    <button className={`rounded-md border-2  w-60 text-lg h-12 font-medium ${styleMode ? "border-white text-white" : "border-black  text-black"} `}>Preview Event</button>
+                    <button className={`rounded-md border-2  w-60 text-lg h-12 font-medium ${styleMode ? "border-white text-white" : "border-black  text-black"} `} onClick={() => setEvent(true)}>Preview Event</button>
                 </div>
             </div>
+            {event ?
+                <EventDetails setEvent={setEvent} type="2" />
+                :
+                null}
+            {checkAvaib == 1 ?
+                <div className={` ${styleMode ? "bg-white" : " bg-black"} w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
+                    <div className={` ${styleMode ? "bg-black" : " bg-white"} modal md:w-[450px] w-[320px] h-96  md:p-8 p-4 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out `}>
+                        <span className="absolute top-5 right-7 cursor-pointer" onClick={() => setCheckAviab(0)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
+                                <path opacity="0.35" d="M33.0721 9.27209C32.6781 9.66409 27.6101 14.7341 24.0001 18.3441C20.3901 14.7341 15.3221 9.66609 14.9281 9.27209C13.3661 7.71009 10.8341 7.71009 9.27209 9.27209C7.71009 10.8341 7.71009 13.3661 9.27209 14.9281C9.66409 15.3221 14.7341 20.3901 18.3441 24.0001C14.7341 27.6101 9.66609 32.6781 9.27209 33.0721C7.71009 34.6341 7.71009 37.1661 9.27209 38.7281C10.8341 40.2901 13.3661 40.2901 14.9281 38.7281C15.2121 38.4441 38.4441 15.2121 38.7281 14.9281C40.2901 13.3661 40.2901 10.8341 38.7281 9.27209C37.1661 7.71009 34.6341 7.71009 33.0721 9.27209Z" fill={` ${styleMode ? "white" : "black"}`} />
+                                <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill={` ${styleMode ? "white" : "black"}`} />
+                            </svg>
+                        </span>
+                        <div>
+                            <div className="cup_gif w-28 h-28"></div>
+                            <div className="py-4 text-start mt-6 ">
+                                <h3 className={` ${styleMode ? "text-white" : ""} text-2xl font-bold font-plus `}>No users around</h3>
+                                <p className={` ${styleMode ? "text-[#BCBCBC]" : "text-[#262626] "} text-lg font-plus font-medium mt-3`} >
+                                    Unfortunately, no potential matches currently but get rewarded by referring us to new users.
+                                    It’s a win, win.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                :
+                null}
+            {checkAvaib == 2 ?
+                <div className={` ${styleMode ? "bg-white" : " bg-black"} w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
+                    <div className={` ${styleMode ? "bg-black" : " bg-white"} modal md:w-[450px] w-[320px] h-96 md:p-8 p-4 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out `}>
+                        <span className="absolute top-5 right-7 cursor-pointer" onClick={() => setCheckAviab(0)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
+                                <path opacity="0.35" d="M33.0721 9.27209C32.6781 9.66409 27.6101 14.7341 24.0001 18.3441C20.3901 14.7341 15.3221 9.66609 14.9281 9.27209C13.3661 7.71009 10.8341 7.71009 9.27209 9.27209C7.71009 10.8341 7.71009 13.3661 9.27209 14.9281C9.66409 15.3221 14.7341 20.3901 18.3441 24.0001C14.7341 27.6101 9.66609 32.6781 9.27209 33.0721C7.71009 34.6341 7.71009 37.1661 9.27209 38.7281C10.8341 40.2901 13.3661 40.2901 14.9281 38.7281C15.2121 38.4441 38.4441 15.2121 38.7281 14.9281C40.2901 13.3661 40.2901 10.8341 38.7281 9.27209C37.1661 7.71009 34.6341 7.71009 33.0721 9.27209Z" fill={` ${styleMode ? "white" : "black"}`} />
+                                <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill={` ${styleMode ? "white" : "black"}`} />
+                            </svg>
+                        </span>
+                        <div>
+                            <div className="cup_gif w-28 h-28"></div>
+                            <div className="py-4 text-start mt-6 ">
+                                <h3 className={` ${styleMode ? "text-white" : ""} text-2xl font-bold font-plus `}>Users around</h3>
+                                <p className={` ${styleMode ? "text-[#BCBCBC]" : "text-[#262626] "} text-lg font-plus font-medium mt-3`} >
+                                    Potential matches matching your criteria found currently.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div> :
+                null
+            }
+            {addUser ?
+                <div className={` ${styleMode ? "bg-white" : " bg-black"} w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
+                    <div className={` ${styleMode ? "bg-black" : " bg-white"} modal md:w-[370px] w-[340px] md:p-6 p-3 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out `}>
+                        <div className="cup_gif w-20 h-20 mx-auto"></div>
+                        <div className="font-plus text-xl font-bold py-3">
+                            <h6 className={`${styleMode ? "text-white" : ""} `}>Guest Prices</h6>
+                        </div>
+                        <ul className={`${styleMode ? "text-white" : ""} `}>
+                            <li className="flex justify-between items-center cursor-pointer py-1">
+                                <div className="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <path d="M9.91873 13.8847H37.6887C38.74 13.8847 39.7119 14.1803 40.5688 14.6583C41.0131 13.8252 41.6479 13.0953 42.4473 12.5518L41.8641 10.3203C41.0489 7.19615 37.8553 5.32564 34.7312 6.14089L8.33783 13.0358C5.50529 13.7756 3.72603 16.4693 4.02357 19.2939C4.29928 16.265 6.81643 13.8847 9.91873 13.8847Z" fill={styleMode ? "white" : "black"} />
+                                        <path opacity="0.35" d="M43.6391 22.1843V19.8357C43.6391 16.5489 40.9752 13.885 37.6884 13.885H9.91848C6.63171 13.885 3.96777 16.5489 3.96777 19.8357V22.1843C6.27466 23.0035 7.93491 25.1834 7.93491 27.77C7.93491 30.3566 6.27466 32.5365 3.96777 33.3557V35.7043C3.96777 38.991 6.63171 41.655 9.91848 41.655H37.6884C40.9752 41.655 43.6391 38.991 43.6391 35.7043V33.3557C41.3322 32.5365 39.672 30.3566 39.672 27.77C39.672 25.1834 41.3322 23.0035 43.6391 22.1843Z" fill={styleMode ? "white" : "black"} />
+                                    </svg>
+                                    <span className="text-lg font-bold ">0-5 guests</span>
+                                </div>
+                                <span className="text-[#F4C755] text-lg font-bold">Free</span>
+                            </li>
+                            <li className="flex justify-between items-center cursor-pointer py-1">
+                                <div className="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <path d="M9.91873 13.8847H37.6887C38.74 13.8847 39.7119 14.1803 40.5688 14.6583C41.0131 13.8252 41.6479 13.0953 42.4473 12.5518L41.8641 10.3203C41.0489 7.19615 37.8553 5.32564 34.7312 6.14089L8.33783 13.0358C5.50529 13.7756 3.72603 16.4693 4.02357 19.2939C4.29928 16.265 6.81643 13.8847 9.91873 13.8847Z" fill={styleMode ? "white" : "black"} />
+                                        <path opacity="0.35" d="M43.6391 22.1843V19.8357C43.6391 16.5489 40.9752 13.885 37.6884 13.885H9.91848C6.63171 13.885 3.96777 16.5489 3.96777 19.8357V22.1843C6.27466 23.0035 7.93491 25.1834 7.93491 27.77C7.93491 30.3566 6.27466 32.5365 3.96777 33.3557V35.7043C3.96777 38.991 6.63171 41.655 9.91848 41.655H37.6884C40.9752 41.655 43.6391 38.991 43.6391 35.7043V33.3557C41.3322 32.5365 39.672 30.3566 39.672 27.77C39.672 25.1834 41.3322 23.0035 43.6391 22.1843Z" fill={styleMode ? "white" : "black"} />
+                                    </svg>
+                                    <span className="text-lg font-bold ">21-40 guests</span>
+                                </div>
+                                <span className="text-[#F4C755] text-lg font-bold">$10.61</span>
+                            </li>
+                            <li className="flex justify-between items-center cursor-pointer py-1">
+                                <div className="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <path d="M9.91873 13.8847H37.6887C38.74 13.8847 39.7119 14.1803 40.5688 14.6583C41.0131 13.8252 41.6479 13.0953 42.4473 12.5518L41.8641 10.3203C41.0489 7.19615 37.8553 5.32564 34.7312 6.14089L8.33783 13.0358C5.50529 13.7756 3.72603 16.4693 4.02357 19.2939C4.29928 16.265 6.81643 13.8847 9.91873 13.8847Z" fill={styleMode ? "white" : "black"} />
+                                        <path opacity="0.35" d="M43.6391 22.1843V19.8357C43.6391 16.5489 40.9752 13.885 37.6884 13.885H9.91848C6.63171 13.885 3.96777 16.5489 3.96777 19.8357V22.1843C6.27466 23.0035 7.93491 25.1834 7.93491 27.77C7.93491 30.3566 6.27466 32.5365 3.96777 33.3557V35.7043C3.96777 38.991 6.63171 41.655 9.91848 41.655H37.6884C40.9752 41.655 43.6391 38.991 43.6391 35.7043V33.3557C41.3322 32.5365 39.672 30.3566 39.672 27.77C39.672 25.1834 41.3322 23.0035 43.6391 22.1843Z" fill={styleMode ? "white" : "black"} />
+                                    </svg>
+                                    <span className="text-lg font-bold ">41-60 guests</span>
+                                </div>
+                                <span className="text-[#F4C755] text-lg font-bold">$14.15</span>
+                            </li>
+                            <li className="flex justify-between items-center cursor-pointer py-1">
+                                <div className="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <path d="M9.91873 13.8847H37.6887C38.74 13.8847 39.7119 14.1803 40.5688 14.6583C41.0131 13.8252 41.6479 13.0953 42.4473 12.5518L41.8641 10.3203C41.0489 7.19615 37.8553 5.32564 34.7312 6.14089L8.33783 13.0358C5.50529 13.7756 3.72603 16.4693 4.02357 19.2939C4.29928 16.265 6.81643 13.8847 9.91873 13.8847Z" fill={styleMode ? "white" : "black"} />
+                                        <path opacity="0.35" d="M43.6391 22.1843V19.8357C43.6391 16.5489 40.9752 13.885 37.6884 13.885H9.91848C6.63171 13.885 3.96777 16.5489 3.96777 19.8357V22.1843C6.27466 23.0035 7.93491 25.1834 7.93491 27.77C7.93491 30.3566 6.27466 32.5365 3.96777 33.3557V35.7043C3.96777 38.991 6.63171 41.655 9.91848 41.655H37.6884C40.9752 41.655 43.6391 38.991 43.6391 35.7043V33.3557C41.3322 32.5365 39.672 30.3566 39.672 27.77C39.672 25.1834 41.3322 23.0035 43.6391 22.1843Z" fill={styleMode ? "white" : "black"} />
+                                    </svg>
+                                    <span className="text-lg font-bold ">61-80 guests</span>
+                                </div>
+                                <span className="text-[#F4C755] text-lg font-bold">$17.69</span>
+                            </li>
+                            <li className="flex justify-between items-center cursor-pointer py-1">
+                                <div className="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <path d="M9.91873 13.8847H37.6887C38.74 13.8847 39.7119 14.1803 40.5688 14.6583C41.0131 13.8252 41.6479 13.0953 42.4473 12.5518L41.8641 10.3203C41.0489 7.19615 37.8553 5.32564 34.7312 6.14089L8.33783 13.0358C5.50529 13.7756 3.72603 16.4693 4.02357 19.2939C4.29928 16.265 6.81643 13.8847 9.91873 13.8847Z" fill={styleMode ? "white" : "black"}/>
+                                        <path opacity="0.35" d="M43.6391 22.1843V19.8357C43.6391 16.5489 40.9752 13.885 37.6884 13.885H9.91848C6.63171 13.885 3.96777 16.5489 3.96777 19.8357V22.1843C6.27466 23.0035 7.93491 25.1834 7.93491 27.77C7.93491 30.3566 6.27466 32.5365 3.96777 33.3557V35.7043C3.96777 38.991 6.63171 41.655 9.91848 41.655H37.6884C40.9752 41.655 43.6391 38.991 43.6391 35.7043V33.3557C41.3322 32.5365 39.672 30.3566 39.672 27.77C39.672 25.1834 41.3322 23.0035 43.6391 22.1843Z" fill={styleMode ? "white" : "black"} />
+                                    </svg>
+                                    <span className="text-lg font-bold ">81-150 guests </span>
+                                </div>
+                                <span className="text-[#F4C755] text-lg font-bold">$21.23</span>
+                            </li>
+
+                        </ul>
+                        <span className="absolute top-4 right-4 cursor-pointer" onClick={() => setAddUser(false)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48" fill="none">
+                                <path opacity="0.35" d="M33.0721 9.27209C32.6781 9.66409 27.6101 14.7341 24.0001 18.3441C20.3901 14.7341 15.3221 9.66609 14.9281 9.27209C13.3661 7.71009 10.8341 7.71009 9.27209 9.27209C7.71009 10.8341 7.71009 13.3661 9.27209 14.9281C9.66409 15.3221 14.7341 20.3901 18.3441 24.0001C14.7341 27.6101 9.66609 32.6781 9.27209 33.0721C7.71009 34.6341 7.71009 37.1661 9.27209 38.7281C10.8341 40.2901 13.3661 40.2901 14.9281 38.7281C15.2121 38.4441 38.4441 15.2121 38.7281 14.9281C40.2901 13.3661 40.2901 10.8341 38.7281 9.27209C37.1661 7.71009 34.6341 7.71009 33.0721 9.27209Z" fill={` ${styleMode ? "white" : "black"}`} />
+                                <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill={` ${styleMode ? "white" : "black"}`} />
+                            </svg>
+                        </span>
+                    </div>
+                </div> :
+                null
+            }
+
         </Dashboardlayout >
 
     )

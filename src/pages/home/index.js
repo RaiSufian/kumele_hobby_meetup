@@ -8,12 +8,16 @@ import { useState, useEffect } from 'react';
 import EventDetails from "../../components/eventDetails";
 import { useSelector } from "react-redux";
 import { Icon } from '@iconify/react';
+import Ads from "../../components/AdsApp";
 const Home = () => {
     const styleMode = useSelector((state) => state.styleModer.mode);
     const [slide, setSlide] = useState(0);
     const [event, setEvent] = useState(false);
     const [list, setlist] = useState(false);
 
+    // ///////////////////////////////////////////////////////////////////////////
+    // Open Defualt Modals Control
+    // ///////////////////////////////////////////////////////////////////////////
     useEffect(() => {
         if (slide < 3) {
             const interval = setInterval(() => {
@@ -35,7 +39,7 @@ const Home = () => {
                     <div className="flex justify-between items-center relative">
                         <h2 className={`${styleMode ? "text-white" : ""} text-2xl font-bold font-plus`}>Explore</h2>
                         <button onClick={() => setlist(!list)} className="text-xl md:hidden block"><Icon icon="solar:menu-dots-bold" /></button>
-                        <ul className={`${ styleMode  ? "bg-black": "bg-white "}  rounded-md rounded-tr-none md:bg-transparent absolute md:static top-6 right-2 z-10 ${list ? "block" : "hidden md:block"}`}>
+                        <ul className={`${styleMode ? "bg-black" : "bg-white "}  rounded-md rounded-tr-none md:bg-transparent absolute md:static top-6 right-2 z-10 ${list ? "block" : "hidden md:block"}`}>
                             <li className=" md:inline-block mx-1 lg:mt-0 mt-1">
                                 <div className={` ${styleMode ? "bg-black text-white" : " bg-white "} flex items-center lg:gap-2 gap-1 cursor-pointer lg:py-2 py-1 lg:px-5 px-2 rounded-full md:border border-theme_blue `}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -97,6 +101,7 @@ const Home = () => {
                             <EventsCatBlock name={"Created events"} setEvent={setEvent} />
                         </div>
                         <div className="flex-1 mt-5 lg:mt-0 max-w-md mx-4 lg:mx-0">
+                            <Ads />
                             <SidebarSub />
                             {/* <SidebarUnSub/> */}
                         </div>
@@ -158,7 +163,7 @@ const Home = () => {
                                     <p className={` ${styleMode ? "text-[#BCBCBC]" : "text-theme_dark "} font-plus text-sm py-6 `}>We found 6 out 10 guest invites. Will you like to match with them? Click yes to confirm match or no to cancel event.</p>
                                     <div className="md:mt-8 mt-4 flex justify-center gap-2">
                                         <button className={`${styleMode ? "border-white text-white" : "border-black "} w-44 border rounded-lg text-lg md:h-10 h-8 `} onClick={() => setSlide(4)}>No</button>
-                                        <button className={` ${styleMode  ?  "bg-white text-black" : "bg-black text-white "} w-44 rounded-lg text-lg md:h-10 h-8 `}>Yes</button>
+                                        <button className={` ${styleMode ? "bg-white text-black" : "bg-black text-white "} w-44 rounded-lg text-lg md:h-10 h-8 `}>Yes</button>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +173,7 @@ const Home = () => {
                     null
             }
             {event ?
-                <EventDetails setEvent={setEvent} />
+                <EventDetails setEvent={setEvent} type="1" />
                 :
                 null}
         </>
