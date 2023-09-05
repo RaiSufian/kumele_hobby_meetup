@@ -2,6 +2,8 @@ import Dashboardlayout from "../../layouts/dashboardlayout";
 import React, { useState } from 'react';
 import { useSelector } from "react-redux";
 import EventDetails from "../../components/eventDetails";
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 const CreateEvent = () => {
     const styleMode = useSelector((state) => state.styleModer.mode);
     const [sliderValue, setSliderValue] = useState(50);
@@ -37,6 +39,16 @@ const CreateEvent = () => {
 
     // Add users
     const [addUser, setAddUser] = useState(false);
+    
+    // Add user age values
+    function valuetext(value) {
+        return `${value}°C`;
+    }
+    const [value, setValue] = useState([18, 28]);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
 
     return (
         <Dashboardlayout>
@@ -159,17 +171,19 @@ const CreateEvent = () => {
                             <div className={` ${styleMode ? "text-white" : ""} mt-5 `}>
                                 <h3>Age range</h3>
                                 <div className="w-full mx-auto mt-4">
-                                    <div className="mt-2">
-                                        <span>{sliderValue}</span>
-                                    </div>
-                                    <input
-                                        type="range"
-                                        min="0"
-                                        max="100"
-                                        value={sliderValue}
-                                        onChange={handleSliderChange}
-                                        className="slider"
-                                    />
+                                    <Box sx={{ width: 400 }}>
+                                        <Slider
+                                            getAriaLabel={() => 'Temperature range'}
+                                            value={value}
+                                            onChange={handleChange}
+                                            valueLabelDisplay="auto"
+                                            getAriaValueText={valuetext}
+                                            aria-label="Always visible"
+                                            min={18}  // Minimum value
+                                            max={50} // Maximum value
+                                            className="w-1/2"
+                                        />
+                                    </Box>
                                 </div>
                             </div>
                             <div className={` ${styleMode ? "text-white" : ""} mt-5 `}>
@@ -422,7 +436,7 @@ const CreateEvent = () => {
                             <li className="flex justify-between items-center cursor-pointer py-1">
                                 <div className="flex gap-2 items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                        <path d="M9.91873 13.8847H37.6887C38.74 13.8847 39.7119 14.1803 40.5688 14.6583C41.0131 13.8252 41.6479 13.0953 42.4473 12.5518L41.8641 10.3203C41.0489 7.19615 37.8553 5.32564 34.7312 6.14089L8.33783 13.0358C5.50529 13.7756 3.72603 16.4693 4.02357 19.2939C4.29928 16.265 6.81643 13.8847 9.91873 13.8847Z" fill={styleMode ? "white" : "black"}/>
+                                        <path d="M9.91873 13.8847H37.6887C38.74 13.8847 39.7119 14.1803 40.5688 14.6583C41.0131 13.8252 41.6479 13.0953 42.4473 12.5518L41.8641 10.3203C41.0489 7.19615 37.8553 5.32564 34.7312 6.14089L8.33783 13.0358C5.50529 13.7756 3.72603 16.4693 4.02357 19.2939C4.29928 16.265 6.81643 13.8847 9.91873 13.8847Z" fill={styleMode ? "white" : "black"} />
                                         <path opacity="0.35" d="M43.6391 22.1843V19.8357C43.6391 16.5489 40.9752 13.885 37.6884 13.885H9.91848C6.63171 13.885 3.96777 16.5489 3.96777 19.8357V22.1843C6.27466 23.0035 7.93491 25.1834 7.93491 27.77C7.93491 30.3566 6.27466 32.5365 3.96777 33.3557V35.7043C3.96777 38.991 6.63171 41.655 9.91848 41.655H37.6884C40.9752 41.655 43.6391 38.991 43.6391 35.7043V33.3557C41.3322 32.5365 39.672 30.3566 39.672 27.77C39.672 25.1834 41.3322 23.0035 43.6391 22.1843Z" fill={styleMode ? "white" : "black"} />
                                     </svg>
                                     <span className="text-lg font-bold ">81-150 guests </span>

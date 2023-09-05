@@ -116,7 +116,7 @@ const EventDetails = ({ setEvent, type }) => {
 
                         </div>
                         {type == 2 ? <div className="mt-2 flex justify-center">
-                            <button className={`rounded-lg w-1/2 h-11 font-plus ${styleMode ? "bg-white text-black" : "bg-black text-white " } `} onClick={() => CreateEvent()}>
+                            <button className={`rounded-lg w-1/2 h-11 font-plus ${styleMode ? "bg-white text-black" : "bg-black text-white "} `} onClick={() => CreateEvent()}>
                                 Create Event
                             </button>
                         </div> : null}
@@ -140,7 +140,7 @@ const EventDetails = ({ setEvent, type }) => {
                         </div>
                         <p className={` ${styleMode ? "text-white" : ""} text-3xl font-bold text-center mt-5 `}>Event Created</p>
                     </div>
-                    
+
                 </div>
             </div> : null}
 

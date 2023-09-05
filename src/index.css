@@ -123,12 +123,14 @@ code {
   background-position: center;
   background-size: 100% 100vh;
 }
-.cup_gif{
+
+.cup_gif {
   background: url("https://s3-alpha-sig.figma.com/img/091e/264f/bfbc492ce0956ffc568dfbd12493a24a?Expires=1694995200&Signature=crzcvJxAjhnhPEGtC5Z2GM~Zw~1-67UYQxUXGQGE0GmhKVVXdZQeJUoYasj2v6PVI19s9CqzmiPme19mFlmb99CiV0fptGn8vRn6JbNyTC3wqsCHFhoq6qE-cz51rgRO813lLiAAzOy-lFE9R16A7W-wFJV7AhVAgFWbK0u-tjfLRZ3sErVnjW~A5ePOCAc9HZf~fD6d1yZeH~Qy136Yvernk-EoVgikWmSxRJ-bCXPtVxMUZssxYBUHB7-zYLWlQiSwHMylw8b32hDj7TV8QRxdkHDdHeQHow9H6c13eT5bo5Dp5V9jCCzibJgwoMytffmEP8-uGmtlHOAXGMt0cw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
   background-repeat: no-repeat;
   background-position: center;
 
 }
+
 .event_shadow {
   box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.09);
 
@@ -245,6 +247,21 @@ code {
     transform: scale(0.7) !important;
     display: block;
   }
+}
+
+/* Range slider setting */
+.css-eg0mwd-MuiSlider-thumb {
+  background-color: black !important;
+  position: relative;
+}
+
+.css-1gv0vcd-MuiSlider-track {
+  background-color: black !important;
+}
+
+
+.css-187mznn-MuiSlider-root {
+  color: #EEECEC !important;
 }
 
 /* Rangwe sldier style end */

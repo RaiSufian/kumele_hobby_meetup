@@ -87,6 +87,7 @@ const Home = () => {
                         </ul>
                         <div className="hidden lg:block">
                         </div>
+                        
                     </div>
                     <div className="lg:flex mt-5 gap-3 justify-between">
                         {/* <div className="max-w-5xl">
