@@ -49,7 +49,6 @@ const CreateEvent = () => {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-
     return (
         <Dashboardlayout>
             <div className={` ${styleMode ? " bg-black" : " layout_bg"} md:mx-4 mx-2 mb-4 pb-4  rounded-lg font-plus `} >

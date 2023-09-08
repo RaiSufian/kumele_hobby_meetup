@@ -14,7 +14,10 @@ import CreateEvent from './pages/createEvent';
 import UserProfile from './pages/profile.js';
 import UserFollower from './pages/userFollower';
 import GuideLine from './pages/guideline';
+import ClientStatics from './pages/clientStatics';
 import TermsConditions from './pages/terms&conditions';
+import CreateBlog from './pages/createBlogs';
+import BlogPreview from './pages/blogPreview';
 import '../node_modules/slick-carousel/slick/slick.css';
 import '../node_modules/slick-carousel/slick/slick-theme.css';
 
@@ -37,6 +40,9 @@ function App() {
         <Route path="/dashboard/user/follower" element={<UserFollower />} />
         <Route path="/dashboard/user/guideline" element={<GuideLine />} />
         <Route path='/dashboard/user/terms&conditions' element={<TermsConditions />} />
+        <Route path='/dashboard/client/history&statistic' element={<ClientStatics />} />
+        <Route path="/blog/create" element={<CreateBlog />} />
+        <Route path="/blog/preview" element={<BlogPreview />}/>
       </Routes>
 
     </>

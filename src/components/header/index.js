@@ -3,6 +3,7 @@ import Hamburger from 'hamburger-react';
 import { useSelector } from "react-redux";
 const Header = ({ isOpen, setOpen }) => {
     const styleMode = useSelector((state) => state.styleModer.mode);
+    const userStatus = useSelector((state) => state.userData.status);
     return (
         <header className={` ${styleMode ? "bg-[#0D0D0D] border-black" : "bg-white  border-white_border "} lg:px-12 px-2 py-3 border-b fixed top-0 left-0 w-full z-30 `}>
             <div className="flex justify-between items-center">
@@ -12,7 +13,7 @@ const Header = ({ isOpen, setOpen }) => {
                 </div>
                 <div className={` ${styleMode ? "border border-white rounded-full" : ""} md:w-14 md:h-14 w-8 h-8 `}>
                     <Link to="/dashboard/profile">
-                        <img src="/img/profile1.png" alt="profile" />
+                        <img src={`${userStatus == 2 ? "/img/clientLogo.png" : "/img/profile1.png"}`} alt="profile" />
                     </Link>
                 </div>
             </div>

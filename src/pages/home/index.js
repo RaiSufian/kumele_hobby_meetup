@@ -9,12 +9,14 @@ import EventDetails from "../../components/eventDetails";
 import { useSelector } from "react-redux";
 import { Icon } from '@iconify/react';
 import Ads from "../../components/AdsApp";
+import { updateLevel } from '../../redux/slice/user';
 const Home = () => {
     const styleMode = useSelector((state) => state.styleModer.mode);
+    const userLevel = useSelector((state) => state.userData.status);
     const [slide, setSlide] = useState(0);
     const [event, setEvent] = useState(false);
     const [list, setlist] = useState(false);
-
+    console.log("my current user values is", userLevel);
     // ///////////////////////////////////////////////////////////////////////////
     // Open Defualt Modals Control
     // ///////////////////////////////////////////////////////////////////////////
@@ -41,7 +43,7 @@ const Home = () => {
                         <button onClick={() => setlist(!list)} className="text-xl md:hidden block"><Icon icon="solar:menu-dots-bold" /></button>
                         <ul className={`${styleMode ? "bg-black" : "bg-white "}  rounded-md rounded-tr-none md:bg-transparent absolute md:static top-6 right-2 z-10 ${list ? "block" : "hidden md:block"}`}>
                             <li className=" md:inline-block mx-1 lg:mt-0 mt-1">
-                                <div className={` ${styleMode ? "bg-black text-white" : " bg-white "} flex items-center lg:gap-2 gap-1 cursor-pointer lg:py-2 py-1 lg:px-5 px-2 rounded-full md:border border-theme_blue `}>
+                                <div className={` ${styleMode ? "bg-black text-white" : " bg-white "} flex items-center lg:gap-2 gap-1 cursor-pointer lg:py-2 py-0.5 lg:px-5 px-2 rounded-full md:border border-theme_blue `}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path opacity="0.35" d="M22.434 10.68L20.78 6.818C20.307 5.715 19.222 5 18.022 5H4C2.343 5 1 6.343 1 8V16C1 17.657 2.343 19 4 19H15H20C21.657 19 23 17.657 23 16V13.437C23 12.489 22.808 11.551 22.434 10.68Z" fill={` ${styleMode ? "white" : "black"}`} />
                                         <path d="M6.5 21C7.88071 21 9 19.8807 9 18.5C9 17.1193 7.88071 16 6.5 16C5.11929 16 4 17.1193 4 18.5C4 19.8807 5.11929 21 6.5 21Z" fill={` ${styleMode ? "white" : "black"}`} />
@@ -87,71 +89,86 @@ const Home = () => {
                         </ul>
                         <div className="hidden lg:block">
                         </div>
-                        
-                    </div>
-                    <div className="lg:flex mt-5 gap-3 justify-between">
-                        {/* <div className="max-w-5xl">
-                        <div className="bg-white rounded-md flex justify-center items-center py-10">
-                            <div className="homePage w-1/2 h-96"> </div>
-                        </div>
 
-                    </div> */}
-                        <div className="xl:max-w-[810px] lg:max-w-xl md:max-w-[740px] sm:max-w-[610px] max-w-[320px] mx-auto lg:mx-0 ">
-                            <BlogsSlider setEvent={setEvent} />
-                            <EventsCatBlock name={"Matched events"} setEvent={setEvent} />
-                            <EventsCatBlock name={"Created events"} setEvent={setEvent} />
-                        </div>
-                        <div className="flex-1 mt-5 lg:mt-0 max-w-md mx-4 lg:mx-0">
-                            <Ads />
-                            <SidebarSub />
-                            {/* <SidebarUnSub/> */}
-                        </div>
                     </div>
+
+                    {/**/}
+
+
+                    {userLevel == 0 ?
+                        <div className="lg:flex mt-5 gap-3 justify-between">
+                            <div className="flex-1 lg:mx-0 ">
+                                <div className="bg-white rounded-md flex justify-center items-center py-10 w-full">
+                                    <div className="home_gif  w-96 h-96"></div>
+                                </div>
+                            </div>
+                            <div className="w-96 mt-5 lg:mt-0 max-w-md mx-4 lg:mx-0">
+                                <Ads />
+                                <SidebarSub />
+                            </div>
+                        </div>
+                        : <>
+                            <div className="lg:flex mt-5 gap-3 justify-between">
+                                <div className="xl:max-w-[810px] lg:max-w-xl md:max-w-[740px] sm:max-w-[610px] max-w-[320px] mx-auto lg:mx-0 ">
+                                    <BlogsSlider setEvent={setEvent} />
+                                    <EventsCatBlock name={"Matched events"} setEvent={setEvent} />
+                                    <EventsCatBlock name={"Created events"} setEvent={setEvent} />
+                                </div>
+                                <div className="flex-1 mt-5 lg:mt-0 max-w-md mx-4 lg:mx-0">
+                                    <Ads />
+                                    <SidebarSub />
+                                </div>
+                            </div>
+                        </>}
                 </div>
-            </Dashboardlayout>
+
+            </Dashboardlayout >
             {slide === 1 ?
                 <div className={` ${styleMode ? "bg-white " : "bg-black "} w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
                     <DashboardSlider setSlide={setSlide} />
                 </div>
-                : null}
-            {slide === 2 ?
-                <div className={` ${styleMode ? "bg-white" : " bg-black"} w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
-                    <div className={` ${styleMode ? "bg-black" : " bg-white"} modal md:w-[450px] w-[320px] md:p-8 p-4 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out `}>
-                        <span className="absolute top-5 right-7 cursor-pointer" onClick={() => setSlide(4)}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
-                                <path opacity="0.35" d="M33.0721 9.27209C32.6781 9.66409 27.6101 14.7341 24.0001 18.3441C20.3901 14.7341 15.3221 9.66609 14.9281 9.27209C13.3661 7.71009 10.8341 7.71009 9.27209 9.27209C7.71009 10.8341 7.71009 13.3661 9.27209 14.9281C9.66409 15.3221 14.7341 20.3901 18.3441 24.0001C14.7341 27.6101 9.66609 32.6781 9.27209 33.0721C7.71009 34.6341 7.71009 37.1661 9.27209 38.7281C10.8341 40.2901 13.3661 40.2901 14.9281 38.7281C15.2121 38.4441 38.4441 15.2121 38.7281 14.9281C40.2901 13.3661 40.2901 10.8341 38.7281 9.27209C37.1661 7.71009 34.6341 7.71009 33.0721 9.27209Z" fill={` ${styleMode ? "white" : "black"}`} />
-                                <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill={` ${styleMode ? "white" : "black"}`} />
-                            </svg>
-                        </span>
-                        <div>
-                            <div className="home_pop2 w-28 h-28"></div>
-                            <div className="py-1 text-start">
-                                <h3 className={` ${styleMode ? "text-white" : ""} text-2xl font-bold font-plus `}>Welcome to Kumele</h3>
-                                <p className={` ${styleMode ? "text-[#BCBCBC]" : "text-theme_dark"} font-plus text-sm py-1  `}>Enjoy our premium In-app purchase for 14days. Invite 10 friends to get an extra  14 days.</p>
-                                <h6 className={`  ${styleMode ? "text-white" : ""}  font-plus text-lg font-semibold py-1 `}>Premium In-app purchase include:</h6>
-                                <ul className={`${styleMode ? "text-[#BCBCBC]" : "text-theme_dark"} text-md list-disc ml-5 `}>
-                                    <li>
-                                        Location Change
-                                    </li>
-                                    <li>
-                                        canabis event (Max guest 5)
-                                    </li>
-                                    <li>
-                                        Erotic event ( Max guest 5)
-                                    </li>
-                                    <li>
-                                        No Ads
-                                    </li>
-                                    <li>
-                                        7 days pre event Advertising
-                                    </li>
-                                </ul>
+                : null
+            }
+            {
+                slide === 2 ?
+                    <div className={` ${styleMode ? "bg-white" : " bg-black"} w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
+                        <div className={` ${styleMode ? "bg-black" : " bg-white"} modal md:w-[450px] w-[320px] md:p-8 p-4 rounded-3xl relative text-center animate-fadeIn duration-1000 ease-in-out `}>
+                            <span className="absolute top-5 right-7 cursor-pointer" onClick={() => setSlide(4)}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
+                                    <path opacity="0.35" d="M33.0721 9.27209C32.6781 9.66409 27.6101 14.7341 24.0001 18.3441C20.3901 14.7341 15.3221 9.66609 14.9281 9.27209C13.3661 7.71009 10.8341 7.71009 9.27209 9.27209C7.71009 10.8341 7.71009 13.3661 9.27209 14.9281C9.66409 15.3221 14.7341 20.3901 18.3441 24.0001C14.7341 27.6101 9.66609 32.6781 9.27209 33.0721C7.71009 34.6341 7.71009 37.1661 9.27209 38.7281C10.8341 40.2901 13.3661 40.2901 14.9281 38.7281C15.2121 38.4441 38.4441 15.2121 38.7281 14.9281C40.2901 13.3661 40.2901 10.8341 38.7281 9.27209C37.1661 7.71009 34.6341 7.71009 33.0721 9.27209Z" fill={` ${styleMode ? "white" : "black"}`} />
+                                    <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill={` ${styleMode ? "white" : "black"}`} />
+                                </svg>
+                            </span>
+                            <div>
+                                <div className="home_pop2 w-28 h-28"></div>
+                                <div className="py-1 text-start">
+                                    <h3 className={` ${styleMode ? "text-white" : ""} text-2xl font-bold font-plus `}>Welcome to Kumele</h3>
+                                    <p className={` ${styleMode ? "text-[#BCBCBC]" : "text-theme_dark"} font-plus text-sm py-1  `}>Enjoy our premium In-app purchase for 14days. Invite 10 friends to get an extra  14 days.</p>
+                                    <h6 className={`  ${styleMode ? "text-white" : ""}  font-plus text-lg font-semibold py-1 `}>Premium In-app purchase include:</h6>
+                                    <ul className={`${styleMode ? "text-[#BCBCBC]" : "text-theme_dark"} text-md list-disc ml-5 `}>
+                                        <li>
+                                            Location Change
+                                        </li>
+                                        <li>
+                                            canabis event (Max guest 5)
+                                        </li>
+                                        <li>
+                                            Erotic event ( Max guest 5)
+                                        </li>
+                                        <li>
+                                            No Ads
+                                        </li>
+                                        <li>
+                                            7 days pre event Advertising
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                :
-                null}
+                    :
+                    null
+            }
             {
                 slide === 3 ?
                     <div className={` w-full  h-screen ${styleMode ? "bg-white " : "bg-black "}  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
@@ -173,10 +190,12 @@ const Home = () => {
                     :
                     null
             }
-            {event ?
-                <EventDetails setEvent={setEvent} type="1" />
-                :
-                null}
+            {
+                event ?
+                    <EventDetails setEvent={setEvent} type="1" />
+                    :
+                    null
+            }
         </>
     )
 }
