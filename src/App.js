@@ -18,6 +18,7 @@ import ClientStatics from './pages/clientStatics';
 import TermsConditions from './pages/terms&conditions';
 import CreateBlog from './pages/createBlogs';
 import BlogPreview from './pages/blogPreview';
+import CreateAdvert from './pages/createAdvert';
 import '../node_modules/slick-carousel/slick/slick.css';
 import '../node_modules/slick-carousel/slick/slick-theme.css';
 
@@ -42,7 +43,8 @@ function App() {
         <Route path='/dashboard/user/terms&conditions' element={<TermsConditions />} />
         <Route path='/dashboard/client/history&statistic' element={<ClientStatics />} />
         <Route path="/blog/create" element={<CreateBlog />} />
-        <Route path="/blog/preview" element={<BlogPreview />}/>
+        <Route path="/blog/preview" element={<BlogPreview />} />
+        <Route path="/advert/create" element={<CreateAdvert />} />
       </Routes>
 
     </>
