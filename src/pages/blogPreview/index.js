@@ -95,7 +95,7 @@ const BlogPreview = () => {
                                     <button className={` md:w-80 sm:w-60 w-1/2 h-12 rounded-md ${styleMode ? "bg-white text-black " : "bg-black text-white "} `}>Login/Signup to Comment</button>
                                     <button className={` md:w-80 sm:w-60 w-1/2 h-12 border-2  rounded-md ${styleMode ? "text-white border-white " : "border-black"} `}>Publish Comment</button>
                                 </div>
-                                <button className="bg-black text-white w-64 rounded-lg" onClick={createBlog}>
+                                <button className={` w-64 rounded-lg ${styleMode  ? "bg-white text-black" : "bg-black text-white"} `} onClick={createBlog}>
                                     Create Blog
                                 </button>
                             </div>

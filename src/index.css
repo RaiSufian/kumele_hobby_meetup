@@ -119,7 +119,8 @@ code {
 .cat_card svg {
   margin: auto;
 }
-.recharts-legend-wrapper{
+
+.recharts-legend-wrapper {
   display: none;
 }
 
@@ -239,8 +240,51 @@ code {
   cursor: pointer;
 }
 
+/* .recharts-cartesian-axis{
+  display: none;
+} */
+.recharts-cartesian-axis line[orientation="left"],
+.recharts-cartesian-axis text[orientation="left"] {
+  display: none;
+}
 
-.slider::-moz-range-thumb {
+.dislike text {
+  display: none;
+}
+
+.male text {
+  display: none;
+}
+
+.female text {
+  display: none;
+}
+
+.non_binray text {
+  display: none;
+}
+
+
+.dislike text[name="Dislike"] {
+  display: block;
+}
+
+.non_binray text[name="Non-Binary"] {
+  display: block;
+}
+
+.male text[name="Male"] {
+  display: block;
+}
+
+.female text[name="Female"] {
+  display: block;
+}
+
+
+
+
+b .slider::-moz-range-thumb {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -280,15 +324,16 @@ code {
 /* Rangwe sldier style end */
 
 /* Quill Editor react js */
-.ql-toolbar.ql-snow{
-  border-width:  0px !important;
+.ql-toolbar.ql-snow {
+  border-width: 0px !important;
 }
-.ql-container.ql-snow{
+
+.ql-container.ql-snow {
   border-width: 0px !important;
   background-color: #F1F1F1;
   border-radius: 12px;
   padding: 20px;
-} 
+}
 
 /* Responsive classes */
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
@@ -301,4 +346,10 @@ code {
   .custom_auto_h {
     max-height: calc(100vh - 120px);
   }
+}
+
+.dark_mode .ql-toolbar {
+  background-color: white;
+  margin-bottom: 5px;
+  border-radius: 12px;
 }

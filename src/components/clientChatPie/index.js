@@ -1,14 +1,13 @@
 import { PieChart, Pie, Cell, Tooltip } from 'recharts';
-const PieChat = () => {
-
+const ClientChatPie = () => {
     const data = [
-        { name: 'A', value: 400 },
-        { name: 'B', value: 300 },
-        { name: 'C', value: 300 },
-        
-    ];
+        { name: 'dislike', value: 400 },
+        { name: 'male', value: 300 },
+        { name: 'female', value: 300 },
+        { name: 'non-binary', value: 600 },
 
-    const COLORS = ['#DEB70F', '#C4C4C4', '#CD7F32'];
+    ];
+    const COLORS = ['#DEB70F', '#C4C4C4', '#CD7F32', '#03a11c'];
     return (
         <PieChart width={320} height={320}>
             <Pie
@@ -23,8 +22,8 @@ const PieChat = () => {
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
             </Pie>
-            {/* <Tooltip /> */}
+            <Tooltip />
         </PieChart>
     )
 }
-export default PieChat;
+export default ClientChatPie;
