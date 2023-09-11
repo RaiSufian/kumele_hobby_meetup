@@ -2,10 +2,10 @@ import React from 'react'
 
 const Slider3 = () => {
   return (
-    <div className="max-w-6xl mx-auto xl:py-2 py-2">
+    <div className="xl:max-w-7xl lg:max-w-6xl mx-auto xl:py-2 py-2">
       <div className='lg:flex xl:py-6 lg:py-2 xl:gap-20 lg:gap-5 lg:px-2'>
         <div className='lg:w-1/2 lg:px-5 px-2 mx-auto'>
-          <img src="/img/slider3.png" alt="img" className="lg:max-w-lg sm:w-96 w-72 mx-auto" />
+          <img src="/img/slider3.png" alt="img" className="xl:w-[30rem] lg:max-w-lg sm:w-96 w-72 mx-auto" />
           <p className="text-sm font-plus text-theme md:mx-20">He lost his sight but not his passion for skateboarding. Be inspired and start a hobby to improve your mental and physical well-being.</p>
         </div>
         <div className='lg:w-1/2 text-start md:px-10 lg:px-0 md:py-10 px-5 lg:py-0'>

@@ -11,7 +11,8 @@ import { useSelector, useDispatch } from "react-redux";
 const UserProfile = () => {
     const dispatch = useDispatch();
     const styleMode = useSelector((state) => state.styleModer.mode);
-    console.log("my create mode", styleMode);
+    const userStatus = useSelector((state) => state.userData.status);
+    // console.log("my create mode", styleMode);
     const navigate = useNavigate();
     ////////////////////////////////////////////////////////////////////////////
     //      Modals controlls start
@@ -50,16 +51,21 @@ const UserProfile = () => {
             <div className="lg:max-w-4xl lg:mx-auto md:mx-5 sm:mx-5 mx-1 mb-4 font-plus mt-3">
                 <div className={`${styleMode ? "bg-black" : "bg-white"} sm:p-5 p-2  rounded-2xl profile_shadow relative`}>
                     <div className="sm:flex gap-3">
-                        <img src="/img/profile1.png" className="w-20 h-20" />
+                        {userStatus == 2 ? <img src="/img/clientLogo.png" className="w-20 h-20" /> : <img src="/img/profile1.png" className="w-20 h-20" />}
+
                         <div className="">
                             <div className="md:flex items-center gap-3">
-                                <h3 className={`text-xl font-bold ${styleMode ? "text-white" : "text-black"}`}>Alkesh Kumar</h3>
-                                <button className="w-24 h-6 rounded-md text-sm bg-theme_blue text-white">Follow</button>
+                                <h3 className={`text-xl font-bold ${styleMode ? "text-white" : "text-black"}`}>
+
+                                    {userStatus == 2 ? "Spotify" : "Alkesh Kumar"}
+                                </h3>
+                                {userStatus == 2 ? null : <button className="w-24 h-6 rounded-md text-sm bg-theme_blue text-white">Follow</button>}
+
                             </div>
                             <p className={` ${styleMode ? "text-theme_border" : "text-dark "}  text-sm md:w-4/5`}> Hello, I am Alkesh Kumar from Cuberto  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
                         </div>
                     </div>
-                    <div className="mt-5 flex text-center rounded-b-lg border border-light_border">
+                    {userStatus == 2 ? null : <div className="mt-5 flex text-center rounded-b-lg border border-light_border">
                         <div className="w-1/3 sm:h-20 h-16 flex items-center justify-center">
                             <Link to="/dashboard/user/follower" className="cursor-pointer">
                                 <p className={` ${styleMode ? " text-white" : ""} text-sm `}>Following</p>
@@ -80,7 +86,8 @@ const UserProfile = () => {
                                 <span className="text-lg font-bold text-theme_blue">23</span>
                             </Link>
                         </div>
-                    </div>
+                    </div>}
+
                     <div className=" cursor-pointer absolute w-10 h-10 rounded-full bg-theme top-1 right-1 flex justify-center items-center md:translate-x-1/2 md:-translate-y-1/2" onClick={() => setProfileEdit(true)}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 46 46" fill="none">
                             <path opacity="0.35" d="M37.8003 8.20023C35.3953 5.79523 31.3253 5.79523 28.9203 8.20023L8.57025 28.5502C8.01525 29.1052 7.64525 29.8452 7.46025 30.5852L6.35025 37.2452C6.16525 38.7252 7.27525 39.8352 8.75525 39.6502L15.2303 38.5402C15.9703 38.3552 16.7102 37.9852 17.2653 37.4302L37.8003 17.0802C40.2053 14.4902 40.2053 10.6052 37.8003 8.20023Z" fill={` ${styleMode ? "white" : "black"}`} />

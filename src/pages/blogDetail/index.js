@@ -88,7 +88,7 @@ const BlogDetail = () => {
                                 <li className="mt-8 sm:flex gap-2 items-center">
                                     <img src="/img/user-1.png" alt="user_profile" className="w-20 h-20 rounded-full" />
                                     <div>
-                                        <span className={`${styleMode ? " text-white" : "text-black "} lg:text-xl text-lg font-plus font-medium `}>Josh Durrant • <span className="text-base font-normal"> 23 August, 2022  </span>• <span className='text-theme_blue'> reply</span> </span>
+                                        <span className={`${styleMode ? " text-white" : "text-black "} lg:text-xl text-lg font-plus font-medium `}>Josh Durrant • <span className="text-base font-normal"> 23 August, 2022  </span>• <span className='text-theme_blue'> reply</span> <button> </button> </span>
                                         <p className={` ${styleMode ? "text-[#BCBCBC]" : "text-light_text "} `}>What a display  dsn  cdn zxnc nzc njzcn nzcjcnzjncjcnzjcnzc ncnz cjkznkcnzc kcnznczn cznzxnc  czc znc zncznc z nzcxnjcc ncjcnz nc nzcnnz cc </p>
                                     </div>
                                 </li>

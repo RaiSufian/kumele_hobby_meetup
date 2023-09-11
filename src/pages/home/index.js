@@ -10,12 +10,14 @@ import { useSelector } from "react-redux";
 import { Icon } from '@iconify/react';
 import Ads from "../../components/AdsApp";
 import { updateLevel } from '../../redux/slice/user';
+import Addpayment from "../../components/addpayment";
 const Home = () => {
     const styleMode = useSelector((state) => state.styleModer.mode);
     const userLevel = useSelector((state) => state.userData.status);
     const [slide, setSlide] = useState(0);
     const [event, setEvent] = useState(false);
     const [list, setlist] = useState(false);
+    const [payModal, setPayModal] = useState(false);
     console.log("my current user values is", userLevel);
     // ///////////////////////////////////////////////////////////////////////////
     // Open Defualt Modals Control
@@ -192,10 +194,11 @@ const Home = () => {
             }
             {
                 event ?
-                    <EventDetails setEvent={setEvent} type="1" />
+                    <EventDetails setEvent={setEvent} type="1" setPayModal={setPayModal} />
                     :
                     null
             }
+            {payModal ? <Addpayment setPayModal={setPayModal} /> : null}
         </>
     )
 }

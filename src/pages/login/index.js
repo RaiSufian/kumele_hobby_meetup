@@ -32,7 +32,7 @@ const Login = () => {
                     Login</h3>
                 <p className={` ${styleMode ? "text-[#959595]" : "text-light "} font-plus py-2 `}> Don’t  have an account? <Link to="/Signup" className="text-theme_blue font-semibold">Signup</Link></p>
                 <form className="lg:pr-8" onSubmit={getlogin}>
-                    <div className={`${styleMode ? "bg-[#242424]" : "bg-bg_light "} rounded-lg flex gap-3 p-2 mt-5 `}>
+                    <div className={`${styleMode ? "bg-[#242424]" : "bg-bg_light "} rounded-lg flex gap-3 p-2 mt-1 `}>
                         <span className=""><svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 39 38" fill="none">
                             <path opacity="0.35" d="M3.43066 26.9154V11.082C3.43066 8.45845 5.55708 6.33203 8.18066 6.33203H30.3473C32.9709 6.33203 35.0973 8.45845 35.0973 11.082V26.9154C35.0973 29.5389 32.9709 31.6654 30.3473 31.6654H8.18066C5.55708 31.6654 3.43066 29.5389 3.43066 26.9154Z" fill={` ${styleMode ? "white" : "black"}`} />
                             <path d="M35.0973 11.0823C35.0973 10.3255 34.9042 9.61929 34.5891 8.98438L21.6263 16.7617C20.1712 17.6357 18.3599 17.6357 16.9032 16.7617L3.93891 8.98438C3.62383 9.61929 3.43066 10.3255 3.43066 11.0823V14.2189L14.457 20.8356C15.9406 21.7255 17.6015 22.1704 19.264 22.1704C20.9249 22.1704 22.589 21.7255 24.0694 20.8356L35.0973 14.2189V11.0823Z" fill={` ${styleMode ? "white" : "black"}`} />
@@ -55,7 +55,7 @@ const Login = () => {
                             </svg>
                         </span>
                     </div>
-                    <div className="flex justify-between py-8 px-1 ">
+                    <div className="flex justify-between py-4 px-1 ">
                         <div className="flex gap-4 items-center">
                             <input type="checkbox" className="w-5 h-5 border-2 border-gray-400 bg-black" />
                             <span className={` text-xl ${styleMode ? "text-white" : "text-dark "}`}>Remember me</span>
@@ -68,7 +68,7 @@ const Login = () => {
                             Or Signin with
 
                         </span>
-                        <ul className="pt-7">
+                        <ul className="pt-4">
                             <li className="inline-flex mx-3 cursor-pointer" onClick={()=>setSocial(true)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 59 59" fill="none">
                                     <path opacity="0.35" d="M39.0849 51.5672H19.6522C12.9455 51.5672 7.50684 46.1284 7.50684 39.4218V19.9891C7.50684 13.2825 12.9455 7.84375 19.6522 7.84375H39.0849C45.7915 7.84375 51.2302 13.2825 51.2302 19.9891V39.4218C51.2302 46.1284 45.7915 51.5672 39.0849 51.5672Z" fill={` ${styleMode ? "white" : "black"}`} />

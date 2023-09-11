@@ -16,7 +16,7 @@ const AuthLayout = ({ children }) => {
                     {styleMode ? <img src="/img/auth_dark.png" className="my-4"/> : <img src="/img/authimg1.png" />}
 
                 </div>
-                <div className=" sm:w-1/2 pt-8 custom_auto_h overflow-y-auto">
+                <div className=" sm:w-1/2 pt-2 custom_auto_h overflow-y-auto">
                     {children}
                 </div>
             </div>
