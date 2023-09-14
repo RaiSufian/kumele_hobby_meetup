@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from "react-slick";
-import HeroFooter from './heroFooter';
+import HeroFooter from './footer/heroFooter';
 import SliderEvent from './sliderEvent';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -34,7 +34,7 @@ const Slider4 = ({ slide, setSlide }) => {
 
     return (
         <>
-            <div className='relative bg-theme_silver'>
+            <div className='relative bg-theme_silver md:h-screen'>
                 <div className="absolute lg:top-[6%] lg:left-[6%] top-4 sm:left-4 left-1/2 -translate-x-1/2 sm:translate-x-1 z-10">
                     <img src="/img/logo2.png" alt="logo" className="lg:w-44 xl:w-48 md:w-36 sm:w-32 w-40 " />
                 </div>
@@ -69,7 +69,7 @@ const Slider4 = ({ slide, setSlide }) => {
                         <SliderEvent name="Volunteers" />
                     </div>
                 </Slider>
-                <div className='py-5 md:py-0 px-2 md:px-0 absolute bottom-1 md:bottom-2 md:left-1/2 md:-translate-x-1/2 text-center text-white w-full'>
+                <div className='py-5 md:py-0 px-2 md:px-0 absolute top-1/2 md:bottom-2 md:left-1/2 md:-translate-x-1/2 text-center text-white w-full'>
                     <div>
                         <h2 className='xl:text-5xl lg:text-4xl md:text-2xl text-2xl font-medium font-fredoka'>“Hobby Meetup | Create or Attend Events Within <span className='text-theme'>4</span><span className='text-theme_blue'>8</span> Hours” </h2>
                         <p className='xl:text-3xl lg:text-2xl md:text-xl text-lg mt-3'>We play. We overcome. We unite. We live.</p>
@@ -93,11 +93,13 @@ const Slider4 = ({ slide, setSlide }) => {
                             <div className={`w-2  ${slide == 4 ? "bg-white" : "bg-theme"}  bg-theme h-2 rounded-full cursor-pointer border border-theme hover:border-white`} onClick={() => setSlide(4)}></div>
                         </div>
                     </div>
-                    <div className='md:block hidden'>
-                        <HeroFooter />
-                    </div>
+
 
                 </div>
+                <div className='hero_footer md:absolute w-full bottom-2 hidden md:block text-white'>
+                    <HeroFooter />
+                </div>
+
             </div>
             <div className={` rounded-xl z-10 absolute lg:w-[650px] md:w-[450px] w-[320px] md:h-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black  ${isVisible ? "block" : "hidden"}`}>
                 <div className="relative lg:p-6 p-3 modal">

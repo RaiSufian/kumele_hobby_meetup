@@ -1,4 +1,4 @@
-import HeroFooter from "./heroFooter";
+import HeroFooter from "./footer/heroFooter";
 import Slider1 from "./slider1";
 import Slider2 from "./slider2";
 import Slider3 from "./slider3";

@@ -381,7 +381,7 @@ const Signup = () => {
                                 <select className={`h-10 rounded-md w-full pl-2 custom_input  ${styleMode ? "bg-[#242424] text-[#808080]" : "bg-bg_light"} custom_scroll`}>
                                     {days.map((value, index) => {
                                         return (
-                                            <option key={index} className={`${styleMode ? "text-white" : ""} `}>
+                                            <option key={index} className={`${styleMode ? "text-white bg-black" : "bg-white"} font-plud font-medium py-3 text-lg`}>
                                                 {value}
                                             </option>
                                         )
@@ -392,7 +392,7 @@ const Signup = () => {
                                 <select className={`h-10 rounded-md w-full pl-2 custom_input  ${styleMode ? "bg-[#242424] text-[#808080]" : "bg-bg_light"} custom_scroll`}>
                                     {months.map((value, index) => {
                                         return (
-                                            <option key={index} className={`${styleMode ? "text-white" : ""} `}>
+                                            <option key={index} className={`${styleMode ? "text-white bg-black" : "bg-white"} font-plud font-medium py-3 text-lg`}>
                                                 {value}
                                             </option>
                                         )
@@ -404,7 +404,7 @@ const Signup = () => {
                                 <select className={`h-10 rounded-md w-full pl-2 custom_input  ${styleMode ? "bg-[#242424] text-[#808080]" : "bg-bg_light"} custom_scroll`}>
                                     {years.map((value, index) => {
                                         return (
-                                            <option key={index} className={`${styleMode ? "text-white" : ""} `}>
+                                            <option key={index} className={`${styleMode ? "text-white bg-black" : "bg-white"} font-plud font-medium py-3 text-lg`}>
                                                 {value}
                                             </option>
                                         )

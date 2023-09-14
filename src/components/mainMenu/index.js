@@ -280,24 +280,24 @@ const MainMenu = ({ isOpen }) => {
             </div>
 
             <div className={`${styleMode ? "bg-white" : "bg-black"} font-plus w-full h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center ${filter ? " block" : "hidden"}`}>
-                <div className={`${styleMode ? "bg-black text-white" : "bg-white"} modal sm:px-10 px-6 py-7 rounded-2xl relative `} >
-                    <div className="sm:w-96 w-72 h-96 overflow-y-auto custom_auto_h pb-16">
-                        <div className="flex justify-between items-center">
-                            <div></div>
+                <div className={`${styleMode ? "bg-black text-white" : "bg-[#FCFCFC]"}  modal  rounded-2xl relative `} >
+                    <div className=" h-[35rem] overflow-y-auto custom_auto_h mb-16  sm:w-[36rem] w-[28rem] sm:px-10 px-6 py-7">
+                        <div className="flex justify-between items-center py-4">
+                           <div></div>
                             <h3 className="text-xl font-bold">Filter</h3>
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48" fill="none" onClick={() => { stFilter(false) }} className="cursor-pointer">
                                 <path opacity="0.35" d="M33.0721 9.27209C32.6781 9.66409 27.6101 14.7341 24.0001 18.3441C20.3901 14.7341 15.3221 9.66609 14.9281 9.27209C13.3661 7.71009 10.8341 7.71009 9.27209 9.27209C7.71009 10.8341 7.71009 13.3661 9.27209 14.9281C9.66409 15.3221 14.7341 20.3901 18.3441 24.0001C14.7341 27.6101 9.66609 32.6781 9.27209 33.0721C7.71009 34.6341 7.71009 37.1661 9.27209 38.7281C10.8341 40.2901 13.3661 40.2901 14.9281 38.7281C15.2121 38.4441 38.4441 15.2121 38.7281 14.9281C40.2901 13.3661 40.2901 10.8341 38.7281 9.27209C37.1661 7.71009 34.6341 7.71009 33.0721 9.27209Z" fill={` ${styleMode ? "white" : "black"}`} />
                                 <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill={` ${styleMode ? "white" : "black"}`} />
                             </svg>
                         </div>
-                        <div className="mt-3 event_shadow rounded-md py-4 px-4">
+                        <div className="mt-3 event_shadow rounded-md p-5">
                             <div className="flex items-start justify-between font-plus">
                                 <div className="flex-1">
                                     <span className="text-sm">Current Location</span>
                                     <p className="py-2 text-[#808080]">4517 Washington Ave. Manchester, Kentucky 39495</p>
                                 </div>
 
-                                <button className="text-[#38579E] font-bold">CHANGE</button>
+                                <button className="text-theme font-bold">CHANGE</button>
                             </div>
                         </div>
                         <div className="mt-3 event_shadow rounded-md py-4 px-4">

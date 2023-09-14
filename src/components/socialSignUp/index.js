@@ -2,22 +2,43 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { updateLevel } from '../../redux/slice/user';
 import { useNavigate } from "react-router-dom";
+import { format } from 'date-fns';
+import { useState, useRef } from "react";
 const SocialSignUp = ({ setSocial }) => {
+    const inputRef = useRef(null);
+    const dateInputRef = useRef(null);
     const styleMode = useSelector((state) => state.styleModer.mode);
     const userData = useSelector((state) => state.userData);
+
+    const [selectedDate, setSelectedDate] = useState('');
+    const [formattedDate, setFormattedDate] = useState('Wednesday, 13th April, 2022');
+
+    const handleDateChange = (event) => {
+        const selectedDate = new Date(event.target.value);
+        const formattedDate = format(selectedDate, "EEEE, do MMM yyyy");
+        setSelectedDate(event.target.value);
+        setFormattedDate(formattedDate);
+    };
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const signUp = (event) => {
         event.preventDefault();
         dispatch(updateLevel(2));
         navigate("/dashboard/client/history&statistic");
-        
+
     }
-  
+    const handleClickOnDiv = () => {
+        // Trigger a click event on the input field
+        console.log("my current userref value is", inputRef.current);
+        inputRef.current.showPicker();
+
+    };
+
+
     return (
         <div className={` ${styleMode ? "bg-white" : "bg-black"} w-full  h-screen  bg-opacity-20 fixed top-0 left-0 z-50 flex items-center justify-center `}>
             <div className={` ${styleMode ? "bg-black text-white" : "bg-white "} modal p-10 rounded-3xl relative `} >
-                <div className="md:w-96 w-60 ">
+                <div className="md:w-[36rem] w-[21rem] ">
                     <div className="flex justify-between items-center cursor-pointer">
                         <div>
 
@@ -29,28 +50,28 @@ const SocialSignUp = ({ setSocial }) => {
                         </svg>
                     </div>
                     <div className="">
-                        <form className="font-plus mb-8" onSubmit={signUp}>
+                        <form className="font-plus mb-16 md:pr-20" onSubmit={signUp}>
                             <div className="mt-3">
                                 <label className="w-full ">Gender</label>
-                                <select className="w-full rounded-md p-2 h-10 mt-1 bg-[#F4F4F4] text-[#808080] text-sm custom_input">
-                                    <option>
+                                <select className={` ${styleMode ? "bg-[#242424] text-[#BCBCBC] custom_inputBlack" : "bg-[#F4F4F4] text-[#808080] custom_input"} custom_select w-full rounded-md p-2 h-10 mt-1  text-sm  `}>
+                                    <option className={` ${styleMode ? "bg-black text-white" : "bg-white"}  text-lg`}>
                                         Select gender
                                     </option>
-                                    <option>
+                                    <option className={` ${styleMode ? "bg-black text-white" : "bg-white"}  text-lg`}>
                                         Male
                                     </option>
-                                    <option>
+                                    <option className={` ${styleMode ? "bg-black text-white" : "bg-white"}  text-lg`}>
                                         Female
                                     </option>
-                                    <option>
+                                    <option className={` ${styleMode ? "bg-black text-white" : "bg-white"}  text-lg`}>
                                         Other
                                     </option>
                                 </select>
                             </div>
-                            <div className="mt-3">
+                            <div className={` ${styleMode ? "text-white" : ""} mt-3 relative`}>
                                 <label className="w-full ">Date of birth</label>
-                                <div className="relative">
-                                    <div className="absolute top-1/2 left-1 -translate-y-1/2 mt-0.5">
+                                <div className={` ${styleMode ? "bg-[#242424] text-[#BCBCBC]" : "bg-[#F4F4F4] text-[#808080] "} relative text-sm p-2 h-10 mt-1 rounded-md cursor-pointer`} onClick={handleClickOnDiv}>
+                                    <div className="absolute top-1/2 left-1 -translate-y-1/2 ">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 35 35" fill="none">
                                             <path opacity="0.35" d="M26.2507 30.6255H9.22201C6.87063 30.6255 4.96484 28.7198 4.96484 26.3684V10.7588H30.5078V26.3684C30.5078 28.7198 28.602 30.6255 26.2507 30.6255Z" fill={`${styleMode ? "white" : "black"}  `} />
                                             <path d="M26.2507 5.08203H9.22201C6.87063 5.08203 4.96484 6.98782 4.96484 9.33919V10.7582H30.5078V9.33919C30.5078 6.98782 28.602 5.08203 26.2507 5.08203Z" fill={`${styleMode ? "white" : "black"}  `} />
@@ -66,13 +87,23 @@ const SocialSignUp = ({ setSocial }) => {
                                             <path d="M14.8976 16.4348C15.6813 16.4348 16.3166 15.7995 16.3166 15.0157C16.3166 14.232 15.6813 13.5967 14.8976 13.5967C14.1138 13.5967 13.4785 14.232 13.4785 15.0157C13.4785 15.7995 14.1138 16.4348 14.8976 16.4348Z" fill={`${styleMode ? "white" : "black"}  `} />
                                         </svg>
                                     </div>
-                                    <input type="date" className="w-full pl-8  rounded-md p-2 h-10 mt-1 bg-[#F4F4F4] text-[#808080] text-sm custom_input" placeholder="Wednesday, 13th April, 2022" />
+                                    <p className="sm:pl-8 pl-5">{formattedDate}</p>
+                                    <div className="absolute right-1 top-1/2 -translate-y-1/2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+                                            <path opacity="0.35" d="M14.6897 14.7785C14.0882 14.177 8.1063 8.1951 7.50483 7.59362C6.30188 6.39067 4.35272 6.39067 3.14977 7.59362C1.94682 8.79657 1.94682 10.7457 3.14977 11.9487C3.75125 12.5502 9.73316 18.5321 10.3346 19.1335C11.5376 20.3365 13.4867 20.3365 14.6897 19.1335C15.8926 17.9306 15.8926 15.9804 14.6897 14.7785Z" fill={` ${styleMode ? "white" : "black"}`} />
+                                            <path d="M14.6896 19.1335C15.2911 18.5321 21.273 12.5502 21.8745 11.9487C23.0775 10.7457 23.0775 8.79657 21.8745 7.59362C20.6716 6.39067 18.7224 6.39067 17.5195 7.59362C16.918 8.1951 10.9361 14.177 10.3346 14.7785C9.13163 15.9814 9.13163 17.9306 10.3346 19.1335C11.5375 20.3365 13.4877 20.3365 14.6896 19.1335Z" fill={` ${styleMode ? "white" : "black"}`} />
+                                        </svg>
+                                    </div>
                                 </div>
+                                <input ref={inputRef} type="date" className={` opacity-0 -z-10 absolute bottom-0 left-1/2 -translate-x-1/2`} placeholder="Wednesday, 13th April, 2022" value={selectedDate}
+                                    onChange={handleDateChange} />
+
+
                             </div>
                             <div className="mt-3">
                                 <label className="w-full ">Referral Code (Optional)</label>
                                 <div className="relative">
-                                    <input type="text" className="w-full   rounded-md p-2 h-10 mt-1 bg-[#F4F4F4] text-[#808080] text-sm custom_input" placeholder="Enter Referral code" />
+                                    <input type="text" className={`${styleMode ? "bg-[#242424] text-[#BCBCBC]" : "bg-[#F4F4F4] text-[#808080]"} w-full   rounded-md p-2 h-10 mt-1  text-sm custom_input`} placeholder="Enter Referral code " />
                                 </div>
                             </div>
                             <div className="mt-3 flex gap-2 px-1 items-center">
@@ -81,10 +112,10 @@ const SocialSignUp = ({ setSocial }) => {
                             </div>
                             <div className="mt-3 flex gap-2 px-1 items-start">
                                 <input type="checkbox" className="w-5 h-5 border-2 border-gray-400 bg-black" />
-                                <label className="text-sm">By creating an account you agree to <Link to="/" className="text-[#38579E] "> Terms & Conditions</Link></label>
+                                <label className="text-sm">By creating an account you agree to <Link to="/" className="text-theme_blue "> Terms & Conditions</Link></label>
                             </div>
-                            <div className={`sign_shadow flex justify-end absolute bottom-0 py-3  w-full right-0 px-12 rounded-b-3xl ${ styleMode ? "bg-[#454545]" : "bg-white" }`}>
-                                <button type="submit" className={` h-10 w-52 rounded-md ${ styleMode ? "bg-white text-black" : "bg-black text-white"}`}>Signup</button>
+                            <div className={`sign_shadow flex justify-end absolute bottom-0 py-3  w-full right-0 px-12 rounded-b-3xl ${styleMode ? "bg-[#454545]" : "bg-white"}`}>
+                                <button type="submit" className={` h-12 w-48 rounded-md ${styleMode ? "bg-white text-black" : "bg-black text-white"}`}>Signup</button>
                             </div>
                         </form>
                     </div>
