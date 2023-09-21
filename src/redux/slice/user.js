@@ -9,7 +9,6 @@ export const userData = createSlice({
     reducers: {
 
         updateLevel: (state, action) => {
-            console.log("status is update");
             state.status = action.payload;
         },
     },

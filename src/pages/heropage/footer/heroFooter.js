@@ -1,16 +1,24 @@
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import AboutModal from "./AboutModal";
 import ConatactModal from "./contectModal";
 import GuideLineModal from "./guideLine";
 import BlogsModal from "./blogsModal";
+import { updateLevel } from "../../../redux/slice/user";
 const HeroFooter = () => {
     const styleMode = useSelector((state) => state.styleModer.mode);
     const [blog, setBlog] = useState(false);
     const [about, setabout] = useState(false);
     const [contact, setContact] = useState(false);
     const [guidelLine, setGuidelLine] = useState(false);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const SetPartnerLogin = () => {
+        dispatch(updateLevel(2));
+        navigate("/Signup")
+    }
     return (
         <>
             <div className="xl:pt-6 pt-3 lg:container mx-auto px-3">
@@ -78,7 +86,7 @@ const HeroFooter = () => {
                             </svg>
                             <span className="pt-2 text-xs md:text-base">Contact</span>
                         </div >
-                        <Link to="/">
+                        <div onClick={() => SetPartnerLogin()} className="cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="39" height="38" viewBox="0 0 49 48" fill="none" className="mx-auto">
                                 <rect x="0.144531" width="48" height="48" rx="12" fill="#F4C755" />
                                 <path opacity="0.35" d="M4.91211 28.1701L7.95541 15.2034C8.40431 13.2929 9.90828 12.1406 11.4953 11.1227C15.0936 8.81102 18.0838 6.14062 20.6765 6.14062C24.9905 6.14062 27.8058 9.76007 29.7887 12.4623C32.3213 15.9103 39.3693 26.1076 40.2653 27.0284C41.3893 28.1825 41.3875 30.2608 40.1911 31.7241C38.627 33.6364 36.3754 32.9241 36.3754 32.9241C36.3754 32.9241 36.3967 34.6402 34.9669 35.849C33.5018 37.0879 31.7522 36.6744 31.7522 36.6744C31.7522 36.6744 31.6461 38.0811 30.128 39.039C28.5763 40.0181 26.5722 38.8658 26.5722 38.8658C26.5722 38.8658 26.505 40.3203 25.5843 40.9177C24.5469 41.591 23.2744 41.4231 22.3254 40.7586C21.1059 39.9032 4.91211 28.1701 4.91211 28.1701Z" fill="black" />
@@ -89,7 +97,7 @@ const HeroFooter = () => {
                                 <path d="M17.4574 37.9572C18.0141 37.4005 18.3976 37.017 18.9543 36.4603C20.149 35.2656 20.149 33.3269 18.9543 32.1304C17.7596 30.9357 15.8208 30.9357 14.6244 32.1304C14.0677 32.6871 13.6842 33.0706 13.1275 33.6273C11.9328 34.822 11.9328 36.7607 13.1275 37.9572C14.3239 39.1537 16.2627 39.1537 17.4574 37.9572Z" fill="black" />
                             </svg>
                             <span className="pt-2 text-xs md:text-base">Partnership</span>
-                        </Link>
+                        </div>
                         <div onClick={() => setBlog(true)} className="cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="39" height="38" viewBox="0 0 49 48" fill="none" className="mx-auto">
                                 <rect x="0.144531" width="48" height="48" rx="12" fill="#F4C755" />
@@ -139,7 +147,7 @@ const HeroFooter = () => {
             {about ? <AboutModal setabout={setabout} /> : null}
             {contact ? <ConatactModal setContact={setContact} /> : null}
             {guidelLine ? <GuideLineModal setGuidelLine={setGuidelLine} /> : null}
-            {blog ? <BlogsModal setBlog={setBlog}/> : null}
+            {blog ? <BlogsModal setBlog={setBlog} /> : null}
         </>
     )
 }

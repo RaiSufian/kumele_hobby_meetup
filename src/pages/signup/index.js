@@ -1,17 +1,26 @@
 import AuthLayout from "../../layouts/authLayout";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import SocialSignUp from "../../components/socialSignUp";
+import { updateLevel } from "../../redux/slice/user";
 const Signup = () => {
 
     const styleMode = useSelector((state) => state.styleModer.mode);
-
+    const userLevel = useSelector((state) => state.userData.status);
+    console.log("current user level is", userLevel);
+    const dispatch = useDispatch()
     const [sign, setSign] = useState(0);
     const [social, setSocial] = useState(false);
     const submitSignup = (event) => {
         event.preventDefault();
-        setSign(1);
+        if (userLevel == 2) {
+            navigate("/dashboard/client/history&statistic")
+        }
+        else {
+            setSign(1);
+        }
+
     }
     const navigate = useNavigate()
 
@@ -325,12 +334,13 @@ const Signup = () => {
     const months = ["MM", "Jan", "Feb", "Mar", , "Apr", "May", , "June", "Jul", "Agu", "Sep", "Oct", "Nov", "Dec"];
     const years = ["YYYY", "2021", "2022", "2023", "2024"]
     const signUpforward = () => {
-        navigate("/dashboard")
+        dispatch(updateLevel(1));
+        navigate("/dashboard");
     }
     return (
         <AuthLayout>
             <div className="px-3 xl:mr-16">
-                <h3 className={` lg:text-5xl text-4xl font-bold font-plus ${styleMode ? "text-white" : ""} `}> Signup</h3>
+                <h3 className={` lg:text-5xl text-4xl font-bold font-plus ${styleMode ? "text-white" : ""} `}>{userLevel == 2 ? "Advertisers & Bloggers Signup " : "Signup"} </h3>
                 <p className={`${styleMode ? "text-[#959595]" : "text-light "} font-plus py-2`} > Already have an account? <Link to="/login" className="text-theme_blue font-semibold ">Signin</Link></p>
                 <form className="pr-8 " onSubmit={submitSignup}>
                     <div className={`${styleMode ? "bg-[#242424]" : "bg-bg_light "} rounded-lg flex gap-3 p-2 mt-2 `}>
@@ -500,9 +510,7 @@ const Signup = () => {
                             </li>
                         </ul>
                     </div>
-
                     <button className={` ${styleMode ? "bg-white text-black" : "bg-black text-white"} w-full  mt-3 rounded-lg text-xl font-plus py-2 `}>Signup</button>
-
                 </form>
             </div >
             {
@@ -512,32 +520,31 @@ const Signup = () => {
                             {/* header of pop up */}
                             <div className="flex items-center justify-between flex-wrap ">
                                 <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 42 42" fill="none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 42 42" fill="none">
                                         <path opacity="0.35" d="M17.7791 24.636C18.7837 23.6315 28.7745 13.6406 29.7791 12.636C31.7883 10.6269 31.7883 7.37147 29.7791 5.36233C27.77 3.35318 24.5145 3.35318 22.5054 5.36233C21.5008 6.3669 11.51 16.3578 10.5054 17.3623C8.49625 19.3715 8.49625 22.6269 10.5054 24.636C12.5145 26.6452 15.7717 26.6452 17.7791 24.636Z" fill={` ${styleMode ? "white" : "black"}`} />
                                         <path d="M10.5069 24.636C11.5114 25.6406 21.5023 35.6315 22.5069 36.636C24.516 38.6452 27.7714 38.6452 29.7806 36.636C31.7897 34.6269 31.7897 31.3715 29.7806 29.3623C28.776 28.3578 18.7851 18.3669 17.7806 17.3623C15.7714 15.3532 12.516 15.3532 10.5069 17.3623C8.49771 19.3715 8.49771 22.6286 10.5069 24.636Z" fill={` ${styleMode ? "white" : "black"}`} />
                                     </svg>
                                 </span>
-                                <h6 className={`text-3xl font-bold font-plus ${styleMode ? "text-white" : ""}`}>Choose interests</h6>
+                                <h6 className={`md:text-3xl text-xl font-bold font-plus ${styleMode ? "text-white" : ""}`}>Choose interests</h6>
                                 <span onClick={() => setSign(0)}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48" fill="none">
                                         <path opacity="0.35" d="M33.0721 9.27306C32.6781 9.66506 27.6101 14.7351 24.0001 18.3451C20.3901 14.7351 15.3221 9.66706 14.9281 9.27306C13.3661 7.71106 10.8341 7.71106 9.27209 9.27306C7.71009 10.8351 7.71009 13.3671 9.27209 14.9291C9.66409 15.3231 14.7341 20.3911 18.3441 24.0011C14.7341 27.6111 9.66609 32.6791 9.27209 33.0731C7.71009 34.6351 7.71009 37.1671 9.27209 38.7291C10.8341 40.2911 13.3661 40.2911 14.9281 38.7291C15.2121 38.4451 38.4441 15.2131 38.7281 14.9291C40.2901 13.3671 40.2901 10.8351 38.7281 9.27306C37.1661 7.71106 34.6341 7.71106 33.0721 9.27306Z" fill={` ${styleMode ? "white" : "black"}`} />
                                         <path d="M38.728 38.728C40.29 37.166 40.29 34.634 38.728 33.072C38.336 32.68 33.266 27.61 29.656 24L24 29.656C27.61 33.266 32.678 38.334 33.072 38.728C34.634 40.29 37.166 40.29 38.728 38.728Z" fill={` ${styleMode ? "white" : "black"}`} />
                                     </svg>
                                 </span>
-
-
                             </div>
-
                             {/* Category Cards */}
                             <div className="flex mt-3 flex-wrap mx-auto">
                                 {cat_data.map((value, index) => {
                                     return (
-                                        <div className={` ${styleMode ? "border-[#6B6B6B]" : "border-light_border "} w-28 cursor-pointer py-3 border rounded-xl  text-center my-2 mx-3 cat_card hover:bg-theme `} key={index}>
-                                            <span >
-                                                {value.icons}
-                                            </span>
+                                        <div className="xl:w-[12%] lg:w-[14%] md:w-2/12 p-1 sm:w-1/5 w-2/6">
+                                            <div className={` ${styleMode ? "border-[#6B6B6B]" : "border-light_border "} md:py-3 py-2 cursor-pointer  border rounded-xl  text-center cat_card hover:bg-theme `} key={index}>
+                                                <span >
+                                                    {value.icons}
+                                                </span>
 
-                                            <span className={` ${styleMode ? "text-white hover:text-black" : "text-dark"} font-plus  pt-3 px-2 text-sm `}>{value.name}</span>
+                                                <span className={` ${styleMode ? "text-white hover:text-black" : "text-dark"} font-plus  pt-3 px-2 text-sm `}>{value.name}</span>
+                                            </div>
                                         </div>
                                     )
                                 })}

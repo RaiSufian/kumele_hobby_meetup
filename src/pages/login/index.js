@@ -7,29 +7,33 @@ import SocialSignUp from "../../components/socialSignUp";
 
 const Login = () => {
     const styleMode = useSelector((state) => state.styleModer.mode);
-    const userData = useSelector((state) => state.userData);
+    const userData = useSelector((state) => state.userData.status);
     const [login, setlogin] = useState(false);
     const [social, setSocial] = useState(false);
-    const navigate = useNavigate();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const getlogin = (event) => {
         event.preventDefault();
-        setlogin(true);
-        dispatch(updateLevel(1));
-        setTimeout(() => {
-            navigate("/dashboard")
-        }, 1000);
+        if (userData == 2) {
+            navigate("/dashboard/client/history&statistic");
+        }
+        else {
+            setlogin(true);
+            dispatch(updateLevel(0));
+            setTimeout(() => {
+                navigate("/dashboard")
+            }, 1000);
+        }
+
+
 
     }
-    useEffect(() => {
-        dispatch(updateLevel(0));
-    }, [])
-   
+    console.log("user level on login", userData);
     return (
         <AuthLayout >
             <div className="px-3 xl:pr-20">
                 <h3 className={` lg:text-5xl text-4xl font-bold font-plus ${styleMode ? "text-white" : ""} `}>
-                    Login</h3>
+                    {userData == "2" ? "Advertisers & Bloggers Login" : "Login"}  </h3>
                 <p className={` ${styleMode ? "text-[#959595]" : "text-light "} font-plus py-2 `}> Don’t  have an account? <Link to="/Signup" className="text-theme_blue font-semibold">Signup</Link></p>
                 <form className="lg:pr-8" onSubmit={getlogin}>
                     <div className={`${styleMode ? "bg-[#242424]" : "bg-bg_light "} rounded-lg flex gap-3 p-2 mt-1 `}>
@@ -69,20 +73,20 @@ const Login = () => {
 
                         </span>
                         <ul className="pt-4">
-                            <li className="inline-flex mx-3 cursor-pointer" onClick={()=>setSocial(true)}>
+                            <li className="inline-flex mx-3 cursor-pointer" onClick={() => setSocial(true)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 59 59" fill="none">
                                     <path opacity="0.35" d="M39.0849 51.5672H19.6522C12.9455 51.5672 7.50684 46.1284 7.50684 39.4218V19.9891C7.50684 13.2825 12.9455 7.84375 19.6522 7.84375H39.0849C45.7915 7.84375 51.2302 13.2825 51.2302 19.9891V39.4218C51.2302 46.1284 45.7915 51.5672 39.0849 51.5672Z" fill={` ${styleMode ? "white" : "black"}`} />
                                     <path d="M29.3685 17.5586C22.6618 17.5586 17.2231 22.9973 17.2231 29.704C17.2231 36.4107 22.6618 41.8494 29.3685 41.8494C36.0752 41.8494 41.5139 36.4107 41.5139 29.704C41.5139 22.9973 36.0752 17.5586 29.3685 17.5586ZM29.3685 36.9912C25.3436 36.9912 22.0813 33.729 22.0813 29.704C22.0813 25.679 25.3436 22.4167 29.3685 22.4167C33.3935 22.4167 36.6558 25.679 36.6558 29.704C36.6558 33.729 33.3935 36.9912 29.3685 36.9912Z" fill={` ${styleMode ? "white" : "black"}`} />
                                     <path d="M41.514 19.9871C42.8556 19.9871 43.9431 18.8995 43.9431 17.558C43.9431 16.2164 42.8556 15.1289 41.514 15.1289C40.1725 15.1289 39.085 16.2164 39.085 17.558C39.085 18.8995 40.1725 19.9871 41.514 19.9871Z" fill={` ${styleMode ? "white" : "black"}`} />
                                 </svg>
                             </li>
-                            <li className="inline-flex mx-3 cursor-pointer" onClick={()=>setSocial(true)}>
+                            <li className="inline-flex mx-3 cursor-pointer" onClick={() => setSocial(true)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 59 59" fill="none">
                                     <path opacity="0.35" d="M46.5354 10.2734H12.5283V49.1387H46.5354V10.2734Z" fill={` ${styleMode ? "white" : "black"}`} />
                                     <path d="M46.5355 10.2734L29.532 22.3945L12.5284 10.2734C8.50346 10.2734 5.24121 13.5357 5.24121 17.5607V41.8514C5.24121 45.8764 8.50346 49.1387 12.5284 49.1387V19.278L29.532 31.3238L46.5355 19.278V49.1387C50.5605 49.1387 53.8228 45.8764 53.8228 41.8514V17.5607C53.8228 13.5357 50.5605 10.2734 46.5355 10.2734Z" fill={` ${styleMode ? "white" : "black"}`} />
                                 </svg>
                             </li>
-                            <li className="inline-flex mx-3 cursor-pointer" onClick={()=>setSocial(true)}>
+                            <li className="inline-flex mx-3 cursor-pointer" onClick={() => setSocial(true)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 59 59" fill="none">
                                     <g clip-path="url(#clip0_1_16499)">
                                         <path opacity="0.35" d="M41.811 11.5039C37.152 11.5039 35.2039 14.3654 31.9756 14.3654C28.6551 14.3654 25.6211 11.6812 21.6035 11.6812C16.138 11.6837 7.83301 16.7483 7.83301 28.6726C7.83301 39.5233 17.6635 51.5643 23.2115 51.5643C26.5831 51.5983 27.4017 49.4412 31.9756 49.4194C36.5544 49.3854 37.5406 51.5934 40.9171 51.5643C44.7186 51.5351 47.6893 47.362 49.8585 44.0536C50.2229 43.4973 50.5362 43.0066 50.8204 42.5451C52.154 40.3662 51.6269 37.5946 49.6544 35.9696C44.9712 32.1098 44.2935 23.9748 49.5184 19.9474C51.3888 18.5045 51.3014 15.5945 49.3362 14.2852C46.8659 12.6334 43.9121 11.5039 41.811 11.5039Z" fill={` ${styleMode ? "white" : "black"}`} />
@@ -120,9 +124,9 @@ const Login = () => {
                     </div>
                 </div>
                 : null}
-                {/* Add Social SignUp  */}
+            {/* Add Social SignUp  */}
             {
-                social ? <SocialSignUp setSocial={setSocial} /> :
+                social ? <SocialSignUp setSocial={setSocial} type="signUp" /> :
                     null
             }
 

@@ -9,7 +9,6 @@ import EventDetails from "../../components/eventDetails";
 import { useSelector } from "react-redux";
 import { Icon } from '@iconify/react';
 import Ads from "../../components/AdsApp";
-import { updateLevel } from '../../redux/slice/user';
 import Addpayment from "../../components/addpayment";
 const Home = () => {
     const styleMode = useSelector((state) => state.styleModer.mode);

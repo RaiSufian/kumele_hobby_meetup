@@ -2,12 +2,15 @@ import React from 'react';
 import Slider from "react-slick";
 import HeroFooter from './footer/heroFooter';
 import SliderEvent from './sliderEvent';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateLevel } from "../../redux/slice/user";
 const Slider4 = ({ slide, setSlide }) => {
     const styleMode = useSelector((state) => state.styleModer.mode);
     const [isVisible, setIsVisible] = useState(false);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     useEffect(() => {
         const interval = setInterval(() => {
             setIsVisible(true);
@@ -20,6 +23,14 @@ const Slider4 = ({ slide, setSlide }) => {
             clearInterval(interval);
         };
     }, []);
+    const setLogin = () => {
+        dispatch(updateLevel(0));
+        navigate("/login");
+    }
+    const setSignUp = () => {
+        dispatch(updateLevel(1));
+        navigate("/Signup");
+    }
     const settings = {
         dots: false,
         fade: true,
@@ -74,13 +85,13 @@ const Slider4 = ({ slide, setSlide }) => {
                         <h2 className='xl:text-5xl lg:text-4xl md:text-2xl text-2xl font-medium font-fredoka'>“Hobby Meetup | Create or Attend Events Within <span className='text-theme'>4</span><span className='text-theme_blue'>8</span> Hours” </h2>
                         <p className='xl:text-3xl lg:text-2xl md:text-xl text-lg mt-3'>We play. We overcome. We unite. We live.</p>
                         <div className='flex justify-center xl:mt-5 lg:mt-2 md:mt-1 mt-5  '>
-                            <Link to="/login">
+                            <div onClick={() => setLogin()}>
                                 <button className='bg-theme md:text-2xl text-xl font-plus xl:w-56 lg:w-48 md:w-40 w-32 xl:py-3 lg:py-2 py-2 text-black font-medium rounded-l-full flex items-center justify-center'>Login</button>
-                            </Link>
+                            </div>
 
-                            <Link to="/Signup">
+                            <div onClick={() => setSignUp()}>
                                 <button className='bg-theme_blue md:text-2xl text-xl font-plus xl:w-56 lg:w-48 md:w-40 w-32  xl:py-3 lg:py-2 py-2 text-black font-medium rounded-r-full flex items-center justify-center'>Signup</button>
-                            </Link>
+                            </div >
 
                         </div>
                     </div>
